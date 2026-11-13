@@ -14,12 +14,12 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/components/layouts/Event/index.tsx:260
-#: src/components/layouts/OrganizerLayout/index.tsx:248
+#: src/components/layouts/OrganizerLayout/index.tsx:249
 msgid "- Click to Publish"
 msgstr "- Kliknutím publikujete"
 
 #: src/components/layouts/Event/index.tsx:262
-#: src/components/layouts/OrganizerLayout/index.tsx:250
+#: src/components/layouts/OrganizerLayout/index.tsx:251
 msgid "- Click to Unpublish"
 msgstr "- Kliknutím zrušíte publikování"
 
@@ -35,7 +35,7 @@ msgstr "(prázdné)"
 msgid "(none)"
 msgstr "(žádná)"
 
-#: src/components/common/ReportTable/index.tsx:336
+#: src/components/common/ReportTable/index.tsx:332
 msgid "{0}"
 msgstr "{0}"
 
@@ -276,7 +276,7 @@ msgstr "{0} vstupenek"
 msgid "{0} to {1}"
 msgstr "{0} – {1}"
 
-#: src/components/routes/oauth/Connect/index.tsx:87
+#: src/components/routes/oauth/Connect/index.tsx:89
 msgid "{0} wants to use your Hi.Events account {1}. It will act as you, with the access you choose below."
 msgstr "{0} chce používat váš účet Hi.Events {1}. Bude jednat vaším jménem s přístupem, který níže zvolíte."
 
@@ -1023,6 +1023,9 @@ msgstr "Opuštěno"
 
 #: src/components/layouts/EventHomepage/index.tsx:205
 #: src/components/layouts/OrganizerHomepage/index.tsx:210
+#: src/components/routes/community/index.tsx:83
+#: src/components/routes/community/index.tsx:112
+#: src/components/routes/community/index.tsx:129
 #: src/components/widget/WidgetSections/index.tsx:90
 #: src/utilites/homepageSections.ts:21
 msgid "About"
@@ -1061,11 +1064,11 @@ msgstr "Přijímejte bankovní převody, šeky nebo jiné offline platební meto
 msgid "Accept credit card payments with Stripe"
 msgstr "Přijímejte platby kartou přes Stripe"
 
-#: src/components/common/TeamAccessFields/index.tsx:205
-#: src/components/common/TeamAccessFields/index.tsx:207
+#: src/components/common/TeamAccessFields/index.tsx:206
+#: src/components/common/TeamAccessFields/index.tsx:208
 #: src/components/common/TeamAccessPanel/index.tsx:137
 #: src/components/forms/ProductForm/index.tsx:605
-#: src/components/routes/oauth/Connect/index.tsx:115
+#: src/components/routes/oauth/Connect/index.tsx:117
 #: src/components/routes/settings/ApiKeys/CreateApiKeyModal.tsx:237
 #: src/components/routes/settings/Team/index.tsx:218
 #: src/components/routes/settings/Team/MemberRow.tsx:141
@@ -1719,8 +1722,8 @@ msgstr "Přidá stránku se jmény účastníků"
 msgid "Adds an \"I've paid\" button to unpaid orders. You and your team get an email when a buyer uses it. You still mark the order as paid yourself."
 msgstr "Přidá k nezaplaceným objednávkám tlačítko „Zaplatil(a) jsem“. Když jej kupující použije, vy a váš tým dostanete e-mail. Objednávku jako zaplacenou však stále označujete sami."
 
-#: src/components/common/TeamAccessFields/index.tsx:32
-#: src/components/common/TeamAccessFields/index.tsx:90
+#: src/components/common/TeamAccessFields/index.tsx:33
+#: src/components/common/TeamAccessFields/index.tsx:91
 #: src/components/layouts/Admin/index.tsx:16
 #: src/components/routes/admin/DeletionRequests/index.tsx:150
 msgid "Admin"
@@ -1883,7 +1886,7 @@ msgstr "Všechny kategorie"
 msgid "All changes saved"
 msgstr "Všechny změny uloženy"
 
-#: src/components/common/OrganizerReportTable/index.tsx:302
+#: src/components/common/OrganizerReportTable/index.tsx:296
 msgid "All Currencies"
 msgstr "Všechny měny"
 
@@ -1949,7 +1952,7 @@ msgstr "Všechny odpovídající termíny"
 msgid "All occurrences"
 msgstr "Všechny termíny"
 
-#: src/components/common/ReportTable/index.tsx:287
+#: src/components/common/ReportTable/index.tsx:281
 msgid "All Occurrences"
 msgstr "Všechny termíny"
 
@@ -2161,7 +2164,7 @@ msgstr "Přijatá částka"
 msgid "An account with this email already exists. Sign in instead."
 msgstr "Účet s tímto e-mailem již existuje. Přihlaste se."
 
-#: src/components/routes/oauth/Connect/index.tsx:16
+#: src/components/routes/oauth/Connect/index.tsx:18
 msgid "an app on this computer"
 msgstr "aplikace v tomto počítači"
 
@@ -2193,7 +2196,7 @@ msgstr "Volitelný popis této kategorie, který se zobrazí na stránce událos
 msgid "An optional message to display on the highlighted product, e.g. \"Selling fast 🔥\" or \"Best value\""
 msgstr "Volitelná zpráva zobrazená u zvýrazněného produktu, např. \\\"Rychle mizí 🔥\\\" nebo \\\"Nejlepší hodnota\\\""
 
-#: src/components/common/TeamAccessFields/index.tsx:235
+#: src/components/common/TeamAccessFields/index.tsx:236
 msgid "An organizer gives access to all of its events, including new ones."
 msgstr "Organizátor poskytuje přístup ke všem svým událostem, včetně nových."
 
@@ -2597,11 +2600,11 @@ msgstr "Opravdu chcete odejít?"
 msgid "Are you sure you want to make this event draft? This will make the event invisible to the public"
 msgstr "Opravdu chcete tuto událost převést na koncept? Tím se událost skryje před veřejností."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:168
+#: src/components/layouts/OrganizerLayout/index.tsx:169
 msgid "Are you sure you want to make this organizer draft? This will make the organizer page invisible to the public"
 msgstr "Opravdu chcete tohoto organizátora převést na koncept? Tím se stránka organizátora skryje před veřejností."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:169
+#: src/components/layouts/OrganizerLayout/index.tsx:170
 msgid "Are you sure you want to make this organizer public? This will make the organizer page visible to the public"
 msgstr "Opravdu chcete tohoto organizátora zveřejnit? Tím se stránka organizátora zobrazí veřejnosti."
 
@@ -2699,12 +2702,23 @@ msgstr "Oblasti"
 msgid "Art"
 msgstr "Umění"
 
+#: src/components/routes/organizer/CommunityContent/index.tsx:84
+#: src/components/routes/organizer/CommunityContent/index.tsx:139
+msgid "Article"
+msgstr "Článek"
+
+#: src/components/routes/community/index.tsx:83
+#: src/components/routes/community/index.tsx:114
+#: src/components/routes/community/index.tsx:144
+msgid "Articles"
+msgstr "Články"
+
 #: src/components/routes/organizer/Payments/Vat/VatSettings.tsx:28
 msgid "As your business is based in Ireland, Irish VAT at 23% applies automatically to all platform fees."
 msgstr "Protože vaše firma sídlí v Irsku, na všechny poplatky platformy se automaticky vztahuje irská DPH ve výši 23 %."
 
 #: src/components/layouts/Event/index.tsx:231
-#: src/components/layouts/OrganizerLayout/index.tsx:221
+#: src/components/layouts/OrganizerLayout/index.tsx:222
 msgid "Ask an account admin to give you access, or open one of your own events."
 msgstr "Požádejte administrátora účtu o přístup, nebo otevřete některou ze svých událostí."
 
@@ -3575,15 +3589,15 @@ msgstr "Přístup ke kameře byl zamítnut. <0>Požádejte o oprávnění</0> zn
 msgid "Campaign"
 msgstr "Kampaň"
 
-#: src/components/common/TeamAccessFields/index.tsx:263
+#: src/components/common/TeamAccessFields/index.tsx:273
 msgid "Can issue refunds"
 msgstr "Může vracet peníze"
 
-#: src/components/common/TeamAccessFields/index.tsx:104
+#: src/components/common/TeamAccessFields/index.tsx:105
 msgid "Can see events, orders and attendees but can't change anything."
 msgstr "Může zobrazit události, objednávky a účastníky, ale nemůže nic měnit."
 
-#: src/components/common/TeamAccessFields/index.tsx:255
+#: src/components/common/TeamAccessFields/index.tsx:265
 #: src/components/routes/settings/Team/MemberRow.tsx:70
 msgid "Can see financials"
 msgstr "Může vidět finanční údaje"
@@ -3660,7 +3674,8 @@ msgstr "Nemůžete použít ověřovací aplikaci ani záložní kódy?"
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:67
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1173
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:64
-#: src/components/routes/oauth/Connect/index.tsx:164
+#: src/components/routes/oauth/Connect/index.tsx:166
+#: src/components/routes/organizer/CommunityContent/index.tsx:101
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:69
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:85
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:85
@@ -4073,7 +4088,7 @@ msgstr "Podívejte se na tuto událost: {0}"
 msgid "Check out this event!"
 msgstr "Podívejte se na tuto událost!"
 
-#: src/components/common/ReportTable/index.tsx:251
+#: src/components/common/ReportTable/index.tsx:245
 #: src/components/routes/settings/TaxesAndFees/index.tsx:85
 #: src/ee/box-office/components/layouts/BoxOffice/index.tsx:84
 msgid "Check your connection and try again."
@@ -4660,7 +4675,7 @@ msgstr "Pravidla chování"
 msgid "Code to paste"
 msgstr "Kód k vložení"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:207
+#: src/components/layouts/OrganizerLayout/index.tsx:208
 msgid "Collaborate with your team to create amazing events together."
 msgstr "Spolupracujte se svým týmem a vytvářejte skvělé události společně."
 
@@ -4717,6 +4732,14 @@ msgstr "Klíčová slova oddělená čárkami, která popisují událost. Vyhled
 #: src/components/routes/admin/Dashboard/index.tsx:332
 msgid "Commission"
 msgstr "Provize"
+
+#: src/components/routes/community/index.tsx:82
+#: src/components/routes/community/index.tsx:96
+#: src/components/routes/community/index.tsx:109
+#: src/components/routes/community/index.tsx:124
+#: src/components/routes/community/index.tsx:170
+msgid "Community"
+msgstr "Komunita"
 
 #: src/ee/box-office/components/layouts/BoxOffice/TenderStage.tsx:180
 #: src/ee/box-office/utilites/boxOfficeTender.ts:11
@@ -4935,7 +4958,7 @@ msgstr "Potvrďte svůj e-mail pro přístup ke všem funkcím."
 msgid "Confirmation code"
 msgstr "Potvrzovací kód"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:344
+#: src/components/layouts/OrganizerLayout/index.tsx:345
 msgid "Confirmation email sent! Please check your inbox."
 msgstr "Potvrzovací e-mail byl odeslán! Zkontrolujte prosím svou schránku."
 
@@ -4955,8 +4978,8 @@ msgstr "Gratulujeme! Vaše událost je nyní viditelná pro veřejnost."
 msgid "Connect"
 msgstr "Připojit"
 
-#: src/components/routes/oauth/Connect/index.tsx:86
-#: src/components/routes/oauth/Connect/index.tsx:151
+#: src/components/routes/oauth/Connect/index.tsx:88
+#: src/components/routes/oauth/Connect/index.tsx:153
 #: src/components/routes/settings/Security/SignInMethods.tsx:246
 msgid "Connect {0}"
 msgstr "Připojit {0}"
@@ -5058,6 +5081,8 @@ msgstr "Postupně"
 #: src/components/layouts/EventHomepage/OrganizerSection.tsx:58
 #: src/components/layouts/OrganizerHomepage/index.tsx:118
 #: src/components/layouts/OrganizerHomepage/index.tsx:219
+#: src/components/routes/community/index.tsx:83
+#: src/components/routes/community/index.tsx:115
 #: src/utilites/homepageSections.ts:35
 msgid "Contact"
 msgstr "Kontakt"
@@ -5081,12 +5106,18 @@ msgstr "Kontaktujte správce účtu nebo náš tým podpory. Jakmile ověří va
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
 #: src/components/routes/admin/Attribution/index.tsx:168
+#: src/components/routes/organizer/CommunityContent/index.tsx:88
+#: src/components/routes/organizer/CommunityContent/index.tsx:127
 msgid "Content"
 msgstr "Obsah"
 
 #: src/components/routes/admin/Announcements/index.tsx:301
 msgid "Content is required"
 msgstr "Obsah je povinný"
+
+#: src/components/routes/organizer/CommunityContent/index.tsx:77
+msgid "Content saved"
+msgstr "Obsah uložen"
 
 #: src/components/common/TwoFactor/TwoFactorSetupFlow.tsx:146
 #: src/components/common/WidgetEditor/BehaviourPanel.tsx:33
@@ -5480,8 +5511,8 @@ msgstr "Soubor {fileName} se nepodařilo nahrát"
 msgid "Couldn't load the API reference."
 msgstr "Referenci API se nepodařilo načíst."
 
-#: src/components/common/OrganizerReportTable/index.tsx:271
-#: src/components/common/ReportTable/index.tsx:249
+#: src/components/common/OrganizerReportTable/index.tsx:265
+#: src/components/common/ReportTable/index.tsx:243
 msgid "Couldn't load this report"
 msgstr "Tento report se nepodařilo načíst"
 
@@ -5535,6 +5566,7 @@ msgid "Cover"
 msgstr "Titulní obrázek"
 
 #: src/components/modals/DuplicateEventModal/index.tsx:159
+#: src/components/routes/organizer/CommunityContent/index.tsx:89
 msgid "Cover image"
 msgstr "Titulní obrázek"
 
@@ -5637,7 +5669,7 @@ msgstr "Vytvořte oznámení a zobrazte svým uživatelům zprávu."
 msgid "Create and change events, orders, attendees and more."
 msgstr "Vytvářet a měnit události, objednávky, účastníky a další."
 
-#: src/components/routes/oauth/Connect/index.tsx:122
+#: src/components/routes/oauth/Connect/index.tsx:124
 msgid "Create and change events, tickets, questions and settings."
 msgstr "Vytvářet a měnit akce, vstupenky, otázky a nastavení."
 
@@ -5702,6 +5734,11 @@ msgstr "Vytvořit check-in seznam"
 msgid "Create Configuration"
 msgstr "Vytvořit konfiguraci"
 
+#: src/components/routes/organizer/CommunityContent/index.tsx:69
+#: src/components/routes/organizer/CommunityContent/index.tsx:123
+msgid "Create content"
+msgstr "Vytvořit obsah"
+
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:325
 msgid "Create custom email templates for this event that override the organizer defaults"
 msgstr "Vytvořte vlastní e-mailové šablony pro tuto událost, které přepíší výchozí nastavení organizátora"
@@ -5724,7 +5761,7 @@ msgid "Create event"
 msgstr "Vytvořit událost"
 
 #: src/components/common/NoEventsBlankSlate/index.tsx:28
-#: src/components/layouts/OrganizerLayout/index.tsx:197
+#: src/components/layouts/OrganizerLayout/index.tsx:198
 #: src/components/routes/organizer/Events/index.tsx:66
 msgid "Create Event"
 msgstr "Vytvořit událost"
@@ -5872,7 +5909,7 @@ msgstr "CTA"
 msgid "CTA label is required"
 msgstr "Popisek výzvy k akci je povinný"
 
-#: src/components/common/OrganizerReportTable/index.tsx:317
+#: src/components/common/OrganizerReportTable/index.tsx:311
 #: src/components/forms/OrganizerForm/index.tsx:51
 #: src/components/modals/CreateEventModal/index.tsx:437
 #: src/components/modals/CreateEventModal/index.tsx:438
@@ -5945,8 +5982,8 @@ msgstr "Vlastní e-maily k objednávkám a vstupenkám pro tuto událost"
 msgid "Custom questions"
 msgstr "Vlastní otázky"
 
-#: src/components/common/OrganizerReportTable/index.tsx:61
-#: src/components/common/ReportTable/index.tsx:56
+#: src/components/common/OrganizerReportTable/index.tsx:62
+#: src/components/common/ReportTable/index.tsx:57
 #: src/components/routes/admin/Attribution/index.tsx:82
 msgid "Custom Range"
 msgstr "Vlastní rozsah"
@@ -6841,10 +6878,12 @@ msgstr "Stahování faktury"
 
 #: src/components/common/EventCard/index.tsx:99
 #: src/components/layouts/Event/index.tsx:259
-#: src/components/layouts/OrganizerLayout/index.tsx:247
+#: src/components/layouts/OrganizerLayout/index.tsx:248
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:472
 #: src/components/routes/event/Lineup/EventStatusBadge.tsx:10
+#: src/components/routes/organizer/CommunityContent/index.tsx:94
+#: src/components/routes/organizer/CommunityContent/index.tsx:138
 #: src/components/routes/settings/Organizers/index.tsx:23
 msgid "Draft"
 msgstr "Koncept"
@@ -7088,6 +7127,7 @@ msgstr "Zvýhodněná cena"
 #: src/components/routes/admin/Announcements/index.tsx:211
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:57
 #: src/components/routes/event/Questions/QuestionRow.tsx:165
+#: src/components/routes/organizer/CommunityContent/index.tsx:142
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:282
 #: src/components/routes/settings/TaxesAndFees/index.tsx:68
 #: src/components/routes/settings/Team/MemberRow.tsx:177
@@ -7169,6 +7209,10 @@ msgstr "Upravit kód"
 #: src/components/routes/admin/Configurations/index.tsx:205
 msgid "Edit Configuration"
 msgstr "Upravit konfiguraci"
+
+#: src/components/routes/organizer/CommunityContent/index.tsx:69
+msgid "Edit content"
+msgstr "Upravit obsah"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:411
 msgid "Edit Date"
@@ -7321,6 +7365,7 @@ msgstr "Způsobilé seznamy pro odbavení"
 #: src/components/routes/auth/ForgotPassword/index.tsx:69
 #: src/components/routes/auth/Login/index.tsx:187
 #: src/components/routes/auth/Register/index.tsx:153
+#: src/components/routes/community/index.tsx:61
 #: src/components/routes/event/Questions/CheckoutPreview.tsx:36
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:99
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:70
@@ -7380,7 +7425,7 @@ msgid "Email change pending"
 msgstr "Změna e-mailu čeká na potvrzení"
 
 #: src/components/layouts/Event/index.tsx:98
-#: src/components/layouts/OrganizerLayout/index.tsx:142
+#: src/components/layouts/OrganizerLayout/index.tsx:143
 #: src/components/routes/settings/Profile/index.tsx:136
 msgid "Email confirmation resent successfully"
 msgstr "Potvrzovací e-mail byl úspěšně znovu odeslán"
@@ -7458,7 +7503,7 @@ msgstr "Poslat e-mail vlastníkovi účtu"
 msgid "Email to send tickets"
 msgstr "E-mail pro odeslání vstupenek"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:323
+#: src/components/layouts/OrganizerLayout/index.tsx:324
 msgid "Email Verification Required"
 msgstr "Vyžadováno ověření e-mailu"
 
@@ -7860,7 +7905,7 @@ msgstr "Pouze sudá čísla"
 msgid "Event"
 msgstr "Událost"
 
-#: src/components/common/TeamAccessFields/index.tsx:155
+#: src/components/common/TeamAccessFields/index.tsx:156
 msgid "Event #{0}"
 msgstr "Událost č. {0}"
 
@@ -8052,6 +8097,8 @@ msgstr "Událost aktualizována"
 #: src/components/routes/admin/Attribution/index.tsx:195
 #: src/components/routes/admin/Dashboard/index.tsx:398
 #: src/components/routes/admin/Events/index.tsx:77
+#: src/components/routes/community/index.tsx:83
+#: src/components/routes/community/index.tsx:113
 #: src/components/routes/event/Lineup/ProfileDrawer.tsx:236
 #: src/components/routes/organizer/Events/index.tsx:46
 #: src/utilites/homepageSections.ts:33
@@ -8129,7 +8176,7 @@ msgstr "Každá událost má pokladnu na místě"
 msgid "Every event has a check-in list"
 msgstr "Každá událost má seznam odbavení"
 
-#: src/components/common/TeamAccessFields/index.tsx:113
+#: src/components/common/TeamAccessFields/index.tsx:114
 msgid "Every organizer and event, including new ones."
 msgstr "Všichni organizátoři a události, včetně nových."
 
@@ -8263,6 +8310,10 @@ msgstr "Platnost vyprší {0}"
 msgid "Expiry Date"
 msgstr "Datum vypršení"
 
+#: src/components/routes/community/index.tsx:128
+msgid "Explore events"
+msgstr "Procházet události"
+
 #: src/components/modals/ProductPurchasesModal/index.tsx:203
 #: src/components/routes/event/Affiliates/index.tsx:97
 #: src/components/routes/event/attendees.tsx:263
@@ -8275,7 +8326,7 @@ msgstr "Exportovat"
 msgid "Export answers"
 msgstr "Exportovat odpovědi"
 
-#: src/components/common/OrganizerReportTable/index.tsx:358
+#: src/components/common/OrganizerReportTable/index.tsx:352
 msgid "Export CSV"
 msgstr "Exportovat CSV"
 
@@ -8291,7 +8342,7 @@ msgstr "Exportovat nákupy"
 msgid "Export started. Preparing file..."
 msgstr "Export byl zahájen. Připravuje se soubor..."
 
-#: src/components/common/OrganizerReportTable/index.tsx:204
+#: src/components/common/OrganizerReportTable/index.tsx:198
 msgid "Export successful"
 msgstr "Export proběhl úspěšně"
 
@@ -8491,7 +8542,7 @@ msgstr "Objednávky se nepodařilo exportovat"
 msgid "Failed to export purchases. Please try again."
 msgstr "Nákupy se nepodařilo exportovat. Zkuste to prosím znovu."
 
-#: src/components/common/OrganizerReportTable/index.tsx:206
+#: src/components/common/OrganizerReportTable/index.tsx:200
 msgid "Failed to export report. Please try again."
 msgstr "Sestavu se nepodařilo exportovat. Zkuste to prosím znovu."
 
@@ -9158,7 +9209,7 @@ msgstr "Kotel vpředu"
 msgid "Front right"
 msgstr "Vpředu vpravo"
 
-#: src/components/common/TeamAccessFields/index.tsx:92
+#: src/components/common/TeamAccessFields/index.tsx:93
 msgid "Full access to every event, the team, payments and account settings."
 msgstr "Plný přístup ke všem událostem, týmu, platbám a nastavení účtu."
 
@@ -9325,7 +9376,7 @@ msgstr "Zpět"
 msgid "Go back to profile"
 msgstr "Zpět na profil"
 
-#: src/components/routes/oauth/Connect/index.tsx:25
+#: src/components/routes/oauth/Connect/index.tsx:27
 msgid "Go back to the app you were connecting and start again."
 msgstr "Vraťte se do aplikace, kterou jste připojovali, a začněte znovu."
 
@@ -9350,7 +9401,7 @@ msgid "Go to seating settings"
 msgstr "Přejít do nastavení míst k sezení"
 
 #: src/components/layouts/Event/index.tsx:232
-#: src/components/layouts/OrganizerLayout/index.tsx:222
+#: src/components/layouts/OrganizerLayout/index.tsx:223
 msgid "Go to your events"
 msgstr "Přejít na vaše události"
 
@@ -9550,7 +9601,7 @@ msgstr "Hi.Events Cloud"
 msgid "Hi.Events Fee"
 msgstr "Poplatek Hi.Events"
 
-#: src/components/routes/oauth/Connect/index.tsx:108
+#: src/components/routes/oauth/Connect/index.tsx:110
 msgid "Hi.Events hasn't verified this app. Only continue if you started connecting it yourself and you trust it."
 msgstr "Hi.Events tuto aplikaci neověřil. Pokračujte jen tehdy, pokud jste připojení zahájili sami a aplikaci důvěřujete."
 
@@ -9755,6 +9806,10 @@ msgstr "Zablokovat místa ({0}) v {dateCount} termínech"
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:241
 msgid "Hold places for"
 msgstr "Držet místa po dobu"
+
+#: src/components/routes/community/index.tsx:111
+msgid "Home"
+msgstr "Domů"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:142
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:126
@@ -10073,6 +10128,10 @@ msgstr "U svého poskytovatele identity vytvořte důvěrného (confidential) kl
 msgid "Inactive"
 msgstr "Neaktivní"
 
+#: src/components/routes/organizer/CommunityContent/index.tsx:128
+msgid "Inbox"
+msgstr "Doručené zprávy"
+
 #: src/components/common/Currency/index.tsx:52
 msgid "incl. fees"
 msgstr "vč. poplatků"
@@ -10191,7 +10250,7 @@ msgid "Instructions"
 msgstr "Pokyny"
 
 #: src/components/layouts/Event/index.tsx:163
-#: src/components/layouts/OrganizerLayout/index.tsx:130
+#: src/components/layouts/OrganizerLayout/index.tsx:131
 #: src/components/modals/DuplicateEventModal/index.tsx:165
 msgid "Integrations"
 msgstr "Integrace"
@@ -10253,11 +10312,11 @@ msgstr "Zvěte lidi, určete, co mohou vidět a dělat, a udržujte přihlašov�
 msgid "Invite someone"
 msgstr "Pozvat někoho"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:209
+#: src/components/layouts/OrganizerLayout/index.tsx:210
 msgid "Invite Team Members"
 msgstr "Pozvat členy týmu"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:206
+#: src/components/layouts/OrganizerLayout/index.tsx:207
 msgid "Invite Your Team"
 msgstr "Pozvěte svůj tým"
 
@@ -10533,55 +10592,55 @@ msgstr "Jazyk a velikost"
 msgid "Last"
 msgstr "Poslední"
 
-#: src/components/common/OrganizerReportTable/index.tsx:60
-#: src/components/common/ReportTable/index.tsx:55
+#: src/components/common/OrganizerReportTable/index.tsx:61
+#: src/components/common/ReportTable/index.tsx:56
 msgid "Last 12 months"
 msgstr "Posledních 12 měsíců"
 
-#: src/components/common/OrganizerReportTable/index.tsx:55
-#: src/components/common/ReportTable/index.tsx:50
+#: src/components/common/OrganizerReportTable/index.tsx:56
+#: src/components/common/ReportTable/index.tsx:51
 msgid "Last 14 days"
 msgstr "Posledních 14 dní"
 
-#: src/components/common/OrganizerReportTable/index.tsx:52
-#: src/components/common/ReportTable/index.tsx:47
+#: src/components/common/OrganizerReportTable/index.tsx:53
+#: src/components/common/ReportTable/index.tsx:48
 #: src/components/routes/admin/Attribution/index.tsx:77
 #: src/components/routes/admin/Dashboard/index.tsx:31
 #: src/components/routes/admin/EmailDelivery/index.tsx:14
 msgid "Last 24 hours"
 msgstr "Posledních 24 hodin"
 
-#: src/components/common/OrganizerReportTable/index.tsx:56
+#: src/components/common/OrganizerReportTable/index.tsx:57
 #: src/components/common/PeriodSelector/index.tsx:34
-#: src/components/common/ReportTable/index.tsx:51
+#: src/components/common/ReportTable/index.tsx:52
 #: src/components/routes/admin/Attribution/index.tsx:79
 #: src/components/routes/admin/Dashboard/index.tsx:33
 #: src/components/routes/admin/EmailDelivery/index.tsx:16
 msgid "Last 30 days"
 msgstr "Posledních 30 dní"
 
-#: src/components/common/OrganizerReportTable/index.tsx:53
-#: src/components/common/ReportTable/index.tsx:48
+#: src/components/common/OrganizerReportTable/index.tsx:54
+#: src/components/common/ReportTable/index.tsx:49
 msgid "Last 48 hours"
 msgstr "Posledních 48 hodin"
 
-#: src/components/common/OrganizerReportTable/index.tsx:58
-#: src/components/common/ReportTable/index.tsx:53
+#: src/components/common/OrganizerReportTable/index.tsx:59
+#: src/components/common/ReportTable/index.tsx:54
 msgid "Last 6 months"
 msgstr "Posledních 6 měsíců"
 
-#: src/components/common/OrganizerReportTable/index.tsx:54
+#: src/components/common/OrganizerReportTable/index.tsx:55
 #: src/components/common/PeriodSelector/index.tsx:32
-#: src/components/common/ReportTable/index.tsx:49
+#: src/components/common/ReportTable/index.tsx:50
 #: src/components/routes/admin/Attribution/index.tsx:78
 #: src/components/routes/admin/Dashboard/index.tsx:32
 #: src/components/routes/admin/EmailDelivery/index.tsx:15
 msgid "Last 7 days"
 msgstr "Posledních 7 dní"
 
-#: src/components/common/OrganizerReportTable/index.tsx:57
+#: src/components/common/OrganizerReportTable/index.tsx:58
 #: src/components/common/PeriodSelector/index.tsx:36
-#: src/components/common/ReportTable/index.tsx:52
+#: src/components/common/ReportTable/index.tsx:53
 #: src/components/routes/admin/Attribution/index.tsx:80
 msgid "Last 90 days"
 msgstr "Posledních 90 dní"
@@ -10799,7 +10858,7 @@ msgstr "Písmena"
 msgid "Letters skipping I and O"
 msgstr "Písmena bez I a O"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:125
+#: src/components/layouts/OrganizerLayout/index.tsx:126
 msgid "Library"
 msgstr "Knihovna"
 
@@ -10934,7 +10993,7 @@ msgstr "Zobrazte své nadcházející události na vlastním webu. Návštěvní
 
 #: src/components/common/EventCard/index.tsx:102
 #: src/components/layouts/Event/index.tsx:261
-#: src/components/layouts/OrganizerLayout/index.tsx:249
+#: src/components/layouts/OrganizerLayout/index.tsx:250
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:115
 #: src/components/routes/event/Lineup/EventStatusBadge.tsx:8
 #: src/components/routes/settings/Organizers/index.tsx:19
@@ -10999,9 +11058,11 @@ msgstr "Načítání protokolů Webhooků..."
 msgid "Loading Webhooks"
 msgstr "Načítání Webhooků"
 
-#: src/components/common/OrganizerReportTable/index.tsx:265
-#: src/components/common/ReportTable/index.tsx:219
+#: src/components/common/OrganizerReportTable/index.tsx:259
+#: src/components/common/ReportTable/index.tsx:213
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:89
+#: src/components/routes/organizer/CommunityContent/index.tsx:131
+#: src/components/routes/organizer/CommunityContent/index.tsx:150
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:94
 msgid "Loading..."
 msgstr "Načítání..."
@@ -11051,7 +11112,7 @@ msgstr "změny místa"
 msgid "locations"
 msgstr "místa"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:126
+#: src/components/layouts/OrganizerLayout/index.tsx:127
 #: src/components/routes/organizer/Locations/index.tsx:31
 msgid "Locations"
 msgstr "Místa"
@@ -11224,6 +11285,10 @@ msgstr "Spravovat jednotné přihlašování"
 msgid "Manage tickets"
 msgstr "Spravovat vstupenky"
 
+#: src/components/common/TeamAccessFields/index.tsx:257
+msgid "Manage website content"
+msgstr "Spravovat obsah webu"
+
 #: src/components/routes/event/SoldOutWaitlist/index.tsx:72
 msgid "Manage your event's waitlist, view stats, and offer tickets to attendees."
 msgstr "Spravujte čekací listinu své akce, prohlížejte statistiky a nabízejte vstupenky účastníkům."
@@ -11257,6 +11322,10 @@ msgstr "Březen"
 #: src/hooks/useOrderActions.tsx:130
 msgid "Mark as paid"
 msgstr "Označit jako zaplacené"
+
+#: src/components/routes/organizer/CommunityContent/index.tsx:162
+msgid "Mark as read"
+msgstr "Označit jako přečtené"
 
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:184
 msgid "Mark as validated (admin override)"
@@ -11342,6 +11411,7 @@ msgstr "Členové s e-mailem na ověřené doméně se musí přihlašovat přes
 #: src/components/common/ContactOrganizerModal/index.tsx:91
 #: src/components/common/OrdersTable/index.tsx:168
 #: src/components/modals/SendMessageModal/index.tsx:455
+#: src/components/routes/community/index.tsx:63
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:63
 msgid "Message"
 msgstr "Zpráva"
@@ -11690,6 +11760,7 @@ msgstr "Mé vstupenky"
 #: src/components/forms/TaxAndFeeForm/index.tsx:62
 #: src/components/modals/DuplicateEventModal/index.tsx:223
 #: src/components/routes/admin/Configurations/index.tsx:224
+#: src/components/routes/community/index.tsx:60
 #: src/components/routes/event/Lineup/ProfileDrawer.tsx:279
 #: src/components/routes/event/Lineup/ScheduleBuilder/SpaceModal.tsx:71
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:81
@@ -11740,6 +11811,10 @@ msgstr "Jméno, e-mail a fakturační adresa se zjišťují vždy."
 #: src/components/common/QuestionAndAnswerList/index.tsx:205
 msgid "Navigate to Attendee"
 msgstr "Přejít na účastníka"
+
+#: src/components/routes/community/index.tsx:110
+msgid "Navigation"
+msgstr "Navigace"
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:455
 msgid "Need to switch Stripe accounts? Disconnect this one."
@@ -11974,6 +12049,10 @@ msgstr "Zatím žádná oznámení"
 msgid "No archived events to show."
 msgstr "Žádné archivované akce k zobrazení."
 
+#: src/components/routes/community/index.tsx:36
+msgid "No articles published yet."
+msgstr "Zatím nebyly publikovány žádné články."
+
 #: src/components/routes/event/Questions/QuestionsBuilder.tsx:232
 msgid "No attendee questions yet"
 msgstr "Zatím žádné otázky pro účastníky"
@@ -12080,15 +12159,19 @@ msgstr "Žádné připojené aplikace"
 msgid "No connections available"
 msgstr "Nejsou k dispozici žádná propojení"
 
-#: src/components/common/ReportTable/index.tsx:227
+#: src/components/routes/organizer/CommunityContent/index.tsx:133
+msgid "No content yet."
+msgstr "Zatím není žádný obsah."
+
+#: src/components/common/ReportTable/index.tsx:221
 msgid "No data available"
 msgstr "Nejsou k dispozici žádná data"
 
-#: src/components/common/OrganizerReportTable/index.tsx:283
+#: src/components/common/OrganizerReportTable/index.tsx:277
 msgid "No data found for the selected filters. Try adjusting the date range or currency."
 msgstr "Pro zvolené filtry nebyla nalezena žádná data. Zkuste upravit rozsah dat nebo měnu."
 
-#: src/components/common/ReportTable/index.tsx:223
+#: src/components/common/ReportTable/index.tsx:217
 msgid "No data to show. Please select a date range"
 msgstr "Žádná data k zobrazení. Vyberte prosím rozsah dat"
 
@@ -12275,6 +12358,10 @@ msgstr "Nebyly nalezeny žádné zprávy"
 #: src/components/routes/event/messages.tsx:329
 msgid "No messages to show"
 msgstr "Žádné zprávy k zobrazení"
+
+#: src/components/routes/organizer/CommunityContent/index.tsx:152
+msgid "No messages yet."
+msgstr "Zatím nejsou žádné zprávy."
 
 #: src/components/modals/ProductPurchasesModal/index.tsx:314
 msgid "No name"
@@ -12518,6 +12605,11 @@ msgstr "Žádné nadcházející termíny"
 #: src/components/layouts/OrganizerHomepage/index.tsx:170
 msgid "No upcoming events"
 msgstr "Žádné nadcházející akce"
+
+#: src/components/routes/community/index.tsx:141
+#: src/components/routes/community/index.tsx:163
+msgid "No upcoming events yet."
+msgstr "Zatím nejsou žádné nadcházející události."
 
 #: src/components/common/AdminUsersTable/index.tsx:19
 msgid "No users found"
@@ -12774,7 +12866,7 @@ msgstr "Zatím není co tisknout"
 msgid "Nothing to sell here yet. Add products to this box office."
 msgstr "Zatím tu není co prodávat. Přidejte do této pokladny na místě produkty."
 
-#: src/components/common/ReportTable/index.tsx:263
+#: src/components/common/ReportTable/index.tsx:257
 msgid "Nothing to show yet"
 msgstr "Zatím není co zobrazit"
 
@@ -12859,7 +12951,7 @@ msgstr "Lichá a sudá od středu"
 msgid "Odd numbers only"
 msgstr "Pouze lichá čísla"
 
-#: src/components/common/OrganizerReportTable/index.tsx:367
+#: src/components/common/OrganizerReportTable/index.tsx:361
 msgid "of"
 msgstr "z"
 
@@ -13022,7 +13114,7 @@ msgstr "Jednou za objednávku"
 msgid "Once you create an event, you'll see it here."
 msgstr "Jakmile vytvoříte akci, uvidíte ji zde."
 
-#: src/components/common/ReportTable/index.tsx:268
+#: src/components/common/ReportTable/index.tsx:262
 msgid "Once you start collecting data, you'll see it here."
 msgstr "Jakmile začnete shromažďovat data, uvidíte je zde."
 
@@ -13135,7 +13227,7 @@ msgstr "Přístup týmu mohou spravovat pouze administrátoři."
 msgid "Only available as an add-on"
 msgstr "Dostupné pouze jako doplněk"
 
-#: src/components/routes/oauth/Connect/index.tsx:107
+#: src/components/routes/oauth/Connect/index.tsx:109
 msgid "Only continue if you just started connecting from an app on this computer, such as Claude Code or Cursor."
 msgstr "Pokračujte, jen pokud jste právě zahájili připojení z aplikace v tomto počítači, například Claude Code nebo Cursor."
 
@@ -13207,7 +13299,7 @@ msgstr "Viditelné pouze pro kupující s platným promo kódem."
 msgid "Only visible with promo code"
 msgstr "Viditelné pouze s promo kódem"
 
-#: src/components/common/TeamAccessFields/index.tsx:119
+#: src/components/common/TeamAccessFields/index.tsx:120
 msgid "Only what you pick below."
 msgstr "Pouze to, co vyberete níže."
 
@@ -13616,8 +13708,8 @@ msgid "Organization Name"
 msgstr "Název organizace"
 
 #: src/components/common/AdminEventsTable/index.tsx:89
-#: src/components/common/TeamAccessFields/index.tsx:36
-#: src/components/common/TeamAccessFields/index.tsx:96
+#: src/components/common/TeamAccessFields/index.tsx:37
+#: src/components/common/TeamAccessFields/index.tsx:97
 #: src/components/common/WidgetEditor/SectionsPicker.tsx:36
 #: src/components/layouts/EventHomepage/index.tsx:219
 #: src/components/modals/CreateEventModal/index.tsx:270
@@ -13678,12 +13770,12 @@ msgid "Organizer Settings"
 msgstr "Nastavení organizátora"
 
 #: src/components/common/StatusToggle/index.tsx:63
-#: src/components/layouts/OrganizerLayout/index.tsx:180
+#: src/components/layouts/OrganizerLayout/index.tsx:181
 msgid "Organizer status update failed. Please try again later"
 msgstr "Aktualizace stavu organizátora se nezdařila. Zkuste to prosím znovu později"
 
 #: src/components/common/StatusToggle/index.tsx:55
-#: src/components/layouts/OrganizerLayout/index.tsx:177
+#: src/components/layouts/OrganizerLayout/index.tsx:178
 msgid "Organizer status updated"
 msgstr "Stav organizátora byl aktualizován"
 
@@ -13702,11 +13794,11 @@ msgstr "Použije se šablona organizátora / výchozí šablona"
 msgid "Organizers"
 msgstr "Organizátoři"
 
-#: src/components/common/TeamAccessFields/index.tsx:138
+#: src/components/common/TeamAccessFields/index.tsx:139
 msgid "Organizers (includes all their events)"
 msgstr "Organizátoři (včetně všech jejich událostí)"
 
-#: src/components/common/TeamAccessFields/index.tsx:234
+#: src/components/common/TeamAccessFields/index.tsx:235
 msgid "Organizers and events"
 msgstr "Organizátoři a události"
 
@@ -13718,7 +13810,7 @@ msgstr "Organizátoři a události"
 msgid "Other"
 msgstr "Ostatní"
 
-#: src/components/common/TeamAccessFields/index.tsx:242
+#: src/components/common/TeamAccessFields/index.tsx:243
 msgid "Other events"
 msgstr "Ostatní události"
 
@@ -13780,7 +13872,9 @@ msgstr "Vlastní jiný účet Hi.Events, a proto se nadále přihlašuje heslem,
 msgid "Padding"
 msgstr "Odsazení"
 
-#: src/components/common/OrganizerReportTable/index.tsx:367
+#: src/components/common/OrganizerReportTable/index.tsx:361
+#: src/components/routes/organizer/CommunityContent/index.tsx:84
+#: src/components/routes/organizer/CommunityContent/index.tsx:139
 msgid "Page"
 msgstr "Stránka"
 
@@ -13811,6 +13905,11 @@ msgstr "Zobrazení stránky"
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:113
 msgid "Page Views"
 msgstr "Zobrazení stránky"
+
+#: src/components/common/TeamAccessFields/index.tsx:258
+#: src/components/routes/organizer/CommunityContent/index.tsx:122
+msgid "Pages, articles and contact submissions."
+msgstr "Stránky, články a kontaktní zprávy."
 
 #: src/ee/seating/components/routes/event/SeatingPrint/index.tsx:224
 msgid "Pages: {pageCount}"
@@ -14186,7 +14285,7 @@ msgstr "Čeká na kontrolu"
 msgid "PENDING REVIEW"
 msgstr "ČEKÁ NA KONTROLU"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:127
+#: src/components/layouts/OrganizerLayout/index.tsx:128
 #: src/components/routes/organizer/People/index.tsx:80
 msgid "People"
 msgstr "Lidé"
@@ -14317,7 +14416,7 @@ msgstr "Trvale smazat tohoto pořadatele a všechny jeho události."
 msgid "Permanently remove this date"
 msgstr "Trvale odstranit tento termín"
 
-#: src/components/common/TeamAccessFields/index.tsx:252
+#: src/components/common/TeamAccessFields/index.tsx:253
 msgid "Permissions"
 msgstr "Oprávnění"
 
@@ -14521,6 +14620,7 @@ msgid "Please don't leave a single empty seat: {0}"
 msgstr "Nenechávejte prosím jedno osamocené volné místo: {0}"
 
 #: src/components/modals/JoinWaitlistModal/index.tsx:57
+#: src/components/routes/community/index.tsx:43
 msgid "Please enter a valid email address"
 msgstr "Zadejte prosím platnou e-mailovou adresu"
 
@@ -14532,6 +14632,10 @@ msgstr "Zadejte prosím platnou URL adresu odkazující na obrázek."
 #: src/components/modals/CreateWebhookModal/index.tsx:34
 msgid "Please enter a valid URL"
 msgstr "Zadejte prosím platnou URL adresu"
+
+#: src/components/routes/community/index.tsx:45
+msgid "Please enter at least 10 characters."
+msgstr "Zadejte alespoň 10 znaků."
 
 #: src/components/routes/welcome/index.tsx:72
 msgid "Please enter the 5-digit code"
@@ -14569,7 +14673,7 @@ msgstr "Vraťte se prosím na stránku události a začněte znovu."
 msgid "Please select a date and time"
 msgstr "Vyberte prosím datum a čas"
 
-#: src/components/common/OrganizerReportTable/index.tsx:280
+#: src/components/common/OrganizerReportTable/index.tsx:274
 msgid "Please select a date range"
 msgstr "Vyberte prosím rozsah dat"
 
@@ -14683,6 +14787,8 @@ msgstr "Zabraňte přeprodeji sdílením zásob mezi více typy vstupenek."
 #: src/components/forms/QuestionForm/index.tsx:280
 #: src/components/routes/admin/Announcements/index.tsx:496
 #: src/components/routes/event/Lineup/index.tsx:223
+#: src/components/routes/organizer/CommunityContent/index.tsx:99
+#: src/components/routes/organizer/CommunityContent/index.tsx:100
 msgid "Preview"
 msgstr "Náhled"
 
@@ -15031,6 +15137,10 @@ msgstr "Publikovat"
 msgid "Publish Anyway"
 msgstr "Přesto publikovat"
 
+#: src/components/routes/organizer/CommunityContent/index.tsx:95
+msgid "Publish at (local time)"
+msgstr "Publikovat v (místní čas)"
+
 #: src/components/modals/PublishEventModal/index.tsx:203
 msgid "Publish Event"
 msgstr "Publikovat událost"
@@ -15041,6 +15151,8 @@ msgstr "Publikujte svou událost"
 
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:473
+#: src/components/routes/organizer/CommunityContent/index.tsx:94
+#: src/components/routes/organizer/CommunityContent/index.tsx:138
 msgid "Published"
 msgstr "Publikováno"
 
@@ -15201,7 +15313,7 @@ msgstr "Znovu aktivovat"
 msgid "Reactivate this date? It will be reopened for future sales."
 msgstr "Znovu aktivovat tento termín? Bude znovu otevřen pro budoucí prodej."
 
-#: src/components/routes/oauth/Connect/index.tsx:121
+#: src/components/routes/oauth/Connect/index.tsx:123
 #: src/components/routes/settings/ApiKeys/ApiKeyRow.tsx:52
 #: src/components/routes/settings/ApiKeys/ConnectedApps.tsx:73
 #: src/components/routes/settings/ApiKeys/CreateApiKeyModal.tsx:250
@@ -15213,7 +15325,7 @@ msgstr "Čtení a zápis"
 msgid "Read more"
 msgstr "Číst dál"
 
-#: src/components/routes/oauth/Connect/index.tsx:127
+#: src/components/routes/oauth/Connect/index.tsx:129
 msgid "Read only"
 msgstr "Pouze čtení"
 
@@ -15458,7 +15570,7 @@ msgstr "Refundace byla úspěšně zaznamenána."
 msgid "Refund Status"
 msgstr "Stav refundace"
 
-#: src/components/common/TeamAccessFields/index.tsx:264
+#: src/components/common/TeamAccessFields/index.tsx:274
 msgid "Refund, cancel with a refund, and mark orders as paid."
 msgstr "Vracet peníze, rušit s vrácením peněz a označovat objednávky jako zaplacené."
 
@@ -15533,6 +15645,7 @@ msgstr "odebrat"
 #: src/components/routes/event/Lineup/ProfileImagesField.tsx:92
 #: src/components/routes/event/Lineup/ScheduleBuilder/ScheduleItemModal.tsx:140
 #: src/components/routes/event/Lineup/ScheduleBuilder/ScheduleItemModal.tsx:217
+#: src/components/routes/organizer/CommunityContent/index.tsx:92
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1214
 #: src/components/routes/settings/ApiKeys/ApiKeyRow.tsx:82
 #: src/ee/box-office/components/layouts/BoxOffice/AmountSheet.tsx:89
@@ -15814,7 +15927,11 @@ msgid "Require two-factor authentication"
 msgstr "Vyžadovat dvoufázové ověření"
 
 #: src/components/forms/QuestionForm/index.tsx:265
+#: src/components/routes/community/index.tsx:42
+#: src/components/routes/community/index.tsx:44
 #: src/components/routes/event/Questions/QuestionRow.tsx:127
+#: src/components/routes/organizer/CommunityContent/index.tsx:45
+#: src/components/routes/organizer/CommunityContent/index.tsx:47
 #: src/ee/sso/components/SingleSignOn/index.tsx:69
 msgid "Required"
 msgstr "Povinné"
@@ -15845,7 +15962,7 @@ msgstr "Odeslat kód znovu"
 msgid "Resend Confirmation"
 msgstr "Odeslat potvrzení znovu"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:340
+#: src/components/layouts/OrganizerLayout/index.tsx:341
 msgid "Resend Confirmation Email"
 msgstr "Odeslat potvrzovací e-mail znovu"
 
@@ -16018,11 +16135,11 @@ msgstr "Zpět na událost"
 msgid "Return to Event Page"
 msgstr "Zpět na stránku události"
 
-#: src/components/routes/oauth/Connect/index.tsx:77
+#: src/components/routes/oauth/Connect/index.tsx:79
 msgid "Returning you to {leavingTo}…"
 msgstr "Vracíme vás na {leavingTo}…"
 
-#: src/components/routes/oauth/Connect/index.tsx:92
+#: src/components/routes/oauth/Connect/index.tsx:94
 msgid "Returns you to"
 msgstr "Vrátí vás na"
 
@@ -16060,7 +16177,7 @@ msgstr "Tržby"
 msgid "Revenue Summary"
 msgstr "Přehled tržeb"
 
-#: src/components/common/TeamAccessFields/index.tsx:256
+#: src/components/common/TeamAccessFields/index.tsx:266
 msgid "Revenue, order totals, reports, payouts and payment settings."
 msgstr "Tržby, celkové částky objednávek, reporty, výplaty a nastavení plateb."
 
@@ -16118,8 +16235,8 @@ msgstr "Vpravo"
 msgid "Right wing"
 msgstr "Pravé křídlo"
 
-#: src/components/common/TeamAccessFields/index.tsx:175
-#: src/components/common/TeamAccessFields/index.tsx:177
+#: src/components/common/TeamAccessFields/index.tsx:176
+#: src/components/common/TeamAccessFields/index.tsx:178
 #: src/components/routes/event/Lineup/ProfileDrawer.tsx:255
 #: src/components/routes/settings/Team/index.tsx:217
 #: src/components/routes/settings/Team/MemberRow.tsx:136
@@ -16191,7 +16308,7 @@ msgstr "Minutáž · {eventTitle}"
 msgid "Runs"
 msgstr "Trvání"
 
-#: src/components/common/TeamAccessFields/index.tsx:98
+#: src/components/common/TeamAccessFields/index.tsx:99
 msgid "Runs events: products, orders, attendees, messages and check-in."
 msgstr "Řídí události: produkty, objednávky, účastníky, zprávy a odbavení."
 
@@ -16361,6 +16478,7 @@ msgstr "Sobota"
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:72
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:80
+#: src/components/routes/organizer/CommunityContent/index.tsx:102
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:119
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:161
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
@@ -16619,6 +16737,7 @@ msgstr "Naplánovaný čas"
 #: src/components/layouts/CheckIn/index.tsx:77
 #: src/components/modals/CreateEventModal/ChipSelect.tsx:128
 #: src/components/modals/CreateEventModal/ChipSelect.tsx:129
+#: src/components/routes/community/index.tsx:161
 #: src/ee/box-office/components/layouts/BoxOffice/tabs/ScanTab.tsx:42
 msgid "Search"
 msgstr "Hledat"
@@ -16726,6 +16845,10 @@ msgstr "Hledat termíny…"
 msgid "Search engine"
 msgstr "Vyhledávač"
 
+#: src/components/routes/community/index.tsx:160
+msgid "Search events"
+msgstr "Hledat události"
+
 #: src/components/common/AddressAutocomplete/index.tsx:86
 msgid "Search for an address"
 msgstr "Vyhledat adresu"
@@ -16742,7 +16865,7 @@ msgstr "Hledat zprávy..."
 msgid "Search orders"
 msgstr "Hledat objednávky"
 
-#: src/components/common/TeamAccessFields/index.tsx:236
+#: src/components/common/TeamAccessFields/index.tsx:237
 msgid "Search organizers and events"
 msgstr "Hledat organizátory a události"
 
@@ -16833,7 +16956,7 @@ msgstr "Plánek sálu uložen"
 msgid "Seat map updated"
 msgstr "Plánek sálu aktualizován"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:128
+#: src/components/layouts/OrganizerLayout/index.tsx:129
 #: src/ee/seating/components/routes/organizer/SeatMaps/index.tsx:145
 msgid "Seat Maps"
 msgstr "Plánky sálu"
@@ -17097,8 +17220,8 @@ msgstr "Vybrat vstupenku"
 msgid "Select tickets"
 msgstr "Vyberte vstupenky"
 
-#: src/components/common/OrganizerReportTable/index.tsx:328
-#: src/components/common/ReportTable/index.tsx:294
+#: src/components/common/OrganizerReportTable/index.tsx:322
+#: src/components/common/ReportTable/index.tsx:288
 msgid "Select time period"
 msgstr "Vyberte časové období"
 
@@ -17245,6 +17368,7 @@ msgstr "Odeslat mi kopii"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:115
 #: src/components/modals/SendMessageModal/index.tsx:552
+#: src/components/routes/community/index.tsx:67
 msgid "Send Message"
 msgstr "Odeslat zprávu"
 
@@ -17345,6 +17469,7 @@ msgid "SEO"
 msgstr "SEO"
 
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:70
+#: src/components/routes/organizer/CommunityContent/index.tsx:97
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:70
 msgid "SEO Description"
 msgstr "SEO popis"
@@ -17360,6 +17485,7 @@ msgid "SEO Settings"
 msgstr "Nastavení SEO"
 
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:64
+#: src/components/routes/organizer/CommunityContent/index.tsx:96
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:64
 msgid "SEO Title"
 msgstr "SEO titulek"
@@ -17544,7 +17670,7 @@ msgstr "Tvar"
 #: src/components/layouts/EventHomepage/EventIntro.tsx:66
 #: src/components/layouts/OrganizerHomepage/index.tsx:333
 #: src/components/layouts/OrganizerHomepage/index.tsx:333
-#: src/components/layouts/OrganizerLayout/index.tsx:269
+#: src/components/layouts/OrganizerLayout/index.tsx:270
 #: src/components/modals/ShareModal/index.tsx:37
 #: src/components/modals/ShareModal/index.tsx:165
 #: src/components/modals/ShareModal/index.tsx:186
@@ -17569,8 +17695,8 @@ msgstr "Sdílet událost"
 msgid "Share link"
 msgstr "Sdílet odkaz"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:266
-#: src/components/layouts/OrganizerLayout/index.tsx:308
+#: src/components/layouts/OrganizerLayout/index.tsx:267
+#: src/components/layouts/OrganizerLayout/index.tsx:309
 msgid "Share Organizer Page"
 msgstr "Sdílet stránku organizátora"
 
@@ -17717,7 +17843,7 @@ msgstr "Zobrazit tuto otázku"
 msgid "Show tickets"
 msgstr "Zobrazit vstupenky"
 
-#: src/components/common/OrganizerReportTable/index.tsx:366
+#: src/components/common/OrganizerReportTable/index.tsx:360
 msgid "Showing {0} of {totalRows} records"
 msgstr "Zobrazeno {0} z {totalRows} záznamů"
 
@@ -17816,6 +17942,7 @@ msgstr "Zobrazuje vaše odkazy na sociální sítě a tlačítko pro kontakt. Po
 
 #: src/components/routes/auth/Login/index.tsx:206
 #: src/components/routes/auth/Register/index.tsx:103
+#: src/components/routes/community/index.tsx:117
 #: src/components/routes/sso/Callback/index.tsx:310
 msgid "Sign in"
 msgstr "Přihlásit se"
@@ -18032,6 +18159,10 @@ msgstr "Přeskočit 30denní ochrannou lhůtu. Tuto akci nelze vrátit zpět."
 msgid "Skip this step"
 msgstr "Přeskočit tento krok"
 
+#: src/components/routes/community/index.tsx:106
+msgid "Skip to content"
+msgstr "Přejít na obsah"
+
 #: src/components/layouts/AppLayout/index.tsx:84
 msgid "Skip to main content"
 msgstr "Přejít na hlavní obsah"
@@ -18043,6 +18174,10 @@ msgstr "Přeskočené listy bez rozpoznatelných sloupců:"
 #: src/locales.ts:88
 msgid "Slovak"
 msgstr "Slovenština"
+
+#: src/components/routes/organizer/CommunityContent/index.tsx:86
+msgid "Slug"
+msgstr "Identifikátor URL"
 
 #: src/components/routes/auth/AcceptInvitation/index.tsx:233
 #: src/components/routes/auth/Register/index.tsx:146
@@ -18216,7 +18351,7 @@ msgstr "Něco se pokazilo. Zkuste to prosím znovu později."
 
 #: src/components/common/TwoFactor/TwoFactorSetupFlow.tsx:30
 #: src/components/layouts/Event/index.tsx:102
-#: src/components/layouts/OrganizerLayout/index.tsx:146
+#: src/components/layouts/OrganizerLayout/index.tsx:147
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/admin/Users/index.tsx:33
 #: src/components/routes/auth/AcceptInvitation/index.tsx:98
@@ -18224,8 +18359,11 @@ msgstr "Něco se pokazilo. Zkuste to prosím znovu později."
 #: src/components/routes/auth/Login/index.tsx:132
 #: src/components/routes/auth/Register/index.tsx:81
 #: src/components/routes/my-tickets/index.tsx:162
-#: src/components/routes/oauth/Connect/index.tsx:63
-#: src/components/routes/oauth/Connect/index.tsx:70
+#: src/components/routes/oauth/Connect/index.tsx:65
+#: src/components/routes/oauth/Connect/index.tsx:72
+#: src/components/routes/organizer/CommunityContent/index.tsx:132
+#: src/components/routes/organizer/CommunityContent/index.tsx:151
+#: src/components/routes/organizer/CommunityContent/index.tsx:161
 #: src/components/routes/product-widget/SelectProducts/index.tsx:383
 #: src/components/routes/settings/Account/DeleteAccountSection.tsx:79
 #: src/components/routes/settings/ApiKeys/ConnectedApps.tsx:30
@@ -18288,7 +18426,7 @@ msgstr "Řečníci, umělci a moderátoři, které můžete přidat k jakékoli 
 msgid "Specific accounts"
 msgstr "Konkrétní účty"
 
-#: src/components/common/TeamAccessFields/index.tsx:118
+#: src/components/common/TeamAccessFields/index.tsx:119
 msgid "Specific organizers and events"
 msgstr "Konkrétní organizátoři a události"
 
@@ -18593,6 +18731,7 @@ msgstr "Statistiky"
 #: src/components/routes/event/OccurrencesTab/index.tsx:351
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:51
 #: src/components/routes/event/Reports/PromoCodesReport/index.tsx:88
+#: src/components/routes/organizer/CommunityContent/index.tsx:94
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:62
 #: src/components/routes/settings/Billing/index.tsx:117
 #: src/ee/box-office/components/common/BoxOfficeTable/index.tsx:177
@@ -18749,6 +18888,7 @@ msgstr "Studio"
 #: src/components/routes/admin/LifecycleEmails/LifecycleEmailEditor.tsx:174
 #: src/components/routes/admin/Messages/index.tsx:162
 #: src/components/routes/admin/Messages/index.tsx:273
+#: src/components/routes/community/index.tsx:62
 msgid "Subject"
 msgstr "Předmět"
 
@@ -18932,6 +19072,7 @@ msgstr "Webhook byl úspěšně aktualizován"
 
 #: src/components/common/ProgressStepper/index.tsx:20
 #: src/components/common/ProgressStepper/index.tsx:24
+#: src/components/routes/organizer/CommunityContent/index.tsx:87
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:642
 msgid "Summary"
 msgstr "Souhrn"
@@ -19136,7 +19277,7 @@ msgid "Taxes and Fees"
 msgstr "Daně a poplatky"
 
 #: src/components/layouts/Event/index.tsx:166
-#: src/components/layouts/OrganizerLayout/index.tsx:133
+#: src/components/layouts/OrganizerLayout/index.tsx:134
 #: src/components/layouts/SettingsLayout/index.tsx:67
 #: src/components/routes/event/Team/index.tsx:13
 #: src/components/routes/organizer/Team/index.tsx:13
@@ -19145,7 +19286,7 @@ msgid "Team"
 msgstr "Tým"
 
 #: src/components/layouts/Event/index.tsx:167
-#: src/components/layouts/OrganizerLayout/index.tsx:134
+#: src/components/layouts/OrganizerLayout/index.tsx:135
 msgid "Team Access"
 msgstr "Přístup týmu"
 
@@ -19841,11 +19982,15 @@ msgstr "Tento seznam odbavení patří k termínu, který byl zrušen, takže ho
 msgid "This code will be used to track sales. Only letters, numbers, hyphens, and underscores allowed."
 msgstr "Tento kód bude použit ke sledování prodejů. Povolena jsou pouze písmena, číslice, pomlčky a podtržítka."
 
-#: src/components/routes/oauth/Connect/index.tsx:24
+#: src/components/routes/community/index.tsx:120
+msgid "This community website is not available yet."
+msgstr "Tento komunitní web zatím není dostupný."
+
+#: src/components/routes/oauth/Connect/index.tsx:26
 msgid "This connection link doesn't work"
 msgstr "Tento odkaz pro připojení nefunguje"
 
-#: src/components/routes/oauth/Connect/index.tsx:24
+#: src/components/routes/oauth/Connect/index.tsx:26
 msgid "This connection request has expired"
 msgstr "Tento požadavek na připojení vypršel"
 
@@ -20532,6 +20677,7 @@ msgstr "Zabarví rozmazaný titulní obrázek za vaší stránkou"
 #: src/components/routes/admin/Announcements/index.tsx:157
 #: src/components/routes/admin/Announcements/index.tsx:381
 #: src/components/routes/event/Lineup/ScheduleBuilder/ScheduleItemModal.tsx:156
+#: src/components/routes/organizer/CommunityContent/index.tsx:85
 msgid "Title"
 msgstr "Název"
 
@@ -20736,8 +20882,8 @@ msgstr "Zkuste jiný hledaný výraz nebo filtr"
 msgid "Try adjusting your filters to see more dates."
 msgstr "Zkuste upravit filtry, abyste viděli více termínů."
 
-#: src/components/common/OrganizerReportTable/index.tsx:273
-#: src/components/common/ReportTable/index.tsx:254
+#: src/components/common/OrganizerReportTable/index.tsx:267
+#: src/components/common/ReportTable/index.tsx:248
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1121
 #: src/components/routes/settings/ApiKeys/ConnectedApps.tsx:54
 #: src/components/routes/settings/ApiKeys/index.tsx:189
@@ -20812,7 +20958,7 @@ msgstr "Vypnout dvoufázové ověření pro uživatele {0}? Udělejte to až po 
 msgid "Turn on"
 msgstr "Zapnout"
 
-#: src/components/common/TeamAccessFields/index.tsx:265
+#: src/components/common/TeamAccessFields/index.tsx:275
 msgid "Turn on Can see financials to allow refunds."
 msgstr "Chcete-li povolit vracení peněz, zapněte „Může vidět finanční údaje“."
 
@@ -20897,6 +21043,7 @@ msgstr "Dvoufázové ověření zapnuto"
 #: src/components/routes/admin/Messages/index.tsx:134
 #: src/components/routes/admin/Messages/index.tsx:165
 #: src/components/routes/admin/Messages/index.tsx:288
+#: src/components/routes/organizer/CommunityContent/index.tsx:84
 #: src/ee/seating/components/SeatMapDesigner/Inspector.tsx:89
 msgid "Type"
 msgstr "Typ"
@@ -21255,6 +21402,7 @@ msgstr "Nadcházející"
 msgid "Upcoming dates"
 msgstr "Nadcházející termíny"
 
+#: src/components/routes/community/index.tsx:140
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:382
 msgid "Upcoming events"
 msgstr "Nadcházející události"
@@ -21450,6 +21598,14 @@ msgstr "Oblasti použijte pro samostatné části místa konání, například p
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:552
 msgid "Use event default"
 msgstr "Použít výchozí nastavení události"
+
+#: src/components/routes/organizer/CommunityContent/index.tsx:86
+msgid "Use home, about or contact for the main pages."
+msgstr "Pro hlavní stránky použijte home, about nebo contact."
+
+#: src/components/routes/organizer/CommunityContent/index.tsx:46
+msgid "Use lowercase letters, numbers and hyphens."
+msgstr "Použijte malá písmena, číslice a spojovníky."
 
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:49
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:40
@@ -21688,7 +21844,7 @@ msgstr "Ověřovací e-mail byl odeslán. Zkontrolujte svou doručenou poštu."
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:216
 #: src/components/routes/admin/Attribution/index.tsx:198
 #: src/components/routes/admin/Dashboard/index.tsx:396
-#: src/components/routes/oauth/Connect/index.tsx:97
+#: src/components/routes/oauth/Connect/index.tsx:99
 #: src/ee/sso/components/SingleSignOn/DomainList.tsx:17
 msgid "Verified"
 msgstr "Ověřeno"
@@ -21765,6 +21921,8 @@ msgid "View {name}"
 msgstr "Zobrazit {name}"
 
 #: src/components/layouts/EventHomepage/MoreEventsSection.tsx:33
+#: src/components/routes/community/index.tsx:140
+#: src/components/routes/community/index.tsx:144
 msgid "View all"
 msgstr "Zobrazit vše"
 
@@ -21848,7 +22006,7 @@ msgstr "Zobrazit stránku události"
 msgid "View Event Page"
 msgstr "Zobrazit stránku události"
 
-#: src/components/routes/oauth/Connect/index.tsx:128
+#: src/components/routes/oauth/Connect/index.tsx:130
 msgid "View events, tickets and sales, without changing anything."
 msgstr "Zobrazovat akce, vstupenky a prodeje, bez jakýchkoli změn."
 
@@ -21866,7 +22024,7 @@ msgid "View on event page"
 msgstr "Zobrazit na stránce události"
 
 #: src/components/layouts/Event/index.tsx:247
-#: src/components/layouts/OrganizerLayout/index.tsx:237
+#: src/components/layouts/OrganizerLayout/index.tsx:238
 msgid "View only"
 msgstr "Pouze pro čtení"
 
@@ -21891,8 +22049,8 @@ msgstr "Zobrazte podrobnosti objednávky, provádějte vrácení plateb a znovu 
 msgid "View orders"
 msgstr "Zobrazit objednávky"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:284
-#: src/components/layouts/OrganizerLayout/index.tsx:287
+#: src/components/layouts/OrganizerLayout/index.tsx:285
+#: src/components/layouts/OrganizerLayout/index.tsx:288
 msgid "View Organizer Homepage"
 msgstr "Zobrazit domovskou stránku organizátora"
 
@@ -21914,12 +22072,16 @@ msgstr "Zobrazit prodej"
 msgid "View Ticket"
 msgstr "Zobrazit vstupenku"
 
+#: src/components/routes/organizer/CommunityContent/index.tsx:124
+msgid "View website"
+msgstr "Zobrazit web"
+
 #: src/components/routes/event/attendees.tsx:204
 msgid "View, edit, and export your registered attendees."
 msgstr "Zobrazte, upravte a exportujte své registrované účastníky."
 
-#: src/components/common/TeamAccessFields/index.tsx:34
-#: src/components/common/TeamAccessFields/index.tsx:102
+#: src/components/common/TeamAccessFields/index.tsx:35
+#: src/components/common/TeamAccessFields/index.tsx:103
 msgid "Viewer"
 msgstr "Pozorovatel"
 
@@ -22270,7 +22432,7 @@ msgid "Webhook will send notifications"
 msgstr "Webhook bude odesílat oznámení"
 
 #: src/components/layouts/Event/index.tsx:165
-#: src/components/layouts/OrganizerLayout/index.tsx:131
+#: src/components/layouts/OrganizerLayout/index.tsx:132
 #: src/components/modals/DuplicateEventModal/index.tsx:167
 #: src/components/routes/event/Webhooks/index.tsx:67
 #: src/components/routes/organizer/Webhooks/index.tsx:66
@@ -22278,9 +22440,15 @@ msgid "Webhooks"
 msgstr "Webhooky"
 
 #: src/components/common/ProfileLinkIcon/index.tsx:61
+#: src/components/routes/community/index.tsx:65
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:123
 msgid "Website"
 msgstr "Webová stránka"
+
+#: src/components/layouts/OrganizerLayout/index.tsx:124
+#: src/components/routes/organizer/CommunityContent/index.tsx:122
+msgid "Website content"
+msgstr "Obsah webu"
 
 #: src/constants/socialMediaConfig.ts:43
 msgid "WeChat"
@@ -22575,7 +22743,7 @@ msgstr "Kdo odpovídá"
 msgid "Who's on?"
 msgstr "Kdo vystupuje?"
 
-#: src/components/common/TeamAccessFields/index.tsx:112
+#: src/components/common/TeamAccessFields/index.tsx:113
 #: src/components/common/TeamAccessPanel/index.tsx:87
 #: src/components/routes/settings/Team/MemberRow.tsx:45
 msgid "Whole account"
@@ -22673,9 +22841,9 @@ msgstr "X (Twitter)"
 msgid "year"
 msgstr "rok"
 
-#: src/components/common/OrganizerReportTable/index.tsx:59
+#: src/components/common/OrganizerReportTable/index.tsx:60
 #: src/components/common/PeriodSelector/index.tsx:38
-#: src/components/common/ReportTable/index.tsx:54
+#: src/components/common/ReportTable/index.tsx:55
 msgid "Year to date"
 msgstr "Od začátku roku"
 
@@ -22791,7 +22959,7 @@ msgstr "Další servisní poplatky a daně můžete nastavit v nastavení svého
 msgid "You can create a promo code which targets this product on the"
 msgstr "Promo kód zaměřený na tento produkt můžete vytvořit na"
 
-#: src/components/routes/oauth/Connect/index.tsx:167
+#: src/components/routes/oauth/Connect/index.tsx:169
 msgid "You can disconnect it at any time from Settings → API keys."
 msgstr "Kdykoli ji můžete odpojit v Nastavení → API klíče."
 
@@ -22848,7 +23016,7 @@ msgstr "Potvrdili jste svou totožnost. Pokračujte během několika minut."
 msgid "You don't have access to this event"
 msgstr "K této události nemáte přístup"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:220
+#: src/components/layouts/OrganizerLayout/index.tsx:221
 msgid "You don't have access to this organizer"
 msgstr "K tomuto organizátorovi nemáte přístup"
 
@@ -22918,7 +23086,7 @@ msgstr "Než budete moci ručně přidat účastníka, musíte vytvořit vstupen
 msgid "You must have at least one price tier"
 msgstr "Musíte mít alespoň jednu cenovou úroveň"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:329
+#: src/components/layouts/OrganizerLayout/index.tsx:330
 msgid "You must verify your email address before you can update the organizer status."
 msgstr "Před aktualizací stavu organizátora musíte ověřit svou e-mailovou adresu."
 
@@ -23214,6 +23382,10 @@ msgstr "Platnost vaší licence vypršela"
 #: src/components/common/WidgetEditor/ContentFields.tsx:235
 msgid "Your lineup is hidden on your event page, so this widget will be empty."
 msgstr "Váš line-up je na stránce události skrytý, takže tento widget bude prázdný."
+
+#: src/components/routes/community/index.tsx:55
+msgid "Your message has been received."
+msgstr "Vaše zpráva byla přijata."
 
 #: src/hooks/useOrderActions.tsx:62
 msgid "Your message has been sent"

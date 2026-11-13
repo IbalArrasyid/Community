@@ -1,0 +1,16 @@
+{
+    "name": "iqbal/barterup",
+    "description": "networking",
+    "autoload": {
+        "psr-4": {
+            "Iqbal\\Barterup\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "IbalArrasyid",
+            "email": "iqbal.rasyid26@gmail.com"
+        }
+    ],
+    "require": {}
+}

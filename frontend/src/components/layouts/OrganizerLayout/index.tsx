@@ -121,6 +121,7 @@ const OrganizerLayout = () => {
         { label: t`Tools` },
         { link: 'organizer-homepage-designer', label: t`Homepage Designer`, icon: IconPaint, showWhen: () => !isReadOnly },
         { link: 'widget', label: t`Widget Embed`, icon: IconDeviceTabletCode },
+        { link: 'community', label: t`Website content`, icon: IconPaint, showWhen: () => can('MANAGE_CONTENT') },
 
         { label: t`Library` },
         { link: 'locations', label: t`Locations`, icon: IconMapPin },

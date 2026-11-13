@@ -8,12 +8,12 @@ services:
             - "1234:80"
         volumes:
             - ./../../backend:/var/www/html
+            - 'app-backend-vendor:/var/www/html/vendor'
             - ./../../backend/storage:/var/www/html/storage
             - ./../../backend/bootstrap/cache:/var/www/html/bootstrap/cache
             - ./../../VERSION:/var/www/html/VERSION:ro
         environment:
               APP_ENV: '${APP_ENV:-local}'
-              APP_KEY: '${APP_KEY}'
         depends_on:
             - redis
             - mailpit
@@ -128,7 +128,9 @@ services:
             retries: 3
             timeout: 5s
     minio:
-        image: 'minio/minio:latest'
+        build:
+            context: ./minio
+            target: server
         ports:
             - '${FORWARD_MINIO_PORT:-9000}:9000'
             - '${FORWARD_MINIO_CONSOLE_PORT:-8900}:8900'
@@ -139,7 +141,7 @@ services:
             - 'app-minio:/data/minio'
         networks:
             - app
-        command: 'minio server /data/minio --console-address ":8900"'
+        command: 'server /data/minio --console-address ":8900"'
         healthcheck:
             test:
                 - CMD
@@ -150,7 +152,9 @@ services:
             timeout: 5s
 
     createbuckets:
-        image: minio/mc
+        build:
+            context: ./minio
+            target: client
         depends_on:
             - minio
         environment:
@@ -183,6 +187,8 @@ networks:
     app:
         driver: bridge
 volumes:
+    app-backend-vendor:
+        driver: local
     app-redis:
         driver: local
     app-pgsql:

@@ -1081,3 +1081,5 @@ $router->prefix('/public')->group(
 if (app()->environment('local', 'development')) {
     include_once __DIR__.'/mail.php';
 }
+
+require __DIR__.'/community.php';

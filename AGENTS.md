@@ -1,4 +1,138 @@
-# AGENTS.md
+# AGENTS.md — Community Website & Event Ticketing Platform
+
+## 1. Product objective
+
+Evolve the existing **hi.events Community Edition** codebase into a **community website with a content management system (CMS), events, and ticketing**. The public website must be useful beyond ticket sales: visitors can learn about the community, discover events, read published content, and contact the team. Authorized administrators and editors can manage website content without editing source code. Organizers retain event-management capabilities. Paid tickets should eventually use **DOKU** instead of Stripe.
+
+**Do not rebuild hi.events from scratch.** Preserve and reuse working functionality wherever possible.
+
+## 2. Source of truth and repository boundaries
+
+- Start at the repository root (the directory containing `backend/` and `frontend/`, if confirmed).
+- Inspect the actual checked-out version, routing, models, services, database schema, tests, packages, and deployment configuration before changing anything. Public documentation may describe a different release.
+- Laravel/PHP is expected in `backend/`; React/TypeScript is expected in `frontend/`. **Verify actual paths, frameworks, build tools, and versions locally.**
+- Treat `backend/ee/`, vendor code, generated files, licensed features, and third-party packages as protected unless a documented requirement and authorization explicitly justify changes.
+- Respect the applicable upstream license and preserve copyright/license notices. Report any potential licensing or redistribution implications; do not assume all `ee/` code is open source.
+- Follow existing conventions and prefer small, reviewable changes over large rewrites.
+
+## 3. Scope of the application
+
+### 3.1 Public website
+
+Provide the following public routes, integrated with the existing frontend router and event URLs:
+
+- `/` — Homepage: hero, community introduction, featured/upcoming events, selected articles/updates, calls to action.
+- `/about` — About the community, mission, team/organization information and editorial content.
+- `/contact` — Contact details and a validated contact form with spam/rate-limit protection.
+- An events listing/search page and existing event detail/checkout flow; reuse current routes wherever possible.
+- A news/articles listing and article detail page when the CMS article module is delivered.
+
+All public pages must be responsive, accessible, SEO-aware, and use a cohesive design system. Do not break existing attendee, organizer, authentication, dashboard, or ticket URLs. Avoid route conflicts with current event slugs.
+
+### 3.2 CMS (content management)
+
+Provide a manageable MVP that allows authorized staff to:
+
+- Create, edit, preview where feasible, publish/unpublish, and schedule if supported, **pages** and **articles**.
+- Manage title, slug, summary, body, cover image, publication status/date, SEO title and meta description.
+- Manage article categories/tags as needed; avoid unnecessary schema complexity.
+- Manage homepage content such as hero banners, introduction, and featured content via an admin interface (not code edits).
+- Manage contact details and contact submissions through appropriate administrative screens.
+- Upload/select media using the existing safe storage and media patterns, with validation and access control.
+
+Use existing authorization and administrative UI patterns. If a role is missing, add minimal explicit capabilities instead of granting every logged-in user administration rights. Sanitize or safely render rich text; protect media upload and preview endpoints.
+
+### 3.3 Community and events
+
+- Keep existing event creation, ticket types, capacities, orders, attendee information, QR tickets, check-in, reporting, notifications, and authentication functioning.
+- Connect editorial homepage content to real events via existing API/services; do not duplicate event/order data in a new CMS subsystem.
+- Distinguish visitors, members/attendees, organizers and site administrators/editors, while **checking and extending existing permissions instead of inventing a parallel role system**.
+- A discussion forum, messaging/chat, membership billing and community social feed are **out of scope for the first MVP** unless later requested.
+
+### 3.4 Payments: replace Stripe with DOKU safely
+
+- Use **DOKU Checkout (hosted checkout)** as the preferred initial design, subject to verification against the official DOKU API for the account and selected payment methods.
+- Audit **all** Stripe dependencies first: checkout/payment initiation, Stripe Connect, account onboarding, payout assumptions, fees, taxes, refunds, webhooks, order/attendee states, admin screens, frontend, tests and configuration.
+- Introduce a payment-provider boundary/adapter aligned with existing architecture. Add DOKU alongside the existing provider initially; make selection configurable. **Do not remove Stripe until DOKU is proven and a safe cutover is explicitly authorized.**
+- Default to **IDR** for DOKU transactions and validate currencies/amount conversions. If the product supports other currencies, reject unsupported DOKU transactions explicitly rather than silently converting.
+- Generate unique invoice/payment references; protect against repeat API requests, concurrent checkouts, duplicated callbacks and replay attempts.
+- Validate notification signatures using the official DOKU specification for the chosen API and verify expected merchant reference, amount, currency and order before updating state.
+- Model pending, paid, failed, expired, canceled and refundable/refunded states consistently with the existing order lifecycle. Payment redirection is **never** proof of successful payment.
+- Issue and send paid tickets only after **verified server-side confirmation** of payment; retain existing correct behavior for free tickets and supported offline payments.
+- Implement expiration and inventory/hold release according to existing business rules; prevent double issuance and overselling.
+- Keep sensitive credentials only in environment/secrets management. Add placeholders/documentation to `.env.example`, **never real secrets to git**.
+- DOKU single-merchant settlement is not equivalent to Stripe Connect. **Inspect organizer payout requirements** and document the chosen settlement model. Do not claim or implement automatic organizer split payouts unless the DOKU merchant arrangement/API actually supports them.
+- Support sandbox-first development and test callbacks, failures, expirations, duplicate notifications and reconciliation before activating live payments.
+
+## 4. Functional roles and access control
+
+- **Visitor:** view published pages, articles, public events and contact form.
+- **Member/attendee:** use existing registration/login, orders, tickets and profile capabilities.
+- **Organizer:** manage only the events, orders and attendees they are permitted to access.
+- **Editor:** manage permitted CMS content without payment or global administration access.
+- **Administrator:** manage CMS, site settings and other authorized site-level operations.
+
+Map these concepts to existing roles/policies. Enforce permissions on the backend, not only by hiding frontend buttons. Public and draft content must never leak through unauthenticated API routes.
+
+## 5. Engineering standards
+
+- Inspect existing architecture before proposing new controllers, tables, routes or components. Reuse existing services, API conventions, localization, validation, state management, styling and design components.
+- Make additive, reviewed migrations with clear rollback strategy. Never drop tables, truncate data, or run destructive migrations without explicit permission.
+- Use database transactions and concurrency controls where required for orders and ticket inventory.
+- Use strict server-side validation, CSRF/auth safeguards as appropriate, authorization, output escaping, upload allow-lists, rate limits and structured error handling.
+- Never log card data, payment secrets, personal credentials or raw sensitive payloads. Mask confidential identifiers in application logs.
+- Keep existing test coverage, add relevant tests, and run targeted lint/type-check/build/test suites. State which checks were not run.
+- Keep the public site fast and usable on mobile; provide clear loading, empty, failed, expired and success states.
+- Make SEO metadata editable for public pages and articles; provide sensible defaults and canonical URLs where existing tooling permits.
+- Preserve backward compatibility for event, checkout, attendee and admin flows unless a documented migration plan states otherwise.
+
+## 6. Workflow for every implementation task
+
+1. **Inspect:** list relevant files, routes, data models, APIs, permissions and tests; check the current git status.
+2. **Plan:** describe affected files, database changes, compatibility risks, expected tests and assumptions.
+3. **Implement:** make small, coherent changes; keep CMS, public frontend and payments logically separated.
+4. **Verify:** run applicable tests/builds and specifically test authorization, routing and payment-state transitions.
+5. **Report:** provide summary, changed files, migrations, tests passed/failed, risks, remaining TODOs and rollback notes.
+
+Unless expressly asked for an audit-only task, continue to implement after a brief inspection and plan. **Do not claim success for untested behavior.** If an essential external credential or DOKU sandbox account is unavailable, build testable integration boundaries and mocks, but label live end-to-end payment verification as blocked.
+
+## 7. Required implementation phases
+
+**Phase 0 — Repository audit:** map backend/frontend, version, Stripe integration, existing site routes, CMS and authorization facilities. Identify affected files and tests.
+
+**Phase 1 — CMS foundation:** data model, migrations, API/controllers, policies, media and admin screens for pages/articles/site content/contact submissions.
+
+**Phase 2 — Public website:** homepage, about, contact, editorial content listing/detail, event discovery and navigation integrated with existing frontend and API.
+
+**Phase 3 — DOKU gateway:** payment adapter, sandbox API, server-side callbacks, order lifecycle, admin configuration and frontend redirect/status views. Preserve Stripe as fallback during testing.
+
+**Phase 4 — Hardening & cutover readiness:** full regression, responsive/a11y/SEO checks, security, reconciliation, deployment notes and manual cutover checklist.
+
+A phase is complete only when its relevant acceptance criteria and tests are reported. Avoid risky all-at-once changes.
+
+## 8. MVP acceptance criteria
+
+- Public visitors can open Home, About and Contact and browse upcoming events without authentication.
+- Authorized staff can modify homepage sections and publish/unpublish articles/pages through the CMS; unpublished content remains private.
+- Contact forms validate, rate-limit and persist submissions; notification email is sent when configured, with failures handled visibly and safely.
+- Existing organizer dashboard, event pages, free ticket flow, attendee check-in and notifications remain operational.
+- In DOKU sandbox, a paid order is not treated as paid until a correctly authenticated notification is processed, and duplicate notifications do not create duplicate tickets.
+- Payment failures/expiry and unsupported currencies do not produce paid tickets; seat availability is handled consistently.
+- Frontend builds and backend targeted tests pass, or precise blockers are documented.
+
+## 9. Output and communication
+
+- Communicate implementation reports in **Bahasa Indonesia**; use clear, concise technical terminology.
+- Include paths of changed files and commands run.
+- Clearly distinguish verified behavior, tests with mocked responses and items needing a real DOKU sandbox/merchant account.
+- Do not make unrelated refactors or change production settings without approval.
+
+## 10. Useful references
+
+- Upstream project: https://github.com/HiEventsDev/hi.events
+- DOKU Checkout backend integration: https://developers.doku.com/accept-payments/doku-checkout/integration-guide/backend-integration
+- DOKU notifications: https://docs.doku.com/get-started/manage-business/set-up-integration/webhook-payment-notification
+
 
 Hi.Events is an open-source event management and ticketing platform: a Laravel backend (`backend/`) and an SSR React frontend (`frontend/`), organised with Domain-Driven Design. These instructions apply to every coding agent working in this repository.
 

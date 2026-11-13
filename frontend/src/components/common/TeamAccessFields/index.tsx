@@ -16,12 +16,13 @@ interface TeamAccessFieldsProps {
     disabled?: boolean;
 }
 
-const ADJUSTABLE: AdjustablePermission[] = ['VIEW_FINANCIALS', 'ISSUE_REFUNDS'];
+const ADJUSTABLE: AdjustablePermission[] = ['VIEW_FINANCIALS', 'ISSUE_REFUNDS', 'MANAGE_CONTENT'];
 
-const roleDefault = (role: UserRole | undefined) => role === 'ORGANIZER';
+const roleDefault = (role: UserRole | undefined, permission: AdjustablePermission) =>
+    role === 'ORGANIZER' && permission !== 'MANAGE_CONTENT';
 
 const hasPermission = (values: TeamAccessForm, permission: AdjustablePermission) =>
-    values.permissions?.[permission] ?? roleDefault(values.role);
+    values.permissions?.[permission] ?? roleDefault(values.role, permission);
 
 const canBeRestricted = (role: UserRole) => role === 'ORGANIZER' || role === 'VIEWER';
 
@@ -44,7 +45,7 @@ export const teamAccessInitialValues = (user?: Pick<User, 'role' | 'access'>): T
     permissions: user?.access && user.role && canBeRestricted(user.role)
         ? Object.fromEntries(ADJUSTABLE
             .map(permission => [permission, user.access!.permissions.includes(permission)] as const)
-            .filter(([, granted]) => granted !== roleDefault(user.role)))
+            .filter(([permission, granted]) => granted !== roleDefault(user.role, permission)))
         : {},
 });
 
@@ -54,7 +55,7 @@ export const toTeamAccessPayload = (values: TeamAccessForm): TeamAccessRequest =
     }
 
     const isRestricted = values.access_scope === 'RESTRICTED';
-    const relevant = values.role === 'ORGANIZER' ? ADJUSTABLE : ADJUSTABLE.filter(p => p !== 'ISSUE_REFUNDS');
+    const relevant = values.role === 'ORGANIZER' ? ADJUSTABLE : ADJUSTABLE.filter(p => p === 'VIEW_FINANCIALS');
 
     return {
         access_scope: values.access_scope,
@@ -62,7 +63,7 @@ export const toTeamAccessPayload = (values: TeamAccessForm): TeamAccessRequest =
         event_ids: isRestricted ? values.event_ids : [],
         permissions: Object.fromEntries(relevant
             .map(permission => [permission, hasPermission(values, permission)] as const)
-            .filter(([, granted]) => granted !== roleDefault(values.role))),
+            .filter(([permission, granted]) => granted !== roleDefault(values.role, permission))),
     };
 };
 
@@ -251,6 +252,15 @@ export const TeamAccessFields = ({form, disabled}: TeamAccessFieldsProps) => {
             {!isAdmin && (
                 <TeamFormSection title={t`Permissions`}>
                     <div className={classes.permissions}>
+                        {values.role === 'ORGANIZER' && (
+                            <PermissionRow
+                                label={t`Manage website content`}
+                                description={t`Pages, articles and contact submissions.`}
+                                checked={hasPermission(values, 'MANAGE_CONTENT')}
+                                disabled={disabled}
+                                onChange={(checked) => setPermission('MANAGE_CONTENT', checked)}
+                            />
+                        )}
                         <PermissionRow
                             label={t`Can see financials`}
                             description={t`Revenue, order totals, reports, payouts and payment settings.`}

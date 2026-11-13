@@ -1,7 +1,9 @@
 #!/bin/bash
 
+set -e
+
 COMPOSE_CMD="docker compose -f docker-compose.dev.yml"
-CERTS_FLAG="$1"
+CERTS_FLAG="${1:-}"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -11,9 +13,8 @@ CYAN='\033[0;36m'
 MAGENTA='\033[0;35m'
 BOLD='\033[1m'
 DIM='\033[2m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 CERTS_DIR="./certs"
-CERTS_GENERATED=false
 
 print_banner() {
     echo ""
@@ -45,7 +46,6 @@ fail() {
     echo -e "  ${RED}✗${NC} $1"
 }
 
-# Prompt yes/no. $1 = question, $2 = default ("y" or "n")
 ask_yes_no() {
     local prompt="$1"
     local default="$2"
@@ -78,7 +78,6 @@ generate_unsigned_certs() {
             fail "Certificate generation failed"
             exit 1
         fi
-        CERTS_GENERATED=true
         ok "Certificates generated"
     else
         ok "SSL certificates already exist"
@@ -98,8 +97,7 @@ generate_signed_certs() {
                 fail "Certificate generation failed"
                 exit 1
             fi
-            CERTS_GENERATED=true
-            ok "Certificates generated"
+                ok "Certificates generated"
         fi
     else
         ok "SSL certificates already exist"
@@ -156,6 +154,12 @@ if [ "$REINSTALL_DEPS" = true ]; then
     ok "Frontend image rebuilt"
 fi
 
+for app in backend frontend; do
+    if [ ! -f "../../$app/.env" ]; then
+        cp "../../$app/.env.example" "../../$app/.env"
+    fi
+done
+
 step "Starting services"
 if ! $COMPOSE_CMD up -d; then
     fail "Failed to start services with docker compose."
@@ -163,13 +167,12 @@ if ! $COMPOSE_CMD up -d; then
 fi
 ok "Services started"
 
-if [ "$CERTS_GENERATED" = true ]; then
-    step "Restarting nginx to load the new certificates"
-    $COMPOSE_CMD restart nginx > /dev/null 2>&1
-    ok "nginx restarted"
-fi
+step "Refreshing nginx service addresses and certificates"
+$COMPOSE_CMD restart nginx > /dev/null 2>&1
+ok "nginx restarted"
 
 step "Running composer install in the backend service"
+$COMPOSE_CMD exec -T --user root backend chown www-data:www-data /var/www/html/vendor
 if ! $COMPOSE_CMD exec -T backend composer install \
                                         --ignore-platform-reqs \
                                         --no-interaction \
@@ -181,34 +184,29 @@ fi
 ok "Composer dependencies installed"
 
 step "Waiting for the database to be ready"
-while ! $COMPOSE_CMD logs pgsql 2>/dev/null | grep "ready to accept connections" > /dev/null; do
-    echo -n '.'
+DATABASE_READY=false
+for attempt in {1..60}; do
+    if $COMPOSE_CMD exec -T pgsql sh -c 'pg_isready -q -h 127.0.0.1 -U "$POSTGRES_USER" -d "$POSTGRES_DB"' > /dev/null 2>&1; then
+        DATABASE_READY=true
+        break
+    fi
     sleep 1
 done
-echo ""
-ok "Database is ready"
-
-if [ ! -f ./../../backend/.env ]; then
-    $COMPOSE_CMD exec backend cp .env.example .env
-fi
-
-if [ ! -f ./../../frontend/.env ]; then
-    $COMPOSE_CMD exec frontend cp .env.example .env
-fi
-
-step "Running migrations and setup"
-$COMPOSE_CMD exec backend php artisan key:generate
-if grep -qE '^JWT_SECRET=(2hoccgHb9r1fqW1lU16C6khSHVa7O0eai6FxkWK95UtQ0LqNDTO5mq1RzDwcq18I)?$' ./../../backend/.env; then
-    $COMPOSE_CMD exec backend php artisan jwt:secret --force
-fi
-$COMPOSE_CMD exec backend php artisan migrate
-$COMPOSE_CMD exec backend chmod -R 775 /var/www/html/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer
-$COMPOSE_CMD exec backend php artisan storage:link
-
-if [ $? -ne 0 ]; then
-    fail "Migrations failed."
+if [ "$DATABASE_READY" != true ]; then
+    fail "PostgreSQL is unavailable. Check docker compose logs pgsql. No migrations were run."
     exit 1
 fi
+ok "Database is ready"
+
+step "Preparing local application secrets"
+$COMPOSE_CMD exec -T backend php < ./prepare-backend-env.php
+$COMPOSE_CMD exec -T backend php artisan config:clear
+
+step "Running migrations and setup"
+$COMPOSE_CMD exec -T backend php artisan migrate --no-interaction
+$COMPOSE_CMD exec -T backend chmod -R 775 /var/www/html/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer
+$COMPOSE_CMD exec -T backend php artisan storage:link
+
 ok "Migrations complete"
 
 echo ""

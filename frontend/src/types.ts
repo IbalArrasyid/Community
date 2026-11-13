@@ -438,9 +438,10 @@ export type Permission =
     | 'MANAGE_PAYMENTS'
     | 'DELETE_EVENTS'
     | 'MANAGE_TEAM'
-    | 'MANAGE_ACCOUNT';
+    | 'MANAGE_ACCOUNT'
+    | 'MANAGE_CONTENT';
 
-export type AdjustablePermission = 'VIEW_FINANCIALS' | 'ISSUE_REFUNDS';
+export type AdjustablePermission = 'VIEW_FINANCIALS' | 'ISSUE_REFUNDS' | 'MANAGE_CONTENT';
 
 export interface UserAccess {
     scope: AccessScope;

@@ -4,7 +4,12 @@ WORKDIR /app
 
 COPY package.json yarn.lock ./
 COPY patches ./patches
-RUN yarn install --frozen-lockfile
+RUN --mount=type=cache,id=hievents-frontend-yarn,target=/var/cache/yarn,sharing=locked \
+    node -e "const fs = require('node:fs'); const file = 'yarn.lock'; fs.writeFileSync(file, fs.readFileSync(file, 'utf8').replaceAll('https://registry.yarnpkg.com/', 'https://registry.npmjs.org/'));" \
+    && yarn install --frozen-lockfile --non-interactive \
+        --registry https://registry.npmjs.org \
+        --network-timeout 300000 --network-concurrency 2 \
+        --cache-folder /var/cache/yarn
 
 COPY . ./
 

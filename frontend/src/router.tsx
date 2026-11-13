@@ -1,36 +1,23 @@
 import { Navigate, redirect, RouteObject } from "react-router";
 import ErrorPage from "./error-page.tsx";
-import { useEffect, useState } from "react";
-import { useGetMe } from "./queries/useGetMe.ts";
+import {communityRouteLoader} from "./routeLoaders/communityRouteLoader";
 import { publicEventRouteLoader } from "./routeLoaders/publicEventRouteLoader.ts";
 import { publicOrganizerRouteLoader } from "./routeLoaders/publicOrganizerRouteLoader.ts";
 import { organizerPreviewRouteLoader } from "./routeLoaders/organizerPreviewRouteLoader.ts";
 import { authRouteLoader } from "./routeLoaders/authRouteLoader.ts";
 import { eventContentWidgetRouteLoader, organizerWidgetRouteLoader, ticketWidgetRouteLoader } from "./routeLoaders/widgetRouteLoader.ts";
 
-const Root = () => {
-    const [redirectPath, setRedirectPath] = useState<string | null>(null);
-    const me = useGetMe();
-
-    useEffect(() => {
-        if (me.isFetched) {
-            const searchParams = typeof window !== 'undefined' ? window.location.search : '';
-            const basePath = me.isSuccess ? "/manage/events" : "/auth/login";
-            setRedirectPath(basePath + searchParams);
-        }
-    }, [me.isFetched]);
-
-    if (redirectPath) {
-        return <Navigate to={redirectPath} replace={true} />;
-    }
-};
-
 export const router: RouteObject[] = [
-    {
-        path: "",
-        element: <Root />,
-        errorElement: <ErrorPage />
-    },
+    ...["/", "/about", "/contact", "/events", "/articles", "/articles/:slug", "/pages/:slug"].map((path): RouteObject => ({
+        path,
+        loader: communityRouteLoader,
+        handle: {styles: "src/components/routes/community/index.tsx"},
+        async lazy() {
+            const Community = await import("./components/routes/community");
+            return {Component: Community.default};
+        },
+        errorElement: <ErrorPage />,
+    })),
     {
         path: "auth",
         loader: authRouteLoader,
@@ -405,6 +392,13 @@ export const router: RouteObject[] = [
                 async lazy() {
                     const Settings = await import("./components/routes/organizer/Settings");
                     return { Component: Settings.default };
+                }
+            },
+            {
+                path: "community",
+                async lazy() {
+                    const CommunityContent = await import("./components/routes/organizer/CommunityContent");
+                    return {Component: CommunityContent.default};
                 }
             },
             {

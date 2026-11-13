@@ -35,3 +35,5 @@ test_results/
 
 .amp/portals/*
 .cloudflare/
+
+/vendor/

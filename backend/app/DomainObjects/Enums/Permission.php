@@ -13,6 +13,7 @@ enum Permission: string
     case DELETE_EVENTS = 'DELETE_EVENTS';
     case MANAGE_TEAM = 'MANAGE_TEAM';
     case MANAGE_ACCOUNT = 'MANAGE_ACCOUNT';
+    case MANAGE_CONTENT = 'MANAGE_CONTENT';
 
     /**
      * @return Permission[]
@@ -22,6 +23,7 @@ enum Permission: string
         return [
             self::VIEW_FINANCIALS,
             self::ISSUE_REFUNDS,
+            self::MANAGE_CONTENT,
         ];
     }
 
@@ -33,6 +35,7 @@ enum Permission: string
         return match ($this) {
             self::ISSUE_REFUNDS => [self::EDIT, self::VIEW_FINANCIALS],
             self::MANAGE_PAYMENTS => [self::VIEW_FINANCIALS],
+            self::MANAGE_CONTENT => [self::EDIT],
             default => [],
         };
     }

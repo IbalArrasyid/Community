@@ -14,12 +14,12 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/components/layouts/Event/index.tsx:260
-#: src/components/layouts/OrganizerLayout/index.tsx:248
+#: src/components/layouts/OrganizerLayout/index.tsx:249
 msgid "- Click to Publish"
 msgstr "– Napsauta julkaistaksesi"
 
 #: src/components/layouts/Event/index.tsx:262
-#: src/components/layouts/OrganizerLayout/index.tsx:250
+#: src/components/layouts/OrganizerLayout/index.tsx:251
 msgid "- Click to Unpublish"
 msgstr "– Napsauta poistaaksesi julkaisun"
 
@@ -35,7 +35,7 @@ msgstr "(tyhjä)"
 msgid "(none)"
 msgstr "(ei mitään)"
 
-#: src/components/common/ReportTable/index.tsx:336
+#: src/components/common/ReportTable/index.tsx:332
 msgid "{0}"
 msgstr "{0}"
 
@@ -276,7 +276,7 @@ msgstr "{0} lippua"
 msgid "{0} to {1}"
 msgstr "{0}–{1}"
 
-#: src/components/routes/oauth/Connect/index.tsx:87
+#: src/components/routes/oauth/Connect/index.tsx:89
 msgid "{0} wants to use your Hi.Events account {1}. It will act as you, with the access you choose below."
 msgstr "{0} haluaa käyttää Hi.Events-tiliäsi {1}. Se toimii puolestasi alla valitsemillasi oikeuksilla."
 
@@ -1023,6 +1023,9 @@ msgstr "Hylätty"
 
 #: src/components/layouts/EventHomepage/index.tsx:205
 #: src/components/layouts/OrganizerHomepage/index.tsx:210
+#: src/components/routes/community/index.tsx:83
+#: src/components/routes/community/index.tsx:112
+#: src/components/routes/community/index.tsx:129
 #: src/components/widget/WidgetSections/index.tsx:90
 #: src/utilites/homepageSections.ts:21
 msgid "About"
@@ -1061,11 +1064,11 @@ msgstr "Hyväksy pankkisiirrot, shekit tai muut offline-maksutavat"
 msgid "Accept credit card payments with Stripe"
 msgstr "Hyväksy luottokorttimaksut Stripellä"
 
-#: src/components/common/TeamAccessFields/index.tsx:205
-#: src/components/common/TeamAccessFields/index.tsx:207
+#: src/components/common/TeamAccessFields/index.tsx:206
+#: src/components/common/TeamAccessFields/index.tsx:208
 #: src/components/common/TeamAccessPanel/index.tsx:137
 #: src/components/forms/ProductForm/index.tsx:605
-#: src/components/routes/oauth/Connect/index.tsx:115
+#: src/components/routes/oauth/Connect/index.tsx:117
 #: src/components/routes/settings/ApiKeys/CreateApiKeyModal.tsx:237
 #: src/components/routes/settings/Team/index.tsx:218
 #: src/components/routes/settings/Team/MemberRow.tsx:141
@@ -1719,8 +1722,8 @@ msgstr "Lisää sivun, näyttää osallistujien nimet"
 msgid "Adds an \"I've paid\" button to unpaid orders. You and your team get an email when a buyer uses it. You still mark the order as paid yourself."
 msgstr "Lisää maksamattomiin tilauksiin \"Olen maksanut\" -painikkeen. Sinä ja tiimisi saatte sähköpostin, kun ostaja käyttää sitä. Merkitset tilauksen maksetuksi edelleen itse."
 
-#: src/components/common/TeamAccessFields/index.tsx:32
-#: src/components/common/TeamAccessFields/index.tsx:90
+#: src/components/common/TeamAccessFields/index.tsx:33
+#: src/components/common/TeamAccessFields/index.tsx:91
 #: src/components/layouts/Admin/index.tsx:16
 #: src/components/routes/admin/DeletionRequests/index.tsx:150
 msgid "Admin"
@@ -1883,7 +1886,7 @@ msgstr "Kaikki kategoriat"
 msgid "All changes saved"
 msgstr "Kaikki muutokset tallennettu"
 
-#: src/components/common/OrganizerReportTable/index.tsx:302
+#: src/components/common/OrganizerReportTable/index.tsx:296
 msgid "All Currencies"
 msgstr "Kaikki valuutat"
 
@@ -1949,7 +1952,7 @@ msgstr "Kaikki vastaavat päivämäärät"
 msgid "All occurrences"
 msgstr "Kaikki tapahtumakerrat"
 
-#: src/components/common/ReportTable/index.tsx:287
+#: src/components/common/ReportTable/index.tsx:281
 msgid "All Occurrences"
 msgstr "Kaikki tapahtumakerrat"
 
@@ -2161,7 +2164,7 @@ msgstr "Vastaanotettu summa"
 msgid "An account with this email already exists. Sign in instead."
 msgstr "Tällä sähköpostiosoitteella on jo tili. Kirjaudu sen sijaan sisään."
 
-#: src/components/routes/oauth/Connect/index.tsx:16
+#: src/components/routes/oauth/Connect/index.tsx:18
 msgid "an app on this computer"
 msgstr "tämän tietokoneen sovellus"
 
@@ -2193,7 +2196,7 @@ msgstr "Valinnainen kuvaus tästä kategoriasta tapahtumasivulle."
 msgid "An optional message to display on the highlighted product, e.g. \"Selling fast 🔥\" or \"Best value\""
 msgstr "Valinnainen viesti korostetulle tuotteelle, esim. \"Myy nopeasti 🔥\" tai \"Paras arvo\""
 
-#: src/components/common/TeamAccessFields/index.tsx:235
+#: src/components/common/TeamAccessFields/index.tsx:236
 msgid "An organizer gives access to all of its events, including new ones."
 msgstr "Järjestäjä antaa pääsyn kaikkiin sen tapahtumiin, myös uusiin."
 
@@ -2597,11 +2600,11 @@ msgstr "Haluatko varmasti poistua?"
 msgid "Are you sure you want to make this event draft? This will make the event invisible to the public"
 msgstr "Haluatko varmasti muuttaa tämän tapahtuman luonnokseksi? Tapahtuma piiloutuu julkisilta."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:168
+#: src/components/layouts/OrganizerLayout/index.tsx:169
 msgid "Are you sure you want to make this organizer draft? This will make the organizer page invisible to the public"
 msgstr "Haluatko varmasti muuttaa tämän järjestäjän luonnokseksi? Järjestäjäsivu piiloutuu julkisilta."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:169
+#: src/components/layouts/OrganizerLayout/index.tsx:170
 msgid "Are you sure you want to make this organizer public? This will make the organizer page visible to the public"
 msgstr "Haluatko varmasti julkaista tämän järjestäjän? Järjestäjäsivu tulee julkisesti näkyville."
 
@@ -2699,12 +2702,23 @@ msgstr "Alueet"
 msgid "Art"
 msgstr "Taide"
 
+#: src/components/routes/organizer/CommunityContent/index.tsx:84
+#: src/components/routes/organizer/CommunityContent/index.tsx:139
+msgid "Article"
+msgstr "Artikkeli"
+
+#: src/components/routes/community/index.tsx:83
+#: src/components/routes/community/index.tsx:114
+#: src/components/routes/community/index.tsx:144
+msgid "Articles"
+msgstr "Artikkelit"
+
 #: src/components/routes/organizer/Payments/Vat/VatSettings.tsx:28
 msgid "As your business is based in Ireland, Irish VAT at 23% applies automatically to all platform fees."
 msgstr "Koska yrityksesi sijaitsee Irlannissa, Irlannin 23 %:n ALV sovelletaan automaattisesti kaikkiin palvelumaksuihin."
 
 #: src/components/layouts/Event/index.tsx:231
-#: src/components/layouts/OrganizerLayout/index.tsx:221
+#: src/components/layouts/OrganizerLayout/index.tsx:222
 msgid "Ask an account admin to give you access, or open one of your own events."
 msgstr "Pyydä tilin ylläpitäjää antamaan sinulle pääsy tai avaa jokin omista tapahtumistasi."
 
@@ -3575,15 +3589,15 @@ msgstr "Kameran käyttöoikeus evättiin. <0>Pyydä lupa</0> uudelleen tai myön
 msgid "Campaign"
 msgstr "Kampanja"
 
-#: src/components/common/TeamAccessFields/index.tsx:263
+#: src/components/common/TeamAccessFields/index.tsx:273
 msgid "Can issue refunds"
 msgstr "Voi tehdä hyvityksiä"
 
-#: src/components/common/TeamAccessFields/index.tsx:104
+#: src/components/common/TeamAccessFields/index.tsx:105
 msgid "Can see events, orders and attendees but can't change anything."
 msgstr "Voi nähdä tapahtumat, tilaukset ja osallistujat, mutta ei voi muuttaa mitään."
 
-#: src/components/common/TeamAccessFields/index.tsx:255
+#: src/components/common/TeamAccessFields/index.tsx:265
 #: src/components/routes/settings/Team/MemberRow.tsx:70
 msgid "Can see financials"
 msgstr "Voi nähdä taloustiedot"
@@ -3660,7 +3674,8 @@ msgstr "Etkö voi käyttää todennussovellusta tai palautuskoodeja?"
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:67
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1173
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:64
-#: src/components/routes/oauth/Connect/index.tsx:164
+#: src/components/routes/oauth/Connect/index.tsx:166
+#: src/components/routes/organizer/CommunityContent/index.tsx:101
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:69
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:85
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:85
@@ -4073,7 +4088,7 @@ msgstr "Tutustu tähän tapahtumaan: {0}"
 msgid "Check out this event!"
 msgstr "Tutustu tähän tapahtumaan!"
 
-#: src/components/common/ReportTable/index.tsx:251
+#: src/components/common/ReportTable/index.tsx:245
 #: src/components/routes/settings/TaxesAndFees/index.tsx:85
 #: src/ee/box-office/components/layouts/BoxOffice/index.tsx:84
 msgid "Check your connection and try again."
@@ -4660,7 +4675,7 @@ msgstr "Käytössäännöt"
 msgid "Code to paste"
 msgstr "Liitettävä koodi"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:207
+#: src/components/layouts/OrganizerLayout/index.tsx:208
 msgid "Collaborate with your team to create amazing events together."
 msgstr "Tee tiimisi kanssa yhteistyötä luodaksesi upeita tapahtumia yhdessä."
 
@@ -4717,6 +4732,14 @@ msgstr "Pilkuilla erotellut avainsanat, jotka kuvaavat tapahtumaa. Näitä käyt
 #: src/components/routes/admin/Dashboard/index.tsx:332
 msgid "Commission"
 msgstr "Provisio"
+
+#: src/components/routes/community/index.tsx:82
+#: src/components/routes/community/index.tsx:96
+#: src/components/routes/community/index.tsx:109
+#: src/components/routes/community/index.tsx:124
+#: src/components/routes/community/index.tsx:170
+msgid "Community"
+msgstr "Yhteisö"
 
 #: src/ee/box-office/components/layouts/BoxOffice/TenderStage.tsx:180
 #: src/ee/box-office/utilites/boxOfficeTender.ts:11
@@ -4935,7 +4958,7 @@ msgstr "Vahvista sähköpostiosoitteesi päästäksesi kaikkiin ominaisuuksiin."
 msgid "Confirmation code"
 msgstr "Vahvistuskoodi"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:344
+#: src/components/layouts/OrganizerLayout/index.tsx:345
 msgid "Confirmation email sent! Please check your inbox."
 msgstr "Vahvistussähköposti lähetetty! Tarkista postilaatikkosi."
 
@@ -4955,8 +4978,8 @@ msgstr "Onnittelut! Tapahtumasi on nyt julkisesti nähtävillä."
 msgid "Connect"
 msgstr "Yhdistä"
 
-#: src/components/routes/oauth/Connect/index.tsx:86
-#: src/components/routes/oauth/Connect/index.tsx:151
+#: src/components/routes/oauth/Connect/index.tsx:88
+#: src/components/routes/oauth/Connect/index.tsx:153
 #: src/components/routes/settings/Security/SignInMethods.tsx:246
 msgid "Connect {0}"
 msgstr "Yhdistä {0}"
@@ -5058,6 +5081,8 @@ msgstr "Juokseva"
 #: src/components/layouts/EventHomepage/OrganizerSection.tsx:58
 #: src/components/layouts/OrganizerHomepage/index.tsx:118
 #: src/components/layouts/OrganizerHomepage/index.tsx:219
+#: src/components/routes/community/index.tsx:83
+#: src/components/routes/community/index.tsx:115
 #: src/utilites/homepageSections.ts:35
 msgid "Contact"
 msgstr "Ota yhteyttä"
@@ -5081,12 +5106,18 @@ msgstr "Ota yhteyttä tilisi ylläpitäjään tai tukitiimiimme. Kun he ovat var
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
 #: src/components/routes/admin/Attribution/index.tsx:168
+#: src/components/routes/organizer/CommunityContent/index.tsx:88
+#: src/components/routes/organizer/CommunityContent/index.tsx:127
 msgid "Content"
 msgstr "Sisältö"
 
 #: src/components/routes/admin/Announcements/index.tsx:301
 msgid "Content is required"
 msgstr "Sisältö on pakollinen"
+
+#: src/components/routes/organizer/CommunityContent/index.tsx:77
+msgid "Content saved"
+msgstr "Sisältö tallennettu"
 
 #: src/components/common/TwoFactor/TwoFactorSetupFlow.tsx:146
 #: src/components/common/WidgetEditor/BehaviourPanel.tsx:33
@@ -5480,8 +5511,8 @@ msgstr "Tiedoston {fileName} lataaminen epäonnistui"
 msgid "Couldn't load the API reference."
 msgstr "API-viitettä ei voitu ladata."
 
-#: src/components/common/OrganizerReportTable/index.tsx:271
-#: src/components/common/ReportTable/index.tsx:249
+#: src/components/common/OrganizerReportTable/index.tsx:265
+#: src/components/common/ReportTable/index.tsx:243
 msgid "Couldn't load this report"
 msgstr "Tätä raporttia ei voitu ladata"
 
@@ -5535,6 +5566,7 @@ msgid "Cover"
 msgstr "Kansikuva"
 
 #: src/components/modals/DuplicateEventModal/index.tsx:159
+#: src/components/routes/organizer/CommunityContent/index.tsx:89
 msgid "Cover image"
 msgstr "Kansikuva"
 
@@ -5637,7 +5669,7 @@ msgstr "Luo ilmoitus näyttämään viesti käyttäjillesi."
 msgid "Create and change events, orders, attendees and more."
 msgstr "Luo ja muokkaa tapahtumia, tilauksia, osallistujia ja muuta."
 
-#: src/components/routes/oauth/Connect/index.tsx:122
+#: src/components/routes/oauth/Connect/index.tsx:124
 msgid "Create and change events, tickets, questions and settings."
 msgstr "Luoda ja muuttaa tapahtumia, lippuja, kysymyksiä ja asetuksia."
 
@@ -5702,6 +5734,11 @@ msgstr "Luo sisäänkirjauslista"
 msgid "Create Configuration"
 msgstr "Luo konfiguraatio"
 
+#: src/components/routes/organizer/CommunityContent/index.tsx:69
+#: src/components/routes/organizer/CommunityContent/index.tsx:123
+msgid "Create content"
+msgstr "Luo sisältöä"
+
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:325
 msgid "Create custom email templates for this event that override the organizer defaults"
 msgstr "Luo tapahtumalle mukautetut sähköpostipohjat, jotka ohittavat järjestäjän oletukset"
@@ -5724,7 +5761,7 @@ msgid "Create event"
 msgstr "Luo tapahtuma"
 
 #: src/components/common/NoEventsBlankSlate/index.tsx:28
-#: src/components/layouts/OrganizerLayout/index.tsx:197
+#: src/components/layouts/OrganizerLayout/index.tsx:198
 #: src/components/routes/organizer/Events/index.tsx:66
 msgid "Create Event"
 msgstr "Luo tapahtuma"
@@ -5872,7 +5909,7 @@ msgstr "CTA"
 msgid "CTA label is required"
 msgstr "CTA-etiketti on pakollinen"
 
-#: src/components/common/OrganizerReportTable/index.tsx:317
+#: src/components/common/OrganizerReportTable/index.tsx:311
 #: src/components/forms/OrganizerForm/index.tsx:51
 #: src/components/modals/CreateEventModal/index.tsx:437
 #: src/components/modals/CreateEventModal/index.tsx:438
@@ -5945,8 +5982,8 @@ msgstr "Tämän tapahtuman mukautetut tilaus- ja lippusähköpostit"
 msgid "Custom questions"
 msgstr "Mukautetut kysymykset"
 
-#: src/components/common/OrganizerReportTable/index.tsx:61
-#: src/components/common/ReportTable/index.tsx:56
+#: src/components/common/OrganizerReportTable/index.tsx:62
+#: src/components/common/ReportTable/index.tsx:57
 #: src/components/routes/admin/Attribution/index.tsx:82
 msgid "Custom Range"
 msgstr "Mukautettu alue"
@@ -6841,10 +6878,12 @@ msgstr "Ladataan laskua"
 
 #: src/components/common/EventCard/index.tsx:99
 #: src/components/layouts/Event/index.tsx:259
-#: src/components/layouts/OrganizerLayout/index.tsx:247
+#: src/components/layouts/OrganizerLayout/index.tsx:248
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:472
 #: src/components/routes/event/Lineup/EventStatusBadge.tsx:10
+#: src/components/routes/organizer/CommunityContent/index.tsx:94
+#: src/components/routes/organizer/CommunityContent/index.tsx:138
 #: src/components/routes/settings/Organizers/index.tsx:23
 msgid "Draft"
 msgstr "Luonnos"
@@ -7088,6 +7127,7 @@ msgstr "Varhaisen oston etu"
 #: src/components/routes/admin/Announcements/index.tsx:211
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:57
 #: src/components/routes/event/Questions/QuestionRow.tsx:165
+#: src/components/routes/organizer/CommunityContent/index.tsx:142
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:282
 #: src/components/routes/settings/TaxesAndFees/index.tsx:68
 #: src/components/routes/settings/Team/MemberRow.tsx:177
@@ -7169,6 +7209,10 @@ msgstr "Muokkaa koodia"
 #: src/components/routes/admin/Configurations/index.tsx:205
 msgid "Edit Configuration"
 msgstr "Muokkaa määritystä"
+
+#: src/components/routes/organizer/CommunityContent/index.tsx:69
+msgid "Edit content"
+msgstr "Muokkaa sisältöä"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:411
 msgid "Edit Date"
@@ -7321,6 +7365,7 @@ msgstr "Kelpoiset sisäänkirjautumislistat"
 #: src/components/routes/auth/ForgotPassword/index.tsx:69
 #: src/components/routes/auth/Login/index.tsx:187
 #: src/components/routes/auth/Register/index.tsx:153
+#: src/components/routes/community/index.tsx:61
 #: src/components/routes/event/Questions/CheckoutPreview.tsx:36
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:99
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:70
@@ -7380,7 +7425,7 @@ msgid "Email change pending"
 msgstr "Sähköpostin vaihto vireillä"
 
 #: src/components/layouts/Event/index.tsx:98
-#: src/components/layouts/OrganizerLayout/index.tsx:142
+#: src/components/layouts/OrganizerLayout/index.tsx:143
 #: src/components/routes/settings/Profile/index.tsx:136
 msgid "Email confirmation resent successfully"
 msgstr "Sähköpostivarmistus lähetettiin uudelleen onnistuneesti"
@@ -7458,7 +7503,7 @@ msgstr "Lähetä sähköposti tilin omistajalle"
 msgid "Email to send tickets"
 msgstr "Sähköposti lippujen lähettämiseen"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:323
+#: src/components/layouts/OrganizerLayout/index.tsx:324
 msgid "Email Verification Required"
 msgstr "Sähköpostivarmistus vaaditaan"
 
@@ -7860,7 +7905,7 @@ msgstr "Vain parilliset numerot"
 msgid "Event"
 msgstr "Tapahtuma"
 
-#: src/components/common/TeamAccessFields/index.tsx:155
+#: src/components/common/TeamAccessFields/index.tsx:156
 msgid "Event #{0}"
 msgstr "Tapahtuma #{0}"
 
@@ -8052,6 +8097,8 @@ msgstr "Tapahtuma päivitetty"
 #: src/components/routes/admin/Attribution/index.tsx:195
 #: src/components/routes/admin/Dashboard/index.tsx:398
 #: src/components/routes/admin/Events/index.tsx:77
+#: src/components/routes/community/index.tsx:83
+#: src/components/routes/community/index.tsx:113
 #: src/components/routes/event/Lineup/ProfileDrawer.tsx:236
 #: src/components/routes/organizer/Events/index.tsx:46
 #: src/utilites/homepageSections.ts:33
@@ -8129,7 +8176,7 @@ msgstr "Jokaisella tapahtumalla on lippukassa"
 msgid "Every event has a check-in list"
 msgstr "Jokaisella tapahtumalla on sisäänkirjauslista"
 
-#: src/components/common/TeamAccessFields/index.tsx:113
+#: src/components/common/TeamAccessFields/index.tsx:114
 msgid "Every organizer and event, including new ones."
 msgstr "Kaikki järjestäjät ja tapahtumat, myös uudet."
 
@@ -8263,6 +8310,10 @@ msgstr "Vanhenee {0}"
 msgid "Expiry Date"
 msgstr "Vanhentumispäivä"
 
+#: src/components/routes/community/index.tsx:128
+msgid "Explore events"
+msgstr "Tutustu tapahtumiin"
+
 #: src/components/modals/ProductPurchasesModal/index.tsx:203
 #: src/components/routes/event/Affiliates/index.tsx:97
 #: src/components/routes/event/attendees.tsx:263
@@ -8275,7 +8326,7 @@ msgstr "Vie"
 msgid "Export answers"
 msgstr "Vie vastaukset"
 
-#: src/components/common/OrganizerReportTable/index.tsx:358
+#: src/components/common/OrganizerReportTable/index.tsx:352
 msgid "Export CSV"
 msgstr "Vie CSV-muodossa"
 
@@ -8291,7 +8342,7 @@ msgstr "Vie ostot"
 msgid "Export started. Preparing file..."
 msgstr "Vienti aloitettu. Valmistelemme tiedostoa..."
 
-#: src/components/common/OrganizerReportTable/index.tsx:204
+#: src/components/common/OrganizerReportTable/index.tsx:198
 msgid "Export successful"
 msgstr "Vienti onnistui"
 
@@ -8491,7 +8542,7 @@ msgstr "Tilausten vienti epäonnistui"
 msgid "Failed to export purchases. Please try again."
 msgstr "Ostojen vienti epäonnistui. Yritä uudelleen."
 
-#: src/components/common/OrganizerReportTable/index.tsx:206
+#: src/components/common/OrganizerReportTable/index.tsx:200
 msgid "Failed to export report. Please try again."
 msgstr "Raportin vienti epäonnistui. Yritä uudelleen."
 
@@ -9158,7 +9209,7 @@ msgstr "Etuosan permanto"
 msgid "Front right"
 msgstr "Edessä oikealla"
 
-#: src/components/common/TeamAccessFields/index.tsx:92
+#: src/components/common/TeamAccessFields/index.tsx:93
 msgid "Full access to every event, the team, payments and account settings."
 msgstr "Täysi pääsy kaikkiin tapahtumiin, tiimiin, maksuihin ja tilin asetuksiin."
 
@@ -9325,7 +9376,7 @@ msgstr "Palaa takaisin"
 msgid "Go back to profile"
 msgstr "Palaa profiiliin"
 
-#: src/components/routes/oauth/Connect/index.tsx:25
+#: src/components/routes/oauth/Connect/index.tsx:27
 msgid "Go back to the app you were connecting and start again."
 msgstr "Palaa sovellukseen, jota olit yhdistämässä, ja aloita alusta."
 
@@ -9350,7 +9401,7 @@ msgid "Go to seating settings"
 msgstr "Siirry paikka-asetuksiin"
 
 #: src/components/layouts/Event/index.tsx:232
-#: src/components/layouts/OrganizerLayout/index.tsx:222
+#: src/components/layouts/OrganizerLayout/index.tsx:223
 msgid "Go to your events"
 msgstr "Siirry tapahtumiisi"
 
@@ -9550,7 +9601,7 @@ msgstr "Hi.Events Cloud"
 msgid "Hi.Events Fee"
 msgstr "Hi.Events-maksu"
 
-#: src/components/routes/oauth/Connect/index.tsx:108
+#: src/components/routes/oauth/Connect/index.tsx:110
 msgid "Hi.Events hasn't verified this app. Only continue if you started connecting it yourself and you trust it."
 msgstr "Hi.Events ei ole vahvistanut tätä sovellusta. Jatka vain, jos aloitit yhdistämisen itse ja luotat sovellukseen."
 
@@ -9755,6 +9806,10 @@ msgstr "Pidätä {0} paikkaa {dateCount} päivämääränä"
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:241
 msgid "Hold places for"
 msgstr "Pidä paikat varattuna"
+
+#: src/components/routes/community/index.tsx:111
+msgid "Home"
+msgstr "Etusivu"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:142
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:126
@@ -10073,6 +10128,10 @@ msgstr "Luo identiteetintarjoajassasi luottamuksellinen OpenID Connect -asiakas,
 msgid "Inactive"
 msgstr "Ei aktiivinen"
 
+#: src/components/routes/organizer/CommunityContent/index.tsx:128
+msgid "Inbox"
+msgstr "Saapuneet"
+
 #: src/components/common/Currency/index.tsx:52
 msgid "incl. fees"
 msgstr "sisältäen maksut"
@@ -10191,7 +10250,7 @@ msgid "Instructions"
 msgstr "Ohjeet"
 
 #: src/components/layouts/Event/index.tsx:163
-#: src/components/layouts/OrganizerLayout/index.tsx:130
+#: src/components/layouts/OrganizerLayout/index.tsx:131
 #: src/components/modals/DuplicateEventModal/index.tsx:165
 msgid "Integrations"
 msgstr "Integraatiot"
@@ -10253,11 +10312,11 @@ msgstr "Kutsu ihmisiä, valitse mitä he voivat nähdä ja tehdä, ja pidä kirj
 msgid "Invite someone"
 msgstr "Kutsu joku"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:209
+#: src/components/layouts/OrganizerLayout/index.tsx:210
 msgid "Invite Team Members"
 msgstr "Kutsu tiimin jäseniä"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:206
+#: src/components/layouts/OrganizerLayout/index.tsx:207
 msgid "Invite Your Team"
 msgstr "Kutsu tiimisi"
 
@@ -10533,55 +10592,55 @@ msgstr "Kieli ja koko"
 msgid "Last"
 msgstr "Viimeinen"
 
-#: src/components/common/OrganizerReportTable/index.tsx:60
-#: src/components/common/ReportTable/index.tsx:55
+#: src/components/common/OrganizerReportTable/index.tsx:61
+#: src/components/common/ReportTable/index.tsx:56
 msgid "Last 12 months"
 msgstr "Viimeiset 12 kuukautta"
 
-#: src/components/common/OrganizerReportTable/index.tsx:55
-#: src/components/common/ReportTable/index.tsx:50
+#: src/components/common/OrganizerReportTable/index.tsx:56
+#: src/components/common/ReportTable/index.tsx:51
 msgid "Last 14 days"
 msgstr "Viimeiset 14 päivää"
 
-#: src/components/common/OrganizerReportTable/index.tsx:52
-#: src/components/common/ReportTable/index.tsx:47
+#: src/components/common/OrganizerReportTable/index.tsx:53
+#: src/components/common/ReportTable/index.tsx:48
 #: src/components/routes/admin/Attribution/index.tsx:77
 #: src/components/routes/admin/Dashboard/index.tsx:31
 #: src/components/routes/admin/EmailDelivery/index.tsx:14
 msgid "Last 24 hours"
 msgstr "Viimeiset 24 tuntia"
 
-#: src/components/common/OrganizerReportTable/index.tsx:56
+#: src/components/common/OrganizerReportTable/index.tsx:57
 #: src/components/common/PeriodSelector/index.tsx:34
-#: src/components/common/ReportTable/index.tsx:51
+#: src/components/common/ReportTable/index.tsx:52
 #: src/components/routes/admin/Attribution/index.tsx:79
 #: src/components/routes/admin/Dashboard/index.tsx:33
 #: src/components/routes/admin/EmailDelivery/index.tsx:16
 msgid "Last 30 days"
 msgstr "Viimeiset 30 päivää"
 
-#: src/components/common/OrganizerReportTable/index.tsx:53
-#: src/components/common/ReportTable/index.tsx:48
+#: src/components/common/OrganizerReportTable/index.tsx:54
+#: src/components/common/ReportTable/index.tsx:49
 msgid "Last 48 hours"
 msgstr "Viimeiset 48 tuntia"
 
-#: src/components/common/OrganizerReportTable/index.tsx:58
-#: src/components/common/ReportTable/index.tsx:53
+#: src/components/common/OrganizerReportTable/index.tsx:59
+#: src/components/common/ReportTable/index.tsx:54
 msgid "Last 6 months"
 msgstr "Viimeiset 6 kuukautta"
 
-#: src/components/common/OrganizerReportTable/index.tsx:54
+#: src/components/common/OrganizerReportTable/index.tsx:55
 #: src/components/common/PeriodSelector/index.tsx:32
-#: src/components/common/ReportTable/index.tsx:49
+#: src/components/common/ReportTable/index.tsx:50
 #: src/components/routes/admin/Attribution/index.tsx:78
 #: src/components/routes/admin/Dashboard/index.tsx:32
 #: src/components/routes/admin/EmailDelivery/index.tsx:15
 msgid "Last 7 days"
 msgstr "Viimeiset 7 päivää"
 
-#: src/components/common/OrganizerReportTable/index.tsx:57
+#: src/components/common/OrganizerReportTable/index.tsx:58
 #: src/components/common/PeriodSelector/index.tsx:36
-#: src/components/common/ReportTable/index.tsx:52
+#: src/components/common/ReportTable/index.tsx:53
 #: src/components/routes/admin/Attribution/index.tsx:80
 msgid "Last 90 days"
 msgstr "Viimeiset 90 päivää"
@@ -10799,7 +10858,7 @@ msgstr "Kirjaimet"
 msgid "Letters skipping I and O"
 msgstr "Kirjaimet ilman I:tä ja O:ta"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:125
+#: src/components/layouts/OrganizerLayout/index.tsx:126
 msgid "Library"
 msgstr "Kirjasto"
 
@@ -10934,7 +10993,7 @@ msgstr "Näytä tulevat tapahtumasi omalla sivustollasi. Vierailijat voivat osta
 
 #: src/components/common/EventCard/index.tsx:102
 #: src/components/layouts/Event/index.tsx:261
-#: src/components/layouts/OrganizerLayout/index.tsx:249
+#: src/components/layouts/OrganizerLayout/index.tsx:250
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:115
 #: src/components/routes/event/Lineup/EventStatusBadge.tsx:8
 #: src/components/routes/settings/Organizers/index.tsx:19
@@ -10999,9 +11058,11 @@ msgstr "Webhook-lokeja ladataan..."
 msgid "Loading Webhooks"
 msgstr "Webhookeja ladataan"
 
-#: src/components/common/OrganizerReportTable/index.tsx:265
-#: src/components/common/ReportTable/index.tsx:219
+#: src/components/common/OrganizerReportTable/index.tsx:259
+#: src/components/common/ReportTable/index.tsx:213
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:89
+#: src/components/routes/organizer/CommunityContent/index.tsx:131
+#: src/components/routes/organizer/CommunityContent/index.tsx:150
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:94
 msgid "Loading..."
 msgstr "Ladataan..."
@@ -11051,7 +11112,7 @@ msgstr "sijaintipäivitykset"
 msgid "locations"
 msgstr "sijainnit"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:126
+#: src/components/layouts/OrganizerLayout/index.tsx:127
 #: src/components/routes/organizer/Locations/index.tsx:31
 msgid "Locations"
 msgstr "Sijainnit"
@@ -11224,6 +11285,10 @@ msgstr "Hallitse kertakirjautumista"
 msgid "Manage tickets"
 msgstr "Hallinnoi lippuja"
 
+#: src/components/common/TeamAccessFields/index.tsx:257
+msgid "Manage website content"
+msgstr "Hallitse sivuston sisältöä"
+
 #: src/components/routes/event/SoldOutWaitlist/index.tsx:72
 msgid "Manage your event's waitlist, view stats, and offer tickets to attendees."
 msgstr "Hallinnoi tapahtumasi jonotuslistaa, katso tilastoja ja tarjoa lippuja osallistujille."
@@ -11257,6 +11322,10 @@ msgstr "maaliskuu"
 #: src/hooks/useOrderActions.tsx:130
 msgid "Mark as paid"
 msgstr "Merkitse maksetuksi"
+
+#: src/components/routes/organizer/CommunityContent/index.tsx:162
+msgid "Mark as read"
+msgstr "Merkitse luetuksi"
 
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:184
 msgid "Mark as validated (admin override)"
@@ -11342,6 +11411,7 @@ msgstr "Jäsenten, joilla on vahvistetun verkkotunnuksen sähköpostiosoite, on 
 #: src/components/common/ContactOrganizerModal/index.tsx:91
 #: src/components/common/OrdersTable/index.tsx:168
 #: src/components/modals/SendMessageModal/index.tsx:455
+#: src/components/routes/community/index.tsx:63
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:63
 msgid "Message"
 msgstr "Viestitä"
@@ -11690,6 +11760,7 @@ msgstr "Lippuni"
 #: src/components/forms/TaxAndFeeForm/index.tsx:62
 #: src/components/modals/DuplicateEventModal/index.tsx:223
 #: src/components/routes/admin/Configurations/index.tsx:224
+#: src/components/routes/community/index.tsx:60
 #: src/components/routes/event/Lineup/ProfileDrawer.tsx:279
 #: src/components/routes/event/Lineup/ScheduleBuilder/SpaceModal.tsx:71
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:81
@@ -11740,6 +11811,10 @@ msgstr "Nimi, sähköposti ja laskutusosoite kerätään aina."
 #: src/components/common/QuestionAndAnswerList/index.tsx:205
 msgid "Navigate to Attendee"
 msgstr "Siirry osallistujalle"
+
+#: src/components/routes/community/index.tsx:110
+msgid "Navigation"
+msgstr "Navigointi"
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:455
 msgid "Need to switch Stripe accounts? Disconnect this one."
@@ -11974,6 +12049,10 @@ msgstr "Ei ilmoituksia vielä"
 msgid "No archived events to show."
 msgstr "Ei näytettäviä arkistoituja tapahtumia."
 
+#: src/components/routes/community/index.tsx:36
+msgid "No articles published yet."
+msgstr "Artikkeleita ei ole vielä julkaistu."
+
 #: src/components/routes/event/Questions/QuestionsBuilder.tsx:232
 msgid "No attendee questions yet"
 msgstr "Ei osallistujakysymyksiä vielä"
@@ -12080,15 +12159,19 @@ msgstr "Ei yhdistettyjä sovelluksia"
 msgid "No connections available"
 msgstr "Yhteyksiä ei ole saatavilla"
 
-#: src/components/common/ReportTable/index.tsx:227
+#: src/components/routes/organizer/CommunityContent/index.tsx:133
+msgid "No content yet."
+msgstr "Sisältöä ei vielä ole."
+
+#: src/components/common/ReportTable/index.tsx:221
 msgid "No data available"
 msgstr "Ei tietoja saatavilla"
 
-#: src/components/common/OrganizerReportTable/index.tsx:283
+#: src/components/common/OrganizerReportTable/index.tsx:277
 msgid "No data found for the selected filters. Try adjusting the date range or currency."
 msgstr "Valituille suodattimille ei löytynyt tietoja. Yritä säätää ajanjaksoa tai valuuttaa."
 
-#: src/components/common/ReportTable/index.tsx:223
+#: src/components/common/ReportTable/index.tsx:217
 msgid "No data to show. Please select a date range"
 msgstr "Ei näytettävää tietoa. Valitse ajanjakso."
 
@@ -12275,6 +12358,10 @@ msgstr "Viestitietoja ei löytynyt"
 #: src/components/routes/event/messages.tsx:329
 msgid "No messages to show"
 msgstr "Ei näytettäviä viestejä"
+
+#: src/components/routes/organizer/CommunityContent/index.tsx:152
+msgid "No messages yet."
+msgstr "Viestejä ei vielä ole."
 
 #: src/components/modals/ProductPurchasesModal/index.tsx:314
 msgid "No name"
@@ -12518,6 +12605,11 @@ msgstr "Ei tulevia päivämääriä"
 #: src/components/layouts/OrganizerHomepage/index.tsx:170
 msgid "No upcoming events"
 msgstr "Ei tulevia tapahtumia"
+
+#: src/components/routes/community/index.tsx:141
+#: src/components/routes/community/index.tsx:163
+msgid "No upcoming events yet."
+msgstr "Tulevia tapahtumia ei vielä ole."
 
 #: src/components/common/AdminUsersTable/index.tsx:19
 msgid "No users found"
@@ -12774,7 +12866,7 @@ msgstr "Ei vielä tulostettavaa"
 msgid "Nothing to sell here yet. Add products to this box office."
 msgstr "Täällä ei ole vielä mitään myytävää. Lisää tuotteita tähän lippukassaan."
 
-#: src/components/common/ReportTable/index.tsx:263
+#: src/components/common/ReportTable/index.tsx:257
 msgid "Nothing to show yet"
 msgstr "Ei vielä näytettävää"
 
@@ -12859,7 +12951,7 @@ msgstr "Parittomat ja parilliset keskeltä alkaen"
 msgid "Odd numbers only"
 msgstr "Vain parittomat numerot"
 
-#: src/components/common/OrganizerReportTable/index.tsx:367
+#: src/components/common/OrganizerReportTable/index.tsx:361
 msgid "of"
 msgstr " / "
 
@@ -13022,7 +13114,7 @@ msgstr "Kerran tilausta kohden"
 msgid "Once you create an event, you'll see it here."
 msgstr "Kun luot tapahtuman, näet sen täällä."
 
-#: src/components/common/ReportTable/index.tsx:268
+#: src/components/common/ReportTable/index.tsx:262
 msgid "Once you start collecting data, you'll see it here."
 msgstr "Kun alat kerätä tietoja, näet ne täällä."
 
@@ -13135,7 +13227,7 @@ msgstr "Vain järjestelmänvalvojat voivat hallita tiimin pääsyä."
 msgid "Only available as an add-on"
 msgstr "Saatavilla vain lisäosana"
 
-#: src/components/routes/oauth/Connect/index.tsx:107
+#: src/components/routes/oauth/Connect/index.tsx:109
 msgid "Only continue if you just started connecting from an app on this computer, such as Claude Code or Cursor."
 msgstr "Jatka vain, jos aloitit juuri yhdistämisen tämän tietokoneen sovelluksesta, kuten Claude Codesta tai Cursorista."
 
@@ -13207,7 +13299,7 @@ msgstr "Näkyy vain ostajille, joilla on voimassa oleva alennuskoodi."
 msgid "Only visible with promo code"
 msgstr "Näkyy vain alennuskoodilla"
 
-#: src/components/common/TeamAccessFields/index.tsx:119
+#: src/components/common/TeamAccessFields/index.tsx:120
 msgid "Only what you pick below."
 msgstr "Vain se, mitä valitset alta."
 
@@ -13616,8 +13708,8 @@ msgid "Organization Name"
 msgstr "Organisaation nimi"
 
 #: src/components/common/AdminEventsTable/index.tsx:89
-#: src/components/common/TeamAccessFields/index.tsx:36
-#: src/components/common/TeamAccessFields/index.tsx:96
+#: src/components/common/TeamAccessFields/index.tsx:37
+#: src/components/common/TeamAccessFields/index.tsx:97
 #: src/components/common/WidgetEditor/SectionsPicker.tsx:36
 #: src/components/layouts/EventHomepage/index.tsx:219
 #: src/components/modals/CreateEventModal/index.tsx:270
@@ -13678,12 +13770,12 @@ msgid "Organizer Settings"
 msgstr "Järjestäjäasetukset"
 
 #: src/components/common/StatusToggle/index.tsx:63
-#: src/components/layouts/OrganizerLayout/index.tsx:180
+#: src/components/layouts/OrganizerLayout/index.tsx:181
 msgid "Organizer status update failed. Please try again later"
 msgstr "Järjestäjän tilapäivitys epäonnistui. Yritä uudelleen myöhemmin."
 
 #: src/components/common/StatusToggle/index.tsx:55
-#: src/components/layouts/OrganizerLayout/index.tsx:177
+#: src/components/layouts/OrganizerLayout/index.tsx:178
 msgid "Organizer status updated"
 msgstr "Järjestäjän tila päivitettiin."
 
@@ -13702,11 +13794,11 @@ msgstr "Järjestäjän/oletuspohja käytetään."
 msgid "Organizers"
 msgstr "Järjestäjät"
 
-#: src/components/common/TeamAccessFields/index.tsx:138
+#: src/components/common/TeamAccessFields/index.tsx:139
 msgid "Organizers (includes all their events)"
 msgstr "Järjestäjät (sisältää kaikki niiden tapahtumat)"
 
-#: src/components/common/TeamAccessFields/index.tsx:234
+#: src/components/common/TeamAccessFields/index.tsx:235
 msgid "Organizers and events"
 msgstr "Järjestäjät ja tapahtumat"
 
@@ -13718,7 +13810,7 @@ msgstr "Järjestäjät ja tapahtumat"
 msgid "Other"
 msgstr "Muut"
 
-#: src/components/common/TeamAccessFields/index.tsx:242
+#: src/components/common/TeamAccessFields/index.tsx:243
 msgid "Other events"
 msgstr "Muut tapahtumat"
 
@@ -13780,7 +13872,9 @@ msgstr "Omistaa toisen Hi.Events-tilin, joten kirjautuu salasanalla, kunnes yhdi
 msgid "Padding"
 msgstr "Täyte"
 
-#: src/components/common/OrganizerReportTable/index.tsx:367
+#: src/components/common/OrganizerReportTable/index.tsx:361
+#: src/components/routes/organizer/CommunityContent/index.tsx:84
+#: src/components/routes/organizer/CommunityContent/index.tsx:139
 msgid "Page"
 msgstr "Sivu"
 
@@ -13811,6 +13905,11 @@ msgstr "Sivun katselut"
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:113
 msgid "Page Views"
 msgstr "Sivun katselut"
+
+#: src/components/common/TeamAccessFields/index.tsx:258
+#: src/components/routes/organizer/CommunityContent/index.tsx:122
+msgid "Pages, articles and contact submissions."
+msgstr "Sivut, artikkelit ja yhteydenotot."
 
 #: src/ee/seating/components/routes/event/SeatingPrint/index.tsx:224
 msgid "Pages: {pageCount}"
@@ -14186,7 +14285,7 @@ msgstr "Odottaa tarkistusta"
 msgid "PENDING REVIEW"
 msgstr "ODOTTAA TARKISTUSTA"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:127
+#: src/components/layouts/OrganizerLayout/index.tsx:128
 #: src/components/routes/organizer/People/index.tsx:80
 msgid "People"
 msgstr "Henkilöt"
@@ -14317,7 +14416,7 @@ msgstr "Poista tämä järjestäjä ja kaikki sen tapahtumat pysyvästi."
 msgid "Permanently remove this date"
 msgstr "Poista tämä päivä pysyvästi"
 
-#: src/components/common/TeamAccessFields/index.tsx:252
+#: src/components/common/TeamAccessFields/index.tsx:253
 msgid "Permissions"
 msgstr "Käyttöoikeudet"
 
@@ -14521,6 +14620,7 @@ msgid "Please don't leave a single empty seat: {0}"
 msgstr "Älä jätä yksittäistä tyhjää paikkaa: {0}"
 
 #: src/components/modals/JoinWaitlistModal/index.tsx:57
+#: src/components/routes/community/index.tsx:43
 msgid "Please enter a valid email address"
 msgstr "Anna kelvollinen sähköpostiosoite"
 
@@ -14532,6 +14632,10 @@ msgstr "Anna kelvollinen kuvan URL-osoite, joka osoittaa kuvaan."
 #: src/components/modals/CreateWebhookModal/index.tsx:34
 msgid "Please enter a valid URL"
 msgstr "Anna kelvollinen URL-osoite"
+
+#: src/components/routes/community/index.tsx:45
+msgid "Please enter at least 10 characters."
+msgstr "Kirjoita vähintään 10 merkkiä."
 
 #: src/components/routes/welcome/index.tsx:72
 msgid "Please enter the 5-digit code"
@@ -14569,7 +14673,7 @@ msgstr "Palaa tapahtumasivulle aloittaaksesi alusta."
 msgid "Please select a date and time"
 msgstr "Valitse päivämäärä ja kellonaika"
 
-#: src/components/common/OrganizerReportTable/index.tsx:280
+#: src/components/common/OrganizerReportTable/index.tsx:274
 msgid "Please select a date range"
 msgstr "Valitse päivämääräalue"
 
@@ -14683,6 +14787,8 @@ msgstr "Estä ylivaraus jakamalla kapasiteetti useiden lipputyyppien kesken."
 #: src/components/forms/QuestionForm/index.tsx:280
 #: src/components/routes/admin/Announcements/index.tsx:496
 #: src/components/routes/event/Lineup/index.tsx:223
+#: src/components/routes/organizer/CommunityContent/index.tsx:99
+#: src/components/routes/organizer/CommunityContent/index.tsx:100
 msgid "Preview"
 msgstr "Esikatselu"
 
@@ -15031,6 +15137,10 @@ msgstr "Julkaise"
 msgid "Publish Anyway"
 msgstr "Julkaise silti"
 
+#: src/components/routes/organizer/CommunityContent/index.tsx:95
+msgid "Publish at (local time)"
+msgstr "Julkaisuajankohta (paikallinen aika)"
+
 #: src/components/modals/PublishEventModal/index.tsx:203
 msgid "Publish Event"
 msgstr "Julkaise tapahtuma"
@@ -15041,6 +15151,8 @@ msgstr "Julkaise tapahtumasi"
 
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:473
+#: src/components/routes/organizer/CommunityContent/index.tsx:94
+#: src/components/routes/organizer/CommunityContent/index.tsx:138
 msgid "Published"
 msgstr "Julkaistu"
 
@@ -15201,7 +15313,7 @@ msgstr "Aktivoi uudelleen"
 msgid "Reactivate this date? It will be reopened for future sales."
 msgstr "Aktivoi tämä päivä uudelleen? Se avataan uudelleen tulevia myyntejä varten."
 
-#: src/components/routes/oauth/Connect/index.tsx:121
+#: src/components/routes/oauth/Connect/index.tsx:123
 #: src/components/routes/settings/ApiKeys/ApiKeyRow.tsx:52
 #: src/components/routes/settings/ApiKeys/ConnectedApps.tsx:73
 #: src/components/routes/settings/ApiKeys/CreateApiKeyModal.tsx:250
@@ -15213,7 +15325,7 @@ msgstr "Luku ja kirjoitus"
 msgid "Read more"
 msgstr "Lue lisää"
 
-#: src/components/routes/oauth/Connect/index.tsx:127
+#: src/components/routes/oauth/Connect/index.tsx:129
 msgid "Read only"
 msgstr "Vain luku"
 
@@ -15458,7 +15570,7 @@ msgstr "Hyvitys tallennettu onnistuneesti"
 msgid "Refund Status"
 msgstr "Hyvityksen tila"
 
-#: src/components/common/TeamAccessFields/index.tsx:264
+#: src/components/common/TeamAccessFields/index.tsx:274
 msgid "Refund, cancel with a refund, and mark orders as paid."
 msgstr "Hyvitä, peru hyvityksellä ja merkitse tilaukset maksetuiksi."
 
@@ -15533,6 +15645,7 @@ msgstr "poista"
 #: src/components/routes/event/Lineup/ProfileImagesField.tsx:92
 #: src/components/routes/event/Lineup/ScheduleBuilder/ScheduleItemModal.tsx:140
 #: src/components/routes/event/Lineup/ScheduleBuilder/ScheduleItemModal.tsx:217
+#: src/components/routes/organizer/CommunityContent/index.tsx:92
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1214
 #: src/components/routes/settings/ApiKeys/ApiKeyRow.tsx:82
 #: src/ee/box-office/components/layouts/BoxOffice/AmountSheet.tsx:89
@@ -15814,7 +15927,11 @@ msgid "Require two-factor authentication"
 msgstr "Vaadi kaksivaiheinen tunnistautuminen"
 
 #: src/components/forms/QuestionForm/index.tsx:265
+#: src/components/routes/community/index.tsx:42
+#: src/components/routes/community/index.tsx:44
 #: src/components/routes/event/Questions/QuestionRow.tsx:127
+#: src/components/routes/organizer/CommunityContent/index.tsx:45
+#: src/components/routes/organizer/CommunityContent/index.tsx:47
 #: src/ee/sso/components/SingleSignOn/index.tsx:69
 msgid "Required"
 msgstr "Pakollinen"
@@ -15845,7 +15962,7 @@ msgstr "Lähetä koodi uudelleen"
 msgid "Resend Confirmation"
 msgstr "Lähetä vahvistus uudelleen"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:340
+#: src/components/layouts/OrganizerLayout/index.tsx:341
 msgid "Resend Confirmation Email"
 msgstr "Lähetä vahvistussähköposti uudelleen"
 
@@ -16018,11 +16135,11 @@ msgstr "Palaa tapahtumaan"
 msgid "Return to Event Page"
 msgstr "Palaa tapahtumasivulle"
 
-#: src/components/routes/oauth/Connect/index.tsx:77
+#: src/components/routes/oauth/Connect/index.tsx:79
 msgid "Returning you to {leavingTo}…"
 msgstr "Palataan kohteeseen {leavingTo}…"
 
-#: src/components/routes/oauth/Connect/index.tsx:92
+#: src/components/routes/oauth/Connect/index.tsx:94
 msgid "Returns you to"
 msgstr "Palauttaa sinut kohteeseen"
 
@@ -16060,7 +16177,7 @@ msgstr "Tuotot"
 msgid "Revenue Summary"
 msgstr "Tuottojen yhteenveto"
 
-#: src/components/common/TeamAccessFields/index.tsx:256
+#: src/components/common/TeamAccessFields/index.tsx:266
 msgid "Revenue, order totals, reports, payouts and payment settings."
 msgstr "Tulot, tilausten summat, raportit, tilitykset ja maksuasetukset."
 
@@ -16118,8 +16235,8 @@ msgstr "Oikea"
 msgid "Right wing"
 msgstr "Oikea siipi"
 
-#: src/components/common/TeamAccessFields/index.tsx:175
-#: src/components/common/TeamAccessFields/index.tsx:177
+#: src/components/common/TeamAccessFields/index.tsx:176
+#: src/components/common/TeamAccessFields/index.tsx:178
 #: src/components/routes/event/Lineup/ProfileDrawer.tsx:255
 #: src/components/routes/settings/Team/index.tsx:217
 #: src/components/routes/settings/Team/MemberRow.tsx:136
@@ -16191,7 +16308,7 @@ msgstr "Ohjelmakaavio · {eventTitle}"
 msgid "Runs"
 msgstr "Toistuu"
 
-#: src/components/common/TeamAccessFields/index.tsx:98
+#: src/components/common/TeamAccessFields/index.tsx:99
 msgid "Runs events: products, orders, attendees, messages and check-in."
 msgstr "Hoitaa tapahtumia: tuotteet, tilaukset, osallistujat, viestit ja sisäänkirjautuminen."
 
@@ -16361,6 +16478,7 @@ msgstr "Lauantai"
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:72
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:85
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:80
+#: src/components/routes/organizer/CommunityContent/index.tsx:102
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:119
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:161
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:103
@@ -16619,6 +16737,7 @@ msgstr "Ajoitettu aika"
 #: src/components/layouts/CheckIn/index.tsx:77
 #: src/components/modals/CreateEventModal/ChipSelect.tsx:128
 #: src/components/modals/CreateEventModal/ChipSelect.tsx:129
+#: src/components/routes/community/index.tsx:161
 #: src/ee/box-office/components/layouts/BoxOffice/tabs/ScanTab.tsx:42
 msgid "Search"
 msgstr "Hae"
@@ -16726,6 +16845,10 @@ msgstr "Hae päivämääriä…"
 msgid "Search engine"
 msgstr "Hakukone"
 
+#: src/components/routes/community/index.tsx:160
+msgid "Search events"
+msgstr "Hae tapahtumia"
+
 #: src/components/common/AddressAutocomplete/index.tsx:86
 msgid "Search for an address"
 msgstr "Hae osoitetta"
@@ -16742,7 +16865,7 @@ msgstr "Hae viestejä..."
 msgid "Search orders"
 msgstr "Hae tilauksia"
 
-#: src/components/common/TeamAccessFields/index.tsx:236
+#: src/components/common/TeamAccessFields/index.tsx:237
 msgid "Search organizers and events"
 msgstr "Hae järjestäjiä ja tapahtumia"
 
@@ -16833,7 +16956,7 @@ msgstr "Istumakartta tallennettu"
 msgid "Seat map updated"
 msgstr "Istumakartta päivitetty"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:128
+#: src/components/layouts/OrganizerLayout/index.tsx:129
 #: src/ee/seating/components/routes/organizer/SeatMaps/index.tsx:145
 msgid "Seat Maps"
 msgstr "Istumakartat"
@@ -17097,8 +17220,8 @@ msgstr "Valitse lippu"
 msgid "Select tickets"
 msgstr "Valitse liput"
 
-#: src/components/common/OrganizerReportTable/index.tsx:328
-#: src/components/common/ReportTable/index.tsx:294
+#: src/components/common/OrganizerReportTable/index.tsx:322
+#: src/components/common/ReportTable/index.tsx:288
 msgid "Select time period"
 msgstr "Valitse ajanjakso"
 
@@ -17245,6 +17368,7 @@ msgstr "Lähetä minulle kopio"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:115
 #: src/components/modals/SendMessageModal/index.tsx:552
+#: src/components/routes/community/index.tsx:67
 msgid "Send Message"
 msgstr "Lähetä viesti"
 
@@ -17345,6 +17469,7 @@ msgid "SEO"
 msgstr "SEO"
 
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:70
+#: src/components/routes/organizer/CommunityContent/index.tsx:97
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:70
 msgid "SEO Description"
 msgstr "SEO-kuvaus"
@@ -17360,6 +17485,7 @@ msgid "SEO Settings"
 msgstr "SEO-asetukset"
 
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:64
+#: src/components/routes/organizer/CommunityContent/index.tsx:96
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:64
 msgid "SEO Title"
 msgstr "SEO-otsikko"
@@ -17544,7 +17670,7 @@ msgstr "Muoto"
 #: src/components/layouts/EventHomepage/EventIntro.tsx:66
 #: src/components/layouts/OrganizerHomepage/index.tsx:333
 #: src/components/layouts/OrganizerHomepage/index.tsx:333
-#: src/components/layouts/OrganizerLayout/index.tsx:269
+#: src/components/layouts/OrganizerLayout/index.tsx:270
 #: src/components/modals/ShareModal/index.tsx:37
 #: src/components/modals/ShareModal/index.tsx:165
 #: src/components/modals/ShareModal/index.tsx:186
@@ -17569,8 +17695,8 @@ msgstr "Jaa tapahtuma"
 msgid "Share link"
 msgstr "Jaa linkki"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:266
-#: src/components/layouts/OrganizerLayout/index.tsx:308
+#: src/components/layouts/OrganizerLayout/index.tsx:267
+#: src/components/layouts/OrganizerLayout/index.tsx:309
 msgid "Share Organizer Page"
 msgstr "Jaa järjestäjän sivu"
 
@@ -17717,7 +17843,7 @@ msgstr "Näytä tämä kysymys"
 msgid "Show tickets"
 msgstr "Näytä liput"
 
-#: src/components/common/OrganizerReportTable/index.tsx:366
+#: src/components/common/OrganizerReportTable/index.tsx:360
 msgid "Showing {0} of {totalRows} records"
 msgstr "Näytetään {0}/{totalRows} tietuetta"
 
@@ -17816,6 +17942,7 @@ msgstr "Näyttää some-linkkisi ja yhteydenottopainikkeen. Kaikkien muiden osio
 
 #: src/components/routes/auth/Login/index.tsx:206
 #: src/components/routes/auth/Register/index.tsx:103
+#: src/components/routes/community/index.tsx:117
 #: src/components/routes/sso/Callback/index.tsx:310
 msgid "Sign in"
 msgstr "Kirjaudu sisään"
@@ -18032,6 +18159,10 @@ msgstr "Ohita 30 päivän harkinta-aika. Tätä ei voi perua."
 msgid "Skip this step"
 msgstr "Ohita tämä vaihe"
 
+#: src/components/routes/community/index.tsx:106
+msgid "Skip to content"
+msgstr "Siirry sisältöön"
+
 #: src/components/layouts/AppLayout/index.tsx:84
 msgid "Skip to main content"
 msgstr "Siirry pääsisältöön"
@@ -18043,6 +18174,10 @@ msgstr "Ohitettiin taulukot, joissa ei ole tunnistettavia sarakkeita:"
 #: src/locales.ts:88
 msgid "Slovak"
 msgstr "Slovakki"
+
+#: src/components/routes/organizer/CommunityContent/index.tsx:86
+msgid "Slug"
+msgstr "URL-tunniste"
 
 #: src/components/routes/auth/AcceptInvitation/index.tsx:233
 #: src/components/routes/auth/Register/index.tsx:146
@@ -18216,7 +18351,7 @@ msgstr "Jotain meni pieleen. Yritä myöhemmin uudelleen."
 
 #: src/components/common/TwoFactor/TwoFactorSetupFlow.tsx:30
 #: src/components/layouts/Event/index.tsx:102
-#: src/components/layouts/OrganizerLayout/index.tsx:146
+#: src/components/layouts/OrganizerLayout/index.tsx:147
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/admin/Users/index.tsx:33
 #: src/components/routes/auth/AcceptInvitation/index.tsx:98
@@ -18224,8 +18359,11 @@ msgstr "Jotain meni pieleen. Yritä myöhemmin uudelleen."
 #: src/components/routes/auth/Login/index.tsx:132
 #: src/components/routes/auth/Register/index.tsx:81
 #: src/components/routes/my-tickets/index.tsx:162
-#: src/components/routes/oauth/Connect/index.tsx:63
-#: src/components/routes/oauth/Connect/index.tsx:70
+#: src/components/routes/oauth/Connect/index.tsx:65
+#: src/components/routes/oauth/Connect/index.tsx:72
+#: src/components/routes/organizer/CommunityContent/index.tsx:132
+#: src/components/routes/organizer/CommunityContent/index.tsx:151
+#: src/components/routes/organizer/CommunityContent/index.tsx:161
 #: src/components/routes/product-widget/SelectProducts/index.tsx:383
 #: src/components/routes/settings/Account/DeleteAccountSection.tsx:79
 #: src/components/routes/settings/ApiKeys/ConnectedApps.tsx:30
@@ -18288,7 +18426,7 @@ msgstr "Puhujat, artistit ja juontajat, jotka voit lisätä mihin tahansa tämä
 msgid "Specific accounts"
 msgstr "Tietyt tilit"
 
-#: src/components/common/TeamAccessFields/index.tsx:118
+#: src/components/common/TeamAccessFields/index.tsx:119
 msgid "Specific organizers and events"
 msgstr "Tietyt järjestäjät ja tapahtumat"
 
@@ -18593,6 +18731,7 @@ msgstr "Tilastot"
 #: src/components/routes/event/OccurrencesTab/index.tsx:351
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:51
 #: src/components/routes/event/Reports/PromoCodesReport/index.tsx:88
+#: src/components/routes/organizer/CommunityContent/index.tsx:94
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:62
 #: src/components/routes/settings/Billing/index.tsx:117
 #: src/ee/box-office/components/common/BoxOfficeTable/index.tsx:177
@@ -18749,6 +18888,7 @@ msgstr "Studio"
 #: src/components/routes/admin/LifecycleEmails/LifecycleEmailEditor.tsx:174
 #: src/components/routes/admin/Messages/index.tsx:162
 #: src/components/routes/admin/Messages/index.tsx:273
+#: src/components/routes/community/index.tsx:62
 msgid "Subject"
 msgstr "Aihe"
 
@@ -18932,6 +19072,7 @@ msgstr "Webhook päivitetty onnistuneesti"
 
 #: src/components/common/ProgressStepper/index.tsx:20
 #: src/components/common/ProgressStepper/index.tsx:24
+#: src/components/routes/organizer/CommunityContent/index.tsx:87
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:642
 msgid "Summary"
 msgstr "Yhteenveto"
@@ -19136,7 +19277,7 @@ msgid "Taxes and Fees"
 msgstr "Verot ja maksut"
 
 #: src/components/layouts/Event/index.tsx:166
-#: src/components/layouts/OrganizerLayout/index.tsx:133
+#: src/components/layouts/OrganizerLayout/index.tsx:134
 #: src/components/layouts/SettingsLayout/index.tsx:67
 #: src/components/routes/event/Team/index.tsx:13
 #: src/components/routes/organizer/Team/index.tsx:13
@@ -19145,7 +19286,7 @@ msgid "Team"
 msgstr "Tiimi"
 
 #: src/components/layouts/Event/index.tsx:167
-#: src/components/layouts/OrganizerLayout/index.tsx:134
+#: src/components/layouts/OrganizerLayout/index.tsx:135
 msgid "Team Access"
 msgstr "Tiimin pääsy"
 
@@ -19841,11 +19982,15 @@ msgstr "Tämä sisäänkirjautumislista koskee peruttua istuntoa, joten sitä ei
 msgid "This code will be used to track sales. Only letters, numbers, hyphens, and underscores allowed."
 msgstr "Tätä koodia käytetään myynnin seurantaan. Vain kirjaimet, numerot, yhdysmerkit ja alaviivat ovat sallittuja."
 
-#: src/components/routes/oauth/Connect/index.tsx:24
+#: src/components/routes/community/index.tsx:120
+msgid "This community website is not available yet."
+msgstr "Tämä yhteisösivusto ei ole vielä saatavilla."
+
+#: src/components/routes/oauth/Connect/index.tsx:26
 msgid "This connection link doesn't work"
 msgstr "Tämä yhteyslinkki ei toimi"
 
-#: src/components/routes/oauth/Connect/index.tsx:24
+#: src/components/routes/oauth/Connect/index.tsx:26
 msgid "This connection request has expired"
 msgstr "Tämä yhteyspyyntö on vanhentunut"
 
@@ -20532,6 +20677,7 @@ msgstr "Sävyttää sivusi takana olevan sumennetun kansikuvan"
 #: src/components/routes/admin/Announcements/index.tsx:157
 #: src/components/routes/admin/Announcements/index.tsx:381
 #: src/components/routes/event/Lineup/ScheduleBuilder/ScheduleItemModal.tsx:156
+#: src/components/routes/organizer/CommunityContent/index.tsx:85
 msgid "Title"
 msgstr "Otsikko"
 
@@ -20736,8 +20882,8 @@ msgstr "Kokeile toista hakutermiä tai suodatinta"
 msgid "Try adjusting your filters to see more dates."
 msgstr "Kokeile muuttaa suodattimia nähdäksesi lisää ajankohtia."
 
-#: src/components/common/OrganizerReportTable/index.tsx:273
-#: src/components/common/ReportTable/index.tsx:254
+#: src/components/common/OrganizerReportTable/index.tsx:267
+#: src/components/common/ReportTable/index.tsx:248
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1121
 #: src/components/routes/settings/ApiKeys/ConnectedApps.tsx:54
 #: src/components/routes/settings/ApiKeys/index.tsx:189
@@ -20812,7 +20958,7 @@ msgstr "Poistetaanko kaksivaiheinen tunnistautuminen käytöstä käyttäjältä
 msgid "Turn on"
 msgstr "Ota käyttöön"
 
-#: src/components/common/TeamAccessFields/index.tsx:265
+#: src/components/common/TeamAccessFields/index.tsx:275
 msgid "Turn on Can see financials to allow refunds."
 msgstr "Ota ”Voi nähdä taloustiedot” käyttöön, jotta hyvitykset sallitaan."
 
@@ -20897,6 +21043,7 @@ msgstr "Kaksivaiheinen käytössä"
 #: src/components/routes/admin/Messages/index.tsx:134
 #: src/components/routes/admin/Messages/index.tsx:165
 #: src/components/routes/admin/Messages/index.tsx:288
+#: src/components/routes/organizer/CommunityContent/index.tsx:84
 #: src/ee/seating/components/SeatMapDesigner/Inspector.tsx:89
 msgid "Type"
 msgstr "Tyyppi"
@@ -21255,6 +21402,7 @@ msgstr "Tulevat"
 msgid "Upcoming dates"
 msgstr "Tulevat päivämäärät"
 
+#: src/components/routes/community/index.tsx:140
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:382
 msgid "Upcoming events"
 msgstr "Tulevat tapahtumat"
@@ -21450,6 +21598,14 @@ msgstr "Käytä alueita tapahtumapaikan erillisille osille, kuten permannolle ja
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:552
 msgid "Use event default"
 msgstr "Käytä tapahtuman oletusta"
+
+#: src/components/routes/organizer/CommunityContent/index.tsx:86
+msgid "Use home, about or contact for the main pages."
+msgstr "Käytä pääsivuille tunnisteita home, about tai contact."
+
+#: src/components/routes/organizer/CommunityContent/index.tsx:46
+msgid "Use lowercase letters, numbers and hyphens."
+msgstr "Käytä pieniä kirjaimia, numeroita ja yhdysmerkkejä."
 
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:49
 #: src/components/routes/organizer/Settings/Sections/EventDefaults/index.tsx:40
@@ -21688,7 +21844,7 @@ msgstr "Vahvistussähköposti lähetetty. Tarkista saapuneet viestisi."
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:216
 #: src/components/routes/admin/Attribution/index.tsx:198
 #: src/components/routes/admin/Dashboard/index.tsx:396
-#: src/components/routes/oauth/Connect/index.tsx:97
+#: src/components/routes/oauth/Connect/index.tsx:99
 #: src/ee/sso/components/SingleSignOn/DomainList.tsx:17
 msgid "Verified"
 msgstr "Vahvistettu"
@@ -21765,6 +21921,8 @@ msgid "View {name}"
 msgstr "Näytä {name}"
 
 #: src/components/layouts/EventHomepage/MoreEventsSection.tsx:33
+#: src/components/routes/community/index.tsx:140
+#: src/components/routes/community/index.tsx:144
 msgid "View all"
 msgstr "Näytä kaikki"
 
@@ -21848,7 +22006,7 @@ msgstr "Näytä tapahtumasivu"
 msgid "View Event Page"
 msgstr "Näytä tapahtumasivu"
 
-#: src/components/routes/oauth/Connect/index.tsx:128
+#: src/components/routes/oauth/Connect/index.tsx:130
 msgid "View events, tickets and sales, without changing anything."
 msgstr "Tarkastella tapahtumia, lippuja ja myyntiä muuttamatta mitään."
 
@@ -21866,7 +22024,7 @@ msgid "View on event page"
 msgstr "Näytä tapahtumasivulla"
 
 #: src/components/layouts/Event/index.tsx:247
-#: src/components/layouts/OrganizerLayout/index.tsx:237
+#: src/components/layouts/OrganizerLayout/index.tsx:238
 msgid "View only"
 msgstr "Vain katselu"
 
@@ -21891,8 +22049,8 @@ msgstr "Näytä tilausten tiedot, tee hyvityksiä ja lähetä vahvistuksia uudel
 msgid "View orders"
 msgstr "Näytä tilaukset"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:284
-#: src/components/layouts/OrganizerLayout/index.tsx:287
+#: src/components/layouts/OrganizerLayout/index.tsx:285
+#: src/components/layouts/OrganizerLayout/index.tsx:288
 msgid "View Organizer Homepage"
 msgstr "Näytä järjestäjäsivu"
 
@@ -21914,12 +22072,16 @@ msgstr "Näytä myynti"
 msgid "View Ticket"
 msgstr "Näytä lippu"
 
+#: src/components/routes/organizer/CommunityContent/index.tsx:124
+msgid "View website"
+msgstr "Näytä sivusto"
+
 #: src/components/routes/event/attendees.tsx:204
 msgid "View, edit, and export your registered attendees."
 msgstr "Näytä, muokkaa ja vie ilmoittautuneiden osallistujien tiedot."
 
-#: src/components/common/TeamAccessFields/index.tsx:34
-#: src/components/common/TeamAccessFields/index.tsx:102
+#: src/components/common/TeamAccessFields/index.tsx:35
+#: src/components/common/TeamAccessFields/index.tsx:103
 msgid "Viewer"
 msgstr "Katselija"
 
@@ -22270,7 +22432,7 @@ msgid "Webhook will send notifications"
 msgstr "Webhook lähettää ilmoituksia"
 
 #: src/components/layouts/Event/index.tsx:165
-#: src/components/layouts/OrganizerLayout/index.tsx:131
+#: src/components/layouts/OrganizerLayout/index.tsx:132
 #: src/components/modals/DuplicateEventModal/index.tsx:167
 #: src/components/routes/event/Webhooks/index.tsx:67
 #: src/components/routes/organizer/Webhooks/index.tsx:66
@@ -22278,9 +22440,15 @@ msgid "Webhooks"
 msgstr "Webhookit"
 
 #: src/components/common/ProfileLinkIcon/index.tsx:61
+#: src/components/routes/community/index.tsx:65
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:123
 msgid "Website"
 msgstr "Verkkosivusto"
+
+#: src/components/layouts/OrganizerLayout/index.tsx:124
+#: src/components/routes/organizer/CommunityContent/index.tsx:122
+msgid "Website content"
+msgstr "Sivuston sisältö"
 
 #: src/constants/socialMediaConfig.ts:43
 msgid "WeChat"
@@ -22575,7 +22743,7 @@ msgstr "Kuka vastaa"
 msgid "Who's on?"
 msgstr "Kuka esiintyy?"
 
-#: src/components/common/TeamAccessFields/index.tsx:112
+#: src/components/common/TeamAccessFields/index.tsx:113
 #: src/components/common/TeamAccessPanel/index.tsx:87
 #: src/components/routes/settings/Team/MemberRow.tsx:45
 msgid "Whole account"
@@ -22673,9 +22841,9 @@ msgstr "X (Twitter)"
 msgid "year"
 msgstr "vuosi"
 
-#: src/components/common/OrganizerReportTable/index.tsx:59
+#: src/components/common/OrganizerReportTable/index.tsx:60
 #: src/components/common/PeriodSelector/index.tsx:38
-#: src/components/common/ReportTable/index.tsx:54
+#: src/components/common/ReportTable/index.tsx:55
 msgid "Year to date"
 msgstr "Vuoden alusta"
 
@@ -22791,7 +22959,7 @@ msgstr "Voit määrittää lisäpalvelumaksut ja verot tilisi asetuksissa."
 msgid "You can create a promo code which targets this product on the"
 msgstr "Voit luoda tähän tuotteeseen kohdistuvan kampanjakoodin täällä:"
 
-#: src/components/routes/oauth/Connect/index.tsx:167
+#: src/components/routes/oauth/Connect/index.tsx:169
 msgid "You can disconnect it at any time from Settings → API keys."
 msgstr "Voit katkaista yhteyden milloin tahansa kohdassa Asetukset → API-avaimet."
 
@@ -22848,7 +23016,7 @@ msgstr "Vahvistit henkilöllisyytesi. Jatka muutaman minuutin kuluessa."
 msgid "You don't have access to this event"
 msgstr "Sinulla ei ole pääsyä tähän tapahtumaan"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:220
+#: src/components/layouts/OrganizerLayout/index.tsx:221
 msgid "You don't have access to this organizer"
 msgstr "Sinulla ei ole pääsyä tähän järjestäjään"
 
@@ -22918,7 +23086,7 @@ msgstr "Sinun on luotava lippu ennen kuin voit lisätä osallistujan manuaalises
 msgid "You must have at least one price tier"
 msgstr "Sinulla on oltava vähintään yksi hintaporras"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:329
+#: src/components/layouts/OrganizerLayout/index.tsx:330
 msgid "You must verify your email address before you can update the organizer status."
 msgstr "Sinun on vahvistettava sähköpostiosoitteesi ennen kuin voit päivittää järjestäjän tilaa."
 
@@ -23214,6 +23382,10 @@ msgstr "Lisenssisi on vanhentunut"
 #: src/components/common/WidgetEditor/ContentFields.tsx:235
 msgid "Your lineup is hidden on your event page, so this widget will be empty."
 msgstr "Esiintyjäsi on piilotettu tapahtumasivulta, joten tämä widget on tyhjä."
+
+#: src/components/routes/community/index.tsx:55
+msgid "Your message has been received."
+msgstr "Viestisi on vastaanotettu."
 
 #: src/hooks/useOrderActions.tsx:62
 msgid "Your message has been sent"

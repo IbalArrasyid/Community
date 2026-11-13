@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
-# Postgres entrypoint init script — runs once on a fresh data volume.
-# Creates the hievents_test database used by the test suite (the BaseRepositoryTest
-# guard refuses to run against any database whose name does not end in _test).
-#
-# Idempotent: existing test DBs are left alone.
 
 set -euo pipefail
 
