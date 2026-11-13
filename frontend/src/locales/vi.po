@@ -23635,3 +23635,11 @@ msgstr "Phóng to"
 #: src/ee/seating/components/SeatMapZoomControls/index.tsx:20
 msgid "Zoom out"
 msgstr "Thu nhỏ"
+
+
+msgid "Meet, connect, and grow together."
+msgstr "Gặp gỡ, kết nối và cùng nhau phát triển."
+
+
+msgid "Discover community events and book your tickets directly with Barter Up."
+msgstr "Khám phá các sự kiện cộng đồng và đặt vé trực tiếp trên Barter Up."

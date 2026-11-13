@@ -12,6 +12,7 @@ import {getConfig} from "../../../utilites/config";
 import {UserGeneratedContent} from "../../common/UserGeneratedContent";
 import {PoweredByFooter} from "../../common/PoweredByFooter";
 import {EventList} from "../../layouts/OrganizerHomepage/EventList";
+import {IconArrowRight, IconTicket, IconQrcode, IconUsers, IconCalendarEvent} from "@tabler/icons-react";
 import classes from "./Community.module.scss";
 
 const ContentBody = ({content}: {content: CommunityContent}) => (
@@ -79,11 +80,11 @@ const Community = () => {
     const isEvents = pathname === '/events';
     const isArticles = pathname === '/articles';
     const isContact = pathname === '/contact';
-    const title = content?.title ?? (isHome ? organizer?.name ?? t`Community`
+    const title = content?.title ?? (isHome ? 'Barter Up'
         : isEvents ? t`Events` : isArticles ? t`Articles` : isContact ? t`Contact` : t`About`);
     const heroImage = content?.cover_image?.url ?? organizer?.images?.find(image => image.type === 'ORGANIZER_COVER')?.url;
     const canonical = new URL(pathname, getConfig('VITE_FRONTEND_URL') || 'http://localhost:5678').toString();
-    const description = content?.seo_description || content?.summary || organizer?.settings?.seo_description || organizer?.name || title;
+    const description = content?.seo_description || content?.summary || organizer?.settings?.seo_description || (isHome ? t`Discover community events and book your tickets directly with Barter Up.` : organizer?.name || title);
     const changePage = (page: number) => {
         const next = new URLSearchParams(search);
         next.set('page', String(page));
@@ -106,7 +107,7 @@ const Community = () => {
             <a className={classes.skip} href="#community-main">{t`Skip to content`}</a>
             <Container size="lg">
                 <header className={classes.header}>
-                    <Link className={classes.brand} to="/">{organizer?.name ?? t`Community`}</Link>
+                    <Link className={classes.brand} to="/"><span className={classes.brandIcon}><IconTicket aria-hidden="true" /></span><span>Barter Up<span className={classes.brandDot}>.</span></span></Link>
                     <nav aria-label={t`Navigation`}>
                         <NavLink to="/" end>{t`Home`}</NavLink>
                         <NavLink to="/about">{t`About`}</NavLink>
@@ -117,23 +118,28 @@ const Community = () => {
                     <Button component={Link} to="/auth/login" variant="subtle">{t`Sign in`}</Button>
                 </header>
                 <main id="community-main" className={classes.main} tabIndex={-1}>
-                    {!organizer ? <Alert>{t`This community website is not available yet.`}</Alert> : isHome ? (
+                    {!organizer && !isHome ? <Alert>{t`This community website is not available yet.`}</Alert> : isHome ? (
                         <>
                             <section className={classes.hero}>
                                 <div className={classes.heroCopy}>
-                                    <span className={classes.eyebrow}>{t`Community`}</span>
-                                    <h1>{title}</h1>
-                                    {content?.summary && <p>{content.summary}</p>}
-                                    <Group>
-                                        <Button component={Link} to="/events" color="teal" size="lg">{t`Explore events`}</Button>
-                                        <Button component={Link} to="/about" variant="white" color="dark" size="lg">{t`About`}</Button>
+                                    <span className={classes.heroBadge}><span />Barter Up · {t`Community`}</span>
+                                    <h1>{content?.title || t`Meet, connect, and grow together.`}</h1>
+                                    <p>{content?.summary || t`Discover community events and book your tickets directly with Barter Up.`}</p>
+                                    <Group justify="center">
+                                        <Button component={Link} to="/events" color="blue" size="lg" radius="md" rightSection={<IconArrowRight size={18} />}>{t`Explore events`}</Button>
+                                        <Button component={Link} to="/about" variant="default" size="lg" radius="md">{t`About`}</Button>
                                     </Group>
                                 </div>
-                                {heroImage && <img className={classes.heroImage} src={heroImage} alt="" fetchPriority="high" />}
                             </section>
-                            {(content?.body || organizer.description) && (
+                            <div className={classes.highlights}>
+                                {[{Icon: IconCalendarEvent, label: t`Events`}, {Icon: IconTicket, label: t`Tickets`}, {Icon: IconQrcode, label: t`Check-in`}, {Icon: IconUsers, label: t`Community`}].map(({Icon, label}) => (
+                                    <div className={classes.highlight} key={label}><span><Icon aria-hidden="true" /></span><strong>{label}</strong></div>
+                                ))}
+                            </div>
+                            {heroImage && <div className={classes.visual}><img src={heroImage} alt="" fetchPriority="high" /><span>Barter Up · {t`Community`}</span></div>}
+                            {(content?.body || organizer?.description) && (
                                 <section className={classes.section}>
-                                    <UserGeneratedContent className={classes.prose} html={content?.body || organizer.description} />
+                                    <UserGeneratedContent className={classes.prose} html={content?.body || organizer?.description || ''} />
                                 </section>
                             )}
                             <section className={classes.section}>
@@ -144,12 +150,18 @@ const Community = () => {
                                 <div className={classes.sectionHeading}><h2>{t`Articles`}</h2><Link to="/articles">{t`View all`}</Link></div>
                                 <ArticleCards articles={articles?.data.slice(0, 3) ?? []} />
                             </section>
+                            <section className={classes.callout}>
+                                <span className={classes.eyebrow}>Barter Up · {t`Community`}</span>
+                                <h2>{t`Meet, connect, and grow together.`}</h2>
+                                <p>{t`Discover community events and book your tickets directly with Barter Up.`}</p>
+                                <Button component={Link} to="/events" size="lg" radius="md" rightSection={<IconArrowRight size={18} />}>{t`Explore events`}</Button>
+                            </section>
                         </>
                     ) : (
                         <Stack gap="xl">
-                            <div className={classes.pageHeading}><span className={classes.eyebrow}>{organizer.name}</span><h1>{title}</h1>{content?.summary && <p>{content.summary}</p>}</div>
+                            <div className={classes.pageHeading}><span className={classes.eyebrow}>{organizer?.name}</span><h1>{title}</h1>{content?.summary && <p>{content.summary}</p>}</div>
                             {content && <ContentBody content={content} />}
-                            {pathname === '/about' && !content && <UserGeneratedContent className={classes.prose} html={organizer.description} />}
+                            {pathname === '/about' && !content && <UserGeneratedContent className={classes.prose} html={organizer?.description || ''} />}
                             {isContact && <ContactForm />}
                             {isArticles && <>
                                 <ArticleCards articles={articles?.data ?? []} />
@@ -167,7 +179,7 @@ const Community = () => {
                     )}
                 </main>
                 <footer className={classes.footer}>
-                    <span>{organizer?.name ?? t`Community`}</span>
+                    <span>Barter Up</span>
                     <PoweredByFooter />
                 </footer>
             </Container>

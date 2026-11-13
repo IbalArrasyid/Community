@@ -23635,3 +23635,11 @@ msgstr "Priblížiť"
 #: src/ee/seating/components/SeatMapZoomControls/index.tsx:20
 msgid "Zoom out"
 msgstr "Oddialiť"
+
+
+msgid "Meet, connect, and grow together."
+msgstr "Stretávajte sa, spájajte sa a rásťte spoločne."
+
+
+msgid "Discover community events and book your tickets directly with Barter Up."
+msgstr "Objavujte komunitné podujatia a rezervujte si vstupenky priamo cez Barter Up."

@@ -23635,3 +23635,11 @@ msgstr "Μεγέθυνση"
 #: src/ee/seating/components/SeatMapZoomControls/index.tsx:20
 msgid "Zoom out"
 msgstr "Σμίκρυνση"
+
+
+msgid "Meet, connect, and grow together."
+msgstr "Συναντηθείτε, συνδεθείτε και αναπτυχθείτε μαζί."
+
+
+msgid "Discover community events and book your tickets directly with Barter Up."
+msgstr "Ανακαλύψτε κοινοτικές εκδηλώσεις και κλείστε εισιτήρια απευθείας στο Barter Up."

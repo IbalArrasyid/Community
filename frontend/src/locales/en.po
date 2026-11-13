@@ -23635,3 +23635,11 @@ msgstr "Zoom in"
 #: src/ee/seating/components/SeatMapZoomControls/index.tsx:20
 msgid "Zoom out"
 msgstr "Zoom out"
+
+
+msgid "Meet, connect, and grow together."
+msgstr "Meet, connect, and grow together."
+
+
+msgid "Discover community events and book your tickets directly with Barter Up."
+msgstr "Discover community events and book your tickets directly with Barter Up."
