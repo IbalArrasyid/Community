@@ -14,13 +14,20 @@ class CommunityContentRepository
 {
     public function __construct(private readonly DatabaseManager $db) {}
 
-    public function paginate(int $organizerId, ?string $type, bool $publishedOnly, int $page): LengthAwarePaginator
+    public function paginate(int $organizerId, ?string $type, bool $publishedOnly, int $page, string $search = '', string $sort = 'newest'): LengthAwarePaginator
     {
-        return $this->runQuery(function (Builder $query) use ($organizerId, $type, $publishedOnly, $page) {
+        return $this->runQuery(function (Builder $query) use ($organizerId, $type, $publishedOnly, $page, $search, $sort) {
             $this->scope($query, $organizerId, $publishedOnly);
             $query->when($type !== null, fn (Builder $query) => $query->where('type', $type));
+            if ($search !== '') {
+                $pattern = '%'.addcslashes($search, '\\%_').'%';
+                $query->where(fn (Builder $query) => $query
+                    ->where('title', 'ilike', $pattern)
+                    ->orWhere('summary', 'ilike', $pattern));
+            }
+            $direction = $sort === 'oldest' ? 'asc' : 'desc';
 
-            return $query->orderByDesc('published_at')->orderByDesc('id')
+            return $query->orderBy('published_at', $direction)->orderBy('id', $direction)
                 ->paginate(12, ['*'], 'page', $page)
                 ->through(fn (object $row) => CommunityContentData::from((array) $row));
         });

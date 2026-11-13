@@ -142,6 +142,73 @@ class CommunityContentTest extends TestCase
         $this->getJson('/public/community/content?type=PAGE')->assertNotFound();
     }
 
+    public function test_article_search_preserves_publication_type_and_organizer_boundaries(): void
+    {
+        $first = $this->insertArticle(['title' => 'Workshop preparation', 'published_at' => now()->subDays(2)]);
+        $second = $this->insertArticle(['title' => 'Community guide', 'summary' => 'A WORKSHOP checklist', 'published_at' => now()->subDay()]);
+        $this->insertArticle(['title' => 'Workshop draft', 'status' => 'DRAFT']);
+        $this->insertArticle(['title' => 'Workshop tomorrow', 'published_at' => now()->addDay()]);
+        $this->insertArticle(['title' => 'Workshop page', 'type' => 'PAGE']);
+        $this->insertArticle(['title' => 'Workshop elsewhere', 'organizer_id' => $this->createOrganizer($this->accountId)]);
+
+        $this->getJson('/public/community/content?type=ARTICLE&q=workshop&sort=oldest', $this->headersFor($this->owner, $this->accountId))
+            ->assertOk()
+            ->assertJsonCount(2, 'data')
+            ->assertJsonPath('data.0.id', $first)
+            ->assertJsonPath('data.1.id', $second)
+            ->assertJsonMissingPath('data.0.organizer_id')
+            ->assertJsonMissingPath('data.0.status');
+    }
+
+    public function test_article_search_is_paginated_and_sorting_is_stable(): void
+    {
+        $ids = [];
+        $publishedAt = now()->subDay()->startOfDay();
+        for ($i = 0; $i < 14; $i++) {
+            $ids[] = $this->insertArticle(['title' => 'Guide '.$i, 'published_at' => $publishedAt]);
+        }
+
+        $this->getJson('/public/community/content?type=ARTICLE')->assertOk()
+            ->assertJsonCount(12, 'data')->assertJsonPath('data.0.id', $ids[13]);
+        $this->getJson('/public/community/content?type=ARTICLE&q=guide&page=2')->assertOk()
+            ->assertJsonCount(2, 'data')->assertJsonPath('meta.total', 14)
+            ->assertJsonPath('meta.current_page', 2)->assertJsonPath('data.0.id', $ids[1]);
+        $this->getJson('/public/community/content?type=ARTICLE&q=guide&sort=oldest&page=2')->assertOk()
+            ->assertJsonCount(2, 'data')->assertJsonPath('data.0.id', $ids[12]);
+    }
+
+    public function test_article_search_treats_sql_wildcards_as_literal_text(): void
+    {
+        $id = $this->insertArticle(['title' => '100% community']);
+        $this->insertArticle(['title' => '1000 community']);
+
+        $this->getJson('/public/community/content?'.http_build_query(['type' => 'ARTICLE', 'q' => '100%']))
+            ->assertOk()->assertJsonCount(1, 'data')->assertJsonPath('data.0.id', $id);
+        $this->getJson('/public/community/content?type=ARTICLE&q=missing')->assertOk()->assertJsonCount(0, 'data');
+    }
+
+    public function test_article_search_validates_optional_query_fields(): void
+    {
+        $this->getJson('/public/community/content?'.http_build_query(['type' => 'ARTICLE', 'q' => str_repeat('a', 201)]))
+            ->assertUnprocessable()->assertJsonValidationErrors('q');
+        $this->getJson('/public/community/content?type=ARTICLE&sort=popular')
+            ->assertUnprocessable()->assertJsonValidationErrors('sort');
+    }
+
+    private function insertArticle(array $attributes = []): int
+    {
+        return (int) DB::table('community_contents')->insertGetId(array_replace($this->payload([
+            'organizer_id' => $this->organizerId,
+            'type' => 'ARTICLE',
+            'slug' => 'article-'.bin2hex(random_bytes(8)),
+            'title' => 'Community article',
+            'status' => 'PUBLISHED',
+            'published_at' => now()->subHour(),
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]), $attributes));
+    }
+
     private function path(): string
     {
         return "/organizers/{$this->organizerId}/community/content";

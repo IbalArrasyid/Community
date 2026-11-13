@@ -23643,3 +23643,51 @@ msgstr "相聚、交流，共同成長。"
 
 msgid "Discover community events and book your tickets directly with Barter Up."
 msgstr "探索社群活動，直接透過 Barter Up 預訂門票。"
+
+
+msgid "Articles & guides"
+msgstr "文章與指南"
+
+
+msgid "Stories and practical ideas for your next community event."
+msgstr "為您的下一場社群活動提供故事與實用創意。"
+
+
+msgid "Newest first"
+msgstr "最新優先"
+
+
+msgid "Oldest first"
+msgstr "最早優先"
+
+
+msgid "No articles found."
+msgstr "找不到文章。"
+
+
+msgid "Table of contents"
+msgstr "目錄"
+
+
+msgid "More articles"
+msgstr "更多文章"
+
+
+msgid "Estimated reading time"
+msgstr "預計閱讀時間"
+
+
+msgid "How can we help?"
+msgstr "我們能為您提供甚麼協助？"
+
+
+msgid "Ask us about events, tickets, or partnerships."
+msgstr "歡迎查詢活動、門票或合作事宜。"
+
+
+msgid "Live chat"
+msgstr "即時聊天"
+
+
+msgid "Live chat is unavailable. Please send us a message."
+msgstr "即時聊天暫時無法使用，請給我們留言。"

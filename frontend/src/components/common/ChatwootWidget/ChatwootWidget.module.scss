@@ -1,0 +1,20 @@
+.launcher {
+    position: fixed;
+    right: 1.5rem;
+    bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+    z-index: 190;
+    height: 3.5rem;
+    padding: 0 1.3rem;
+    background: #2563eb;
+    color: white;
+    box-shadow: 0 8px 28px #1d4ed83b;
+    &:hover { background: #1d4ed8; }
+    &:focus-visible { outline: 3px solid #93c5fd; outline-offset: 4px; }
+}
+.introduction { color: #475569; line-height: 1.8; margin-top: 0; margin-bottom: 1.5rem; }
+.error { margin-bottom: 1rem; }
+@media (max-width: 575px) {
+    .launcher { right: 1rem; bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px)); width: 3.5rem; padding: 0; }
+    .launcher :global(.mantine-Button-label) { display: none; }
+    .launcher :global(.mantine-Button-section) { margin: 0; }
+}

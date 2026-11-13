@@ -31,9 +31,9 @@ export const communityContentQuery = (type: CommunityContentType, slug: string) 
     retry: false,
 });
 
-export const communityArticlesQuery = (page = 1) => ({
-    queryKey: ['community', 'articles', page],
-    queryFn: () => communityClient.articles(page),
+export const communityArticlesQuery = (page = 1, query = '', sort: 'newest' | 'oldest' = 'newest') => ({
+    queryKey: ['community', 'articles', page, query, sort],
+    queryFn: () => communityClient.articles(page, query, sort),
     staleTime: 0,
 });
 

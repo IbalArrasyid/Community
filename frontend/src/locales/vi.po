@@ -23643,3 +23643,51 @@ msgstr "Gặp gỡ, kết nối và cùng nhau phát triển."
 
 msgid "Discover community events and book your tickets directly with Barter Up."
 msgstr "Khám phá các sự kiện cộng đồng và đặt vé trực tiếp trên Barter Up."
+
+
+msgid "Articles & guides"
+msgstr "Bài viết và hướng dẫn"
+
+
+msgid "Stories and practical ideas for your next community event."
+msgstr "Những câu chuyện và ý tưởng thiết thực cho sự kiện cộng đồng tiếp theo của bạn."
+
+
+msgid "Newest first"
+msgstr "Mới nhất trước"
+
+
+msgid "Oldest first"
+msgstr "Cũ nhất trước"
+
+
+msgid "No articles found."
+msgstr "Không tìm thấy bài viết."
+
+
+msgid "Table of contents"
+msgstr "Mục lục"
+
+
+msgid "More articles"
+msgstr "Các bài viết khác"
+
+
+msgid "Estimated reading time"
+msgstr "Thời gian đọc ước tính"
+
+
+msgid "How can we help?"
+msgstr "Chúng tôi có thể giúp gì?"
+
+
+msgid "Ask us about events, tickets, or partnerships."
+msgstr "Hãy hỏi chúng tôi về sự kiện, vé hoặc hợp tác."
+
+
+msgid "Live chat"
+msgstr "Trò chuyện trực tiếp"
+
+
+msgid "Live chat is unavailable. Please send us a message."
+msgstr "Trò chuyện trực tiếp không khả dụng. Vui lòng gửi tin nhắn cho chúng tôi."

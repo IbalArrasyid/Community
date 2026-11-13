@@ -23643,3 +23643,51 @@ msgstr "Setkávejte se, propojujte se a růstěte společně."
 
 msgid "Discover community events and book your tickets directly with Barter Up."
 msgstr "Objevujte komunitní akce a rezervujte si vstupenky přímo u Barter Up."
+
+
+msgid "Articles & guides"
+msgstr "Články a průvodci"
+
+
+msgid "Stories and practical ideas for your next community event."
+msgstr "Příběhy a praktické nápady pro vaši příští komunitní akci."
+
+
+msgid "Newest first"
+msgstr "Od nejnovějších"
+
+
+msgid "Oldest first"
+msgstr "Od nejstarších"
+
+
+msgid "No articles found."
+msgstr "Nebyly nalezeny žádné články."
+
+
+msgid "Table of contents"
+msgstr "Obsah"
+
+
+msgid "More articles"
+msgstr "Další články"
+
+
+msgid "Estimated reading time"
+msgstr "Odhadovaná doba čtení"
+
+
+msgid "How can we help?"
+msgstr "Jak vám můžeme pomoci?"
+
+
+msgid "Ask us about events, tickets, or partnerships."
+msgstr "Zeptejte se nás na akce, vstupenky nebo partnerství."
+
+
+msgid "Live chat"
+msgstr "Živý chat"
+
+
+msgid "Live chat is unavailable. Please send us a message."
+msgstr "Živý chat není dostupný. Pošlete nám prosím zprávu."

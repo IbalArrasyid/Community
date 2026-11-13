@@ -23643,3 +23643,51 @@ msgstr "Möt människor, skapa kontakter och väx tillsammans."
 
 msgid "Discover community events and book your tickets directly with Barter Up."
 msgstr "Upptäck gemenskapsevenemang och boka dina biljetter direkt hos Barter Up."
+
+
+msgid "Articles & guides"
+msgstr "Artiklar och guider"
+
+
+msgid "Stories and practical ideas for your next community event."
+msgstr "Berättelser och praktiska idéer för ditt nästa gemenskapsevenemang."
+
+
+msgid "Newest first"
+msgstr "Nyaste först"
+
+
+msgid "Oldest first"
+msgstr "Äldsta först"
+
+
+msgid "No articles found."
+msgstr "Inga artiklar hittades."
+
+
+msgid "Table of contents"
+msgstr "Innehållsförteckning"
+
+
+msgid "More articles"
+msgstr "Fler artiklar"
+
+
+msgid "Estimated reading time"
+msgstr "Beräknad lästid"
+
+
+msgid "How can we help?"
+msgstr "Hur kan vi hjälpa dig?"
+
+
+msgid "Ask us about events, tickets, or partnerships."
+msgstr "Fråga oss om evenemang, biljetter eller samarbeten."
+
+
+msgid "Live chat"
+msgstr "Livechatt"
+
+
+msgid "Live chat is unavailable. Please send us a message."
+msgstr "Livechatten är inte tillgänglig. Skicka ett meddelande till oss."

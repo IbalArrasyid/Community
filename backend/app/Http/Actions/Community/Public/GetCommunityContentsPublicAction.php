@@ -18,10 +18,13 @@ class GetCommunityContentsPublicAction extends BaseAction
         $data = $request->validate([
             'type' => ['required', Rule::enum(CommunityContentType::class)],
             'page' => ['sometimes', 'integer', 'min:1'],
+            'q' => ['sometimes', 'nullable', 'string', 'max:200'],
+            'sort' => ['sometimes', Rule::in(['newest', 'oldest'])],
         ]);
 
         return $this->resourceResponse(CommunityContentPublicResource::class, $handler->list(
             $site->handle()->getId(), $data['type'], true, (int) ($data['page'] ?? 1),
+            trim($data['q'] ?? ''), $data['sort'] ?? 'newest',
         ));
     }
 }

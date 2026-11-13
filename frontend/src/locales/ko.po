@@ -23643,3 +23643,51 @@ msgstr "만나고, 연결되고, 함께 성장하세요."
 
 msgid "Discover community events and book your tickets directly with Barter Up."
 msgstr "커뮤니티 이벤트를 발견하고 Barter Up에서 직접 티켓을 예약하세요."
+
+
+msgid "Articles & guides"
+msgstr "기사 및 가이드"
+
+
+msgid "Stories and practical ideas for your next community event."
+msgstr "다음 커뮤니티 이벤트를 위한 이야기와 실용적인 아이디어."
+
+
+msgid "Newest first"
+msgstr "최신순"
+
+
+msgid "Oldest first"
+msgstr "오래된 순"
+
+
+msgid "No articles found."
+msgstr "기사를 찾을 수 없습니다."
+
+
+msgid "Table of contents"
+msgstr "목차"
+
+
+msgid "More articles"
+msgstr "더 많은 기사"
+
+
+msgid "Estimated reading time"
+msgstr "예상 읽기 시간"
+
+
+msgid "How can we help?"
+msgstr "무엇을 도와드릴까요?"
+
+
+msgid "Ask us about events, tickets, or partnerships."
+msgstr "이벤트, 티켓 또는 파트너십에 대해 문의하세요."
+
+
+msgid "Live chat"
+msgstr "실시간 채팅"
+
+
+msgid "Live chat is unavailable. Please send us a message."
+msgstr "실시간 채팅을 이용할 수 없습니다. 메시지를 보내주세요."

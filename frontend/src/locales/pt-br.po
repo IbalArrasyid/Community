@@ -23643,3 +23643,51 @@ msgstr "Encontre pessoas, crie conexões e cresça em comunidade."
 
 msgid "Discover community events and book your tickets directly with Barter Up."
 msgstr "Descubra eventos da comunidade e reserve seus ingressos diretamente no Barter Up."
+
+
+msgid "Articles & guides"
+msgstr "Artigos e guias"
+
+
+msgid "Stories and practical ideas for your next community event."
+msgstr "Histórias e ideias práticas para seu próximo evento comunitário."
+
+
+msgid "Newest first"
+msgstr "Mais recentes primeiro"
+
+
+msgid "Oldest first"
+msgstr "Mais antigos primeiro"
+
+
+msgid "No articles found."
+msgstr "Nenhum artigo encontrado."
+
+
+msgid "Table of contents"
+msgstr "Índice"
+
+
+msgid "More articles"
+msgstr "Mais artigos"
+
+
+msgid "Estimated reading time"
+msgstr "Tempo estimado de leitura"
+
+
+msgid "How can we help?"
+msgstr "Como podemos ajudar?"
+
+
+msgid "Ask us about events, tickets, or partnerships."
+msgstr "Pergunte sobre eventos, ingressos ou parcerias."
+
+
+msgid "Live chat"
+msgstr "Chat ao vivo"
+
+
+msgid "Live chat is unavailable. Please send us a message."
+msgstr "O chat ao vivo está indisponível. Envie uma mensagem."

@@ -23643,3 +23643,51 @@ msgstr "Tanışın, bağlantı kurun ve birlikte büyüyün."
 
 msgid "Discover community events and book your tickets directly with Barter Up."
 msgstr "Topluluk etkinliklerini keşfedin ve biletlerinizi doğrudan Barter Up üzerinden ayırtın."
+
+
+msgid "Articles & guides"
+msgstr "Makaleler ve rehberler"
+
+
+msgid "Stories and practical ideas for your next community event."
+msgstr "Bir sonraki topluluk etkinliğiniz için hikâyeler ve pratik fikirler."
+
+
+msgid "Newest first"
+msgstr "Önce en yeniler"
+
+
+msgid "Oldest first"
+msgstr "Önce en eskiler"
+
+
+msgid "No articles found."
+msgstr "Makale bulunamadı."
+
+
+msgid "Table of contents"
+msgstr "İçindekiler"
+
+
+msgid "More articles"
+msgstr "Diğer makaleler"
+
+
+msgid "Estimated reading time"
+msgstr "Tahmini okuma süresi"
+
+
+msgid "How can we help?"
+msgstr "Nasıl yardımcı olabiliriz?"
+
+
+msgid "Ask us about events, tickets, or partnerships."
+msgstr "Etkinlikler, biletler veya iş ortaklıkları hakkında bize sorun."
+
+
+msgid "Live chat"
+msgstr "Canlı sohbet"
+
+
+msgid "Live chat is unavailable. Please send us a message."
+msgstr "Canlı sohbet kullanılamıyor. Lütfen bize mesaj gönderin."

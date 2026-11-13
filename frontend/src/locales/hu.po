@@ -23643,3 +23643,51 @@ msgstr "Találkozzatok, kapcsolódjatok és fejlődjetek együtt."
 
 msgid "Discover community events and book your tickets directly with Barter Up."
 msgstr "Fedezd fel a közösségi eseményeket, és foglalj jegyet közvetlenül a Barter Upon."
+
+
+msgid "Articles & guides"
+msgstr "Cikkek és útmutatók"
+
+
+msgid "Stories and practical ideas for your next community event."
+msgstr "Történetek és gyakorlati ötletek a következő közösségi eseményedhez."
+
+
+msgid "Newest first"
+msgstr "Legújabbak elöl"
+
+
+msgid "Oldest first"
+msgstr "Legrégebbiek elöl"
+
+
+msgid "No articles found."
+msgstr "Nem található cikk."
+
+
+msgid "Table of contents"
+msgstr "Tartalomjegyzék"
+
+
+msgid "More articles"
+msgstr "További cikkek"
+
+
+msgid "Estimated reading time"
+msgstr "Becsült olvasási idő"
+
+
+msgid "How can we help?"
+msgstr "Miben segíthetünk?"
+
+
+msgid "Ask us about events, tickets, or partnerships."
+msgstr "Kérdezz minket eseményekről, jegyekről vagy partnerségekről."
+
+
+msgid "Live chat"
+msgstr "Élő csevegés"
+
+
+msgid "Live chat is unavailable. Please send us a message."
+msgstr "Az élő csevegés nem elérhető. Kérjük, küldj üzenetet."

@@ -23643,3 +23643,51 @@ msgstr "Tapaa, verkostoidu ja kasva yhdessä."
 
 msgid "Discover community events and book your tickets directly with Barter Up."
 msgstr "Löydä yhteisötapahtumia ja varaa lippusi suoraan Barter Upista."
+
+
+msgid "Articles & guides"
+msgstr "Artikkelit ja oppaat"
+
+
+msgid "Stories and practical ideas for your next community event."
+msgstr "Tarinoita ja käytännön ideoita seuraavaan yhteisötapahtumaasi."
+
+
+msgid "Newest first"
+msgstr "Uusimmat ensin"
+
+
+msgid "Oldest first"
+msgstr "Vanhimmat ensin"
+
+
+msgid "No articles found."
+msgstr "Artikkeleita ei löytynyt."
+
+
+msgid "Table of contents"
+msgstr "Sisällysluettelo"
+
+
+msgid "More articles"
+msgstr "Lisää artikkeleita"
+
+
+msgid "Estimated reading time"
+msgstr "Arvioitu lukuaika"
+
+
+msgid "How can we help?"
+msgstr "Kuinka voimme auttaa?"
+
+
+msgid "Ask us about events, tickets, or partnerships."
+msgstr "Kysy meiltä tapahtumista, lipuista tai kumppanuuksista."
+
+
+msgid "Live chat"
+msgstr "Live-chat"
+
+
+msgid "Live chat is unavailable. Please send us a message."
+msgstr "Live-chat ei ole käytettävissä. Lähetä meille viesti."

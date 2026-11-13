@@ -23644,3 +23644,51 @@ msgstr "Ontmoet elkaar, maak contact en groei samen."
 
 msgid "Discover community events and book your tickets directly with Barter Up."
 msgstr "Ontdek community-evenementen en boek je tickets rechtstreeks bij Barter Up."
+
+
+msgid "Articles & guides"
+msgstr "Artikelen en handleidingen"
+
+
+msgid "Stories and practical ideas for your next community event."
+msgstr "Verhalen en praktische ideeën voor je volgende community-evenement."
+
+
+msgid "Newest first"
+msgstr "Nieuwste eerst"
+
+
+msgid "Oldest first"
+msgstr "Oudste eerst"
+
+
+msgid "No articles found."
+msgstr "Geen artikelen gevonden."
+
+
+msgid "Table of contents"
+msgstr "Inhoudsopgave"
+
+
+msgid "More articles"
+msgstr "Meer artikelen"
+
+
+msgid "Estimated reading time"
+msgstr "Geschatte leestijd"
+
+
+msgid "How can we help?"
+msgstr "Hoe kunnen we helpen?"
+
+
+msgid "Ask us about events, tickets, or partnerships."
+msgstr "Stel ons vragen over evenementen, tickets of samenwerkingen."
+
+
+msgid "Live chat"
+msgstr "Livechat"
+
+
+msgid "Live chat is unavailable. Please send us a message."
+msgstr "Livechat is niet beschikbaar. Stuur ons een bericht."

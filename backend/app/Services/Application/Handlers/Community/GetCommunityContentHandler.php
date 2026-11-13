@@ -10,9 +10,9 @@ class GetCommunityContentHandler
 {
     public function __construct(private readonly CommunityContentRepository $repository) {}
 
-    public function list(int $organizerId, ?string $type, bool $publishedOnly, int $page): LengthAwarePaginator
+    public function list(int $organizerId, ?string $type, bool $publishedOnly, int $page, string $search = '', string $sort = 'newest'): LengthAwarePaginator
     {
-        return $this->repository->paginate($organizerId, $type, $publishedOnly, $page);
+        return $this->repository->paginate($organizerId, $type, $publishedOnly, $page, $search, $sort);
     }
 
     public function find(int $organizerId, int|string $key, bool $publishedOnly = false, ?string $type = null): CommunityContentData

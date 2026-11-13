@@ -44,8 +44,8 @@ export const communityClient = {
     site: async () => (await publicApi.get<GenericDataResponse<Organizer>>('/community')).data.data,
     content: async (type: CommunityContentType, slug: string) =>
         (await publicApi.get<GenericDataResponse<CommunityContent>>('/community/content/' + type + '/' + encodeURIComponent(slug))).data.data,
-    articles: async (page: number) =>
-        (await publicApi.get<GenericPaginatedResponse<CommunityContent>>('/community/content', {params: {type: 'ARTICLE', page}})).data,
+    articles: async (page: number, query = '', sort: 'newest' | 'oldest' = 'newest') =>
+        (await publicApi.get<GenericPaginatedResponse<CommunityContent>>('/community/content', {params: {type: 'ARTICLE', page, q: query, sort}})).data,
     events: async (page: number, query: string) =>
         (await publicApi.get<GenericPaginatedResponse<Event>>('/community/events' + queryParamsHelper.buildQueryString({
             pageNumber: page,
@@ -55,7 +55,7 @@ export const communityClient = {
             sortDirection: 'asc',
             additionalParams: {eventsStatus: 'upcoming'},
         }))).data,
-    contact: async (data: CommunityContactInput) => (await publicApi.post('/community/contact', data)).data,
+    contact: async (data: CommunityContactInput) => (await publicApi.post<{data: {received: boolean}}>('/community/contact', data)).data,
     list: async (id: IdParam, page: number) =>
         (await api.get<GenericPaginatedResponse<CommunityContent>>(path(id) + '/content', {params: {page}})).data,
     save: async (id: IdParam, contentId: number | undefined, data: CommunityContentInput) =>

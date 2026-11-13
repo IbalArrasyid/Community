@@ -23641,3 +23641,51 @@ msgstr "Встречайтесь, общайтесь и развивайтесь
 
 msgid "Discover community events and book your tickets directly with Barter Up."
 msgstr "Открывайте события сообщества и бронируйте билеты напрямую в Barter Up."
+
+
+msgid "Articles & guides"
+msgstr "Статьи и руководства"
+
+
+msgid "Stories and practical ideas for your next community event."
+msgstr "Истории и практические идеи для вашего следующего события сообщества."
+
+
+msgid "Newest first"
+msgstr "Сначала новые"
+
+
+msgid "Oldest first"
+msgstr "Сначала старые"
+
+
+msgid "No articles found."
+msgstr "Статьи не найдены."
+
+
+msgid "Table of contents"
+msgstr "Содержание"
+
+
+msgid "More articles"
+msgstr "Другие статьи"
+
+
+msgid "Estimated reading time"
+msgstr "Примерное время чтения"
+
+
+msgid "How can we help?"
+msgstr "Чем мы можем помочь?"
+
+
+msgid "Ask us about events, tickets, or partnerships."
+msgstr "Спросите нас о событиях, билетах или сотрудничестве."
+
+
+msgid "Live chat"
+msgstr "Онлайн-чат"
+
+
+msgid "Live chat is unavailable. Please send us a message."
+msgstr "Онлайн-чат недоступен. Отправьте нам сообщение."

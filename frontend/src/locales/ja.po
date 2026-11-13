@@ -23643,3 +23643,51 @@ msgstr "出会い、つながり、ともに成長しよう。"
 
 msgid "Discover community events and book your tickets directly with Barter Up."
 msgstr "コミュニティのイベントを見つけて、Barter Upで直接チケットを予約しましょう。"
+
+
+msgid "Articles & guides"
+msgstr "記事とガイド"
+
+
+msgid "Stories and practical ideas for your next community event."
+msgstr "次のコミュニティイベントに役立つストーリーと実践的なアイデア。"
+
+
+msgid "Newest first"
+msgstr "新しい順"
+
+
+msgid "Oldest first"
+msgstr "古い順"
+
+
+msgid "No articles found."
+msgstr "記事が見つかりませんでした。"
+
+
+msgid "Table of contents"
+msgstr "目次"
+
+
+msgid "More articles"
+msgstr "その他の記事"
+
+
+msgid "Estimated reading time"
+msgstr "推定読了時間"
+
+
+msgid "How can we help?"
+msgstr "どのようなご用件でしょうか？"
+
+
+msgid "Ask us about events, tickets, or partnerships."
+msgstr "イベント、チケット、提携についてお問い合わせください。"
+
+
+msgid "Live chat"
+msgstr "ライブチャット"
+
+
+msgid "Live chat is unavailable. Please send us a message."
+msgstr "ライブチャットは利用できません。メッセージをお送りください。"

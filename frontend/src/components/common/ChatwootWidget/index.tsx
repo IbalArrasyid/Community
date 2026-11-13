@@ -1,121 +1,145 @@
-import { useEffect, useRef } from "react";
-import { isSsr } from "../../../utilites/helpers.ts";
-import { useGetMe } from "../../../queries/useGetMe.ts";
-import { User } from "../../../types.ts";
-import { getConfig } from "../../../utilites/config.ts";
+import {useEffect, useState} from 'react';
+import {Alert, Button} from '@mantine/core';
+import {t} from '@lingui/macro';
+import {IconMessageCircle} from '@tabler/icons-react';
+import {getConfig} from '../../../utilites/config';
+import {OPEN_SUPPORT_EVENT, SupportChatConfiguration, supportChatConfiguration} from '../../../utilites/supportChat';
+import {CommunityContactForm} from '../CommunityContactForm';
+import {Modal} from '../Modal';
+import classes from './ChatwootWidget.module.scss';
 
 interface ChatwootSdk {
-    run: (options: { websiteToken: string; baseUrl: string }) => void;
+    run: (options: {websiteToken: string; baseUrl: string}) => void;
 }
 
 interface ChatwootApi {
-    setUser: (identifier: string, user: { email: string; name: string; locale: string }) => void;
-    setCustomAttributes: (attributes: Record<string, string | number | boolean | undefined>) => void;
+    toggle: (state: 'open' | 'close') => void;
 }
 
 declare global {
     interface Window {
-        chatwootSDK: ChatwootSdk;
+        chatwootSDK?: ChatwootSdk;
         $chatwoot?: ChatwootApi;
+        chatwootSettings?: Record<string, unknown>;
     }
 }
 
-const CHATWOOT_ROUTES = ["/manage", "/settings", "/welcome"];
-
 const ChatwootWidget = () => {
-    const scriptRef = useRef<HTMLScriptElement | null>(null);
-    const { data: me, isLoading } = useGetMe();
-    const chatwootToken = getConfig('VITE_CHATWOOT_WEBSITE_TOKEN');
-    const chatwootUrl = getConfig('VITE_CHATWOOT_BASE_URL') || 'https://app.chatwoot.com';
+    const [configuration, setConfiguration] = useState<SupportChatConfiguration | null>(null);
+    const [requestCount, setRequestCount] = useState(0);
+    const [loading, setLoading] = useState(false);
+    const [fallbackOpen, setFallbackOpen] = useState(false);
+    const [unavailable, setUnavailable] = useState(false);
 
     useEffect(() => {
-        if (isSsr() || isLoading || !chatwootToken) {
+        setConfiguration(supportChatConfiguration(getConfig('VITE_CHATWOOT_BASE_URL'), getConfig('VITE_CHATWOOT_WEBSITE_TOKEN')));
+        const open = () => setRequestCount(count => count + 1);
+        window.addEventListener(OPEN_SUPPORT_EVENT, open);
+        return () => window.removeEventListener(OPEN_SUPPORT_EVENT, open);
+    }, []);
+
+    useEffect(() => {
+        if (requestCount === 0) return;
+        setUnavailable(false);
+        if (!configuration) {
+            setLoading(false);
+            setFallbackOpen(true);
+            return;
+        }
+        setFallbackOpen(false);
+        if (window.$chatwoot) {
+            setLoading(false);
+            try {
+                window.$chatwoot.toggle('open');
+            } catch {
+                setUnavailable(true);
+                setFallbackOpen(true);
+            }
             return;
         }
 
-        try {
-            const pathname = window.location.pathname;
-            if (!CHATWOOT_ROUTES.some(route => pathname.includes(route))) return;
-
-            if (!document.getElementById("chatwoot-script")) {
-                const script = document.createElement("script");
-                script.id = "chatwoot-script";
-                script.src = `${chatwootUrl}/packs/js/sdk.js`;
-                script.defer = true;
-                script.async = true;
-                script.onload = () => {
-                    window.chatwootSDK.run({
-                        websiteToken: chatwootToken,
-                        baseUrl: chatwootUrl
-                    });
-                    if (me) {
-                        setChatwootUserDetails(me);
-                    }
-                };
-                document.body.appendChild(script);
-                scriptRef.current = script;
-            } else if (me) {
-                setChatwootUserDetails(me);
+        let active = true;
+        let timer: number | undefined;
+        setLoading(true);
+        const fail = () => {
+            if (!active) return;
+            active = false;
+            window.clearTimeout(timer);
+            setLoading(false);
+            setUnavailable(true);
+            setFallbackOpen(true);
+        };
+        const ready = () => {
+            if (!active || !window.$chatwoot) return;
+            try {
+                window.$chatwoot.toggle('open');
+                active = false;
+                window.clearTimeout(timer);
+                setLoading(false);
+            } catch {
+                fail();
             }
-
-            const handleUrlChange = () => {
-                try {
-                    const currentPath = window.location.pathname;
-                    if (!CHATWOOT_ROUTES.some(route => currentPath.includes(route))) {
-                        removeChatwootScript();
-                    }
-                } catch (error) {
-                    console.error("Error in ChatwootWidget URL change handler:", error);
-                }
-            };
-
-            window.addEventListener("popstate", handleUrlChange);
-
-            return () => {
-                window.removeEventListener("popstate", handleUrlChange);
-                removeChatwootScript();
-            };
-        } catch (error) {
-            console.error("Error initializing ChatwootWidget:", error);
-        }
-    }, [isLoading, me]);
-
-    const removeChatwootScript = () => {
-        try {
-            const script = document.getElementById("chatwoot-script");
-            if (script) {
-                script.remove();
-                scriptRef.current = null;
+        };
+        let script = document.getElementById('chatwoot-script') as HTMLScriptElement | null;
+        const start = () => {
+            if (!active || !script || script.dataset.started === 'true') return;
+            if (!window.chatwootSDK) {
+                fail();
+                return;
             }
-        } catch (error) {
-            console.error("Error removing ChatwootWidget script:", error);
+            try {
+                script.dataset.started = 'true';
+                window.chatwootSDK.run({websiteToken: configuration.websiteToken, baseUrl: configuration.baseUrl});
+            } catch {
+                fail();
+            }
+        };
+        const scriptError = () => {
+            script?.remove();
+            fail();
+        };
+
+        window.chatwootSettings = {...window.chatwootSettings, hideMessageBubble: true, showUnreadMessagesDialog: false, position: 'right'};
+        window.addEventListener('chatwoot:ready', ready);
+        timer = window.setTimeout(fail, 15000);
+        if (!script) {
+            script = document.createElement('script');
+            script.id = 'chatwoot-script';
+            script.src = configuration.baseUrl + '/packs/js/sdk.js';
+            script.async = true;
+            script.addEventListener('load', start);
+            script.addEventListener('error', scriptError);
+            document.body.appendChild(script);
+        } else {
+            script.addEventListener('load', start);
+            script.addEventListener('error', scriptError);
+            if (window.chatwootSDK) start();
         }
-    };
 
-    const setChatwootUserDetails = (user: User) => {
-        try {
-            window.addEventListener("chatwoot:ready", () => {
-                if (!window.$chatwoot) return;
+        return () => {
+            active = false;
+            window.clearTimeout(timer);
+            window.removeEventListener('chatwoot:ready', ready);
+            script?.removeEventListener('load', start);
+            script?.removeEventListener('error', scriptError);
+        };
+    }, [configuration, requestCount]);
 
-                window.$chatwoot.setUser(String(user.id), {
-                    email: user.email,
-                    name: user.full_name,
-                    locale: user.locale || "en",
-                });
-
-                window.$chatwoot.setCustomAttributes({
-                    locale: user.locale || "en",
-                    account_id: user.account_id || "Unknown",
-                    user_role: user.role || "Unknown",
-                    is_user_verified: user.is_email_verified,
-                });
-            });
-        } catch (error) {
-            console.error("Error setting Chatwoot user details:", error);
-        }
-    };
-
-    return null;
+    return <>
+        <aside aria-label={t`Contact`}>
+        <Button type="button" className={classes.launcher} radius="xl" loading={loading}
+            leftSection={<IconMessageCircle size={23} aria-hidden="true" />}
+            aria-label={configuration ? t`Live chat` : t`Contact`}
+            onClick={() => setRequestCount(count => count + 1)}>
+            <span>{configuration ? t`Live chat` : t`Contact`}</span>
+        </Button>
+        </aside>
+        <Modal opened={fallbackOpen} onClose={() => setFallbackOpen(false)} heading={t`Contact`} size="md">
+            {unavailable && <Alert className={classes.error} color="orange" role="alert">{t`Live chat is unavailable. Please send us a message.`}</Alert>}
+            <p className={classes.introduction}>{t`Ask us about events, tickets, or partnerships.`}</p>
+            <CommunityContactForm onCancel={() => setFallbackOpen(false)} />
+        </Modal>
+    </>;
 };
 
 export default ChatwootWidget;

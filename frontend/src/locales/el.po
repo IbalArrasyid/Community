@@ -23643,3 +23643,51 @@ msgstr "Συναντηθείτε, συνδεθείτε και αναπτυχθε
 
 msgid "Discover community events and book your tickets directly with Barter Up."
 msgstr "Ανακαλύψτε κοινοτικές εκδηλώσεις και κλείστε εισιτήρια απευθείας στο Barter Up."
+
+
+msgid "Articles & guides"
+msgstr "Άρθρα και οδηγοί"
+
+
+msgid "Stories and practical ideas for your next community event."
+msgstr "Ιστορίες και πρακτικές ιδέες για την επόμενη εκδήλωση της κοινότητάς σας."
+
+
+msgid "Newest first"
+msgstr "Πρώτα τα νεότερα"
+
+
+msgid "Oldest first"
+msgstr "Πρώτα τα παλαιότερα"
+
+
+msgid "No articles found."
+msgstr "Δεν βρέθηκαν άρθρα."
+
+
+msgid "Table of contents"
+msgstr "Πίνακας περιεχομένων"
+
+
+msgid "More articles"
+msgstr "Περισσότερα άρθρα"
+
+
+msgid "Estimated reading time"
+msgstr "Εκτιμώμενος χρόνος ανάγνωσης"
+
+
+msgid "How can we help?"
+msgstr "Πώς μπορούμε να βοηθήσουμε;"
+
+
+msgid "Ask us about events, tickets, or partnerships."
+msgstr "Ρωτήστε μας για εκδηλώσεις, εισιτήρια ή συνεργασίες."
+
+
+msgid "Live chat"
+msgstr "Ζωντανή συνομιλία"
+
+
+msgid "Live chat is unavailable. Please send us a message."
+msgstr "Η ζωντανή συνομιλία δεν είναι διαθέσιμη. Στείλτε μας ένα μήνυμα."
