@@ -83,7 +83,183 @@
 .honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .search { display: flex; gap: 1rem; align-items: center; max-width: 640px; > div { flex: 1; } }
 .footer { border-top: 1px solid #dce5dd; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; padding: 2rem 0; }
+.about {
+    --about-border: #e2e8f0;
+    --about-muted: #475569;
+    overflow-wrap: anywhere;
+}
+.aboutHero {
+    padding: clamp(2rem, 5vw, 4rem) 0 3rem;
+    text-align: center;
+    background: radial-gradient(ellipse at 50% 20%, #dbeafe80, transparent 65%);
+    h1 {
+        max-width: 58rem;
+        margin: 1.5rem auto;
+        font-size: clamp(2.3rem, 5vw, 4.3rem);
+        line-height: 1.14;
+        letter-spacing: -.045em;
+    }
+    > p {
+        max-width: 48rem;
+        margin: 0 auto;
+        color: var(--about-muted);
+        font-size: 1.1rem;
+        line-height: 1.9;
+    }
+}
+.aboutCapabilities {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+.aboutCapability {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .9rem;
+    padding: 1.8rem 1rem;
+    border: 1px solid var(--about-border);
+    border-radius: 1rem;
+    background: white;
+    box-shadow: 0 4px 16px #0f172a04;
+    svg { color: #2563eb; }
+    &:nth-child(2) svg { color: #ea580c; }
+    &:nth-child(3) svg { color: #059669; }
+    &:nth-child(4) svg { color: #7c3aed; }
+}
+.aboutBanner {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+.aboutArtwork {
+    position: relative;
+    min-height: 24rem;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    background: #dbeafe;
+    > img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(transparent 25%, #0f172ae6);
+    }
+}
+.aboutIllustration {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    min-height: 24rem;
+    color: #1d4ed8;
+    background: radial-gradient(ellipse at 90% 0%, #ffedd5, transparent 60%), linear-gradient(135deg, #dbeafe, #ede9fe);
+    > span {
+        display: grid;
+        place-items: center;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 1.5rem;
+        background: #ffffffb3;
+        transform: rotate(10deg);
+        &:first-child { width: 8rem; height: 8rem; margin-top: 1rem; transform: rotate(-8deg); }
+        &:last-child { margin-top: 2rem; color: #ea580c; transform: rotate(-12deg); }
+    }
+}
+.aboutArtworkCaption {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    color: white;
+    h2 { max-width: 32rem; margin: .8rem 0 0; font-size: clamp(1.5rem, 3vw, 2.3rem); line-height: 1.2; }
+}
+.aboutStatement {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border-radius: 1.5rem;
+    color: white;
+    background: linear-gradient(145deg, #2563eb, #1e40af);
+    h2 { font-size: 1.7rem; letter-spacing: -.03em; }
+    p { margin: 0 0 2rem; line-height: 1.85; color: #dbeafe; }
+    a { display: inline-flex; align-items: center; gap: .7rem; margin-top: auto; font-weight: 700; text-underline-offset: .3rem; }
+}
+.aboutEditorial {
+    padding: clamp(1.25rem, 4vw, 3rem);
+    border: 1px solid var(--about-border);
+    border-radius: 1.5rem;
+    background: white;
+}
+.aboutRichText {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--about-muted);
+    > :first-child { margin-top: 0; }
+    > :last-child { margin-bottom: 0; }
+    h2 { margin: 3.5rem 0 1.2rem; max-width: 44rem; color: #0f172a; font-size: clamp(1.7rem, 3vw, 2.5rem); line-height: 1.25; letter-spacing: -.035em; }
+    h3 { margin: 2rem 0 .6rem; color: #0f172a; line-height: 1.4; }
+    p { max-width: 52rem; margin: 0 0 1.2rem; }
+    a { color: #1d4ed8; text-underline-offset: .2rem; }
+    img { max-width: 100%; height: auto; border-radius: 1rem; }
+    blockquote { margin: 2rem 0; padding: 1.5rem 2rem; border-left: 4px solid #2563eb; border-radius: 0 1rem 1rem 0; background: #eff6ff; color: #1e40af; p:last-child { margin-bottom: 0; } }
+    > ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        padding: 0;
+        margin: 1.5rem 0 2rem;
+        list-style: none;
+        > li {
+            padding: 1.5rem;
+            border: 1px solid #dbeafe;
+            border-top: 3px solid #2563eb;
+            border-radius: 1rem;
+            background: #f8faff;
+            strong { color: #0f172a; }
+            &:nth-child(2) { border-top-color: #ea580c; }
+            &:nth-child(3) { border-top-color: #059669; }
+            &:nth-child(4) { border-top-color: #7c3aed; }
+            p:last-child { margin-bottom: 0; }
+        }
+    }
+    > ol {
+        padding-left: 1.5rem;
+        > li { padding: .8rem 0 .8rem .8rem; border-bottom: 1px solid var(--about-border); }
+        > li::marker { font-weight: 800; color: #2563eb; }
+    }
+    table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
+    th, td { padding: 1rem; border: 1px solid var(--about-border); text-align: start; }
+    th { background: #eff6ff; color: #0f172a; }
+}
+.aboutCta {
+    margin-top: 4rem;
+    padding: clamp(1.5rem, 5vw, 4rem);
+    border-radius: 1.5rem;
+    color: white;
+    background: radial-gradient(ellipse at 100% 0, #6366f1, transparent 60%), #1d4ed8;
+    h2 { max-width: 42rem; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; letter-spacing: -.035em; }
+    p { max-width: 40rem; margin-bottom: 2rem; color: #dbeafe; line-height: 1.8; }
+}
 @media (max-width: 760px) {
+    .aboutCapabilities { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .aboutCapability { padding: 1.2rem .8rem; }
+    .aboutBanner { grid-template-columns: 1fr; gap: 1rem; }
+    .aboutRichText > ul { grid-template-columns: 1fr; }
+    .aboutRichText blockquote { padding: 1rem; }
+    .aboutCta a { max-width: 100%; }
     .highlights { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .highlight { padding: .8rem; font-size: .85rem; }
     .header { flex-wrap: wrap; nav { order: 3; width: 100%; gap: 1rem; } }

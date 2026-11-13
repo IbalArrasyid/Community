@@ -13,6 +13,7 @@ import {UserGeneratedContent} from "../../common/UserGeneratedContent";
 import {PoweredByFooter} from "../../common/PoweredByFooter";
 import {EventList} from "../../layouts/OrganizerHomepage/EventList";
 import {IconArrowRight, IconTicket, IconQrcode, IconUsers, IconCalendarEvent} from "@tabler/icons-react";
+import {AboutPage} from "./AboutPage";
 import classes from "./Community.module.scss";
 
 const ContentBody = ({content}: {content: CommunityContent}) => (
@@ -157,11 +158,12 @@ const Community = () => {
                                 <Button component={Link} to="/events" size="lg" radius="md" rightSection={<IconArrowRight size={18} />}>{t`Explore events`}</Button>
                             </section>
                         </>
+                    ) : pathname === '/about' && organizer ? (
+                        <AboutPage content={content} organizer={organizer} title={title} heroImage={heroImage} />
                     ) : (
                         <Stack gap="xl">
                             <div className={classes.pageHeading}><span className={classes.eyebrow}>{organizer?.name}</span><h1>{title}</h1>{content?.summary && <p>{content.summary}</p>}</div>
                             {content && <ContentBody content={content} />}
-                            {pathname === '/about' && !content && <UserGeneratedContent className={classes.prose} html={organizer?.description || ''} />}
                             {isContact && <ContactForm />}
                             {isArticles && <>
                                 <ArticleCards articles={articles?.data ?? []} />
